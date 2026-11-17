@@ -1,0 +1,555 @@
+{
+ "data": [
+  {
+   "id": "infosec-analyst-i-lemontech-remote",
+   "type": "job",
+   "attributes": {
+    "title": "Infosec Analyst I",
+    "description_headline": "Requisitos 🎯 (Excluyente)",
+    "description": "<ul><li><strong>Formación:</strong> Titulado/a o egresado/a de Ingeniería Informática, Seguridad de la Información o carreras afines.</li><li><strong>Experiencia:</strong> 0 a 2 años de experiencia en seguridad de la información, GRC, auditoría TI o roles similares.</li><li><strong>Conocimientos técnicos:</strong> Fundamentos comprobables de ISO 27001, buenas prácticas de seguridad y nociones de protección de datos (normativa LATAM).</li><li><strong>Herramientas:</strong> Manejo de herramientas de ofimática y sistemas de gestión de tickets/evidencia. Nociones de herramientas de escaneo de vulnerabilidades.</li><li><strong>Idiomas:</strong> Inglés intermedio (lectura y escritura), indispensab",
+    "projects": "<p>En <strong>LemonTech🍋</strong>, desarrollamos tecnología para la industria legal (Legaltech) en Latinoamérica, optimizando tiempos, facturación, casos y documentos para estudios jurídicos y departamentos legales. <strong>Buscamos a nuestro próximo InfoSec Analyst I </strong>para unirse a nuestro equipo. Este rol es el punto de entrada ideal para desarrollarte en el área de ciberseguridad y GRC (Gobierno, Riesgo y Cumplimiento).</p><p>Serás responsable de apoyar la operación de nuestro Sistema de Gestión de Seguridad de la Información (SGSI), trabajando codo a codo y bajo la supervisión de nuestro Information Security Manager. Tu foco estará en la ejecución rigurosa, el levantamiento de in",
+    "functions_headline": "Funciones Principales ✅",
+    "functions": "<p>Tu día a día se enfocará en las siguientes áreas operativas:</p><ul><li><strong>Políticas y SGSI:</strong> Mantener actualizada la documentación del SGSI (control de versiones) y redactar borradores de procedimientos y registros utilizando plantillas existentes.</li><li><strong>Riesgos y Controles:</strong> Levantar y mantener el inventario de activos, recopilar insumos para evaluaciones de riesgo (evidencia, vulnerabilidades) y hacer seguimiento al avance de los planes de tratamiento.</li><li><strong>Due Diligence y Proveedores:</strong> Completar cuestionarios estándar de seguridad de clientes y aplicar checklists de evaluación a proveedores de bajo riesgo.</li><li><strong>Auditoría y C",
+    "benefits_headline": "🍋 Beneficios LemonTech",
+    "benefits": "<p>En<strong> LemonTech creemos que el talento se cuida, </strong>se potencia y se disfruta. Por eso, además de tu compensación, contamos con más de <i><strong>beneficios pensados para tu desarrollo, tu bienestar y tu día a día..</strong></i></p><ul><li><strong>⏰ Viernes corto </strong>— hasta las 15:00 hrs</li><li>🏝️ +7 días <strong>extra de vacaciones</strong> al cumplir 1 año</li><li>📖 Cofinanciamos hasta el<strong> 50% de tus estudio</strong></li><li><strong>🇺🇸 Inglés </strong>desde 15 USD al mes</li><li><strong>🎂 Día libre </strong>en tu cumpleaños</li><li><strong>🍼 Postnatal parental</strong> de 1 mes</li><li>🏅 Plan de <strong>reconocimiento trimestral</strong></li></ul><p>Y muchos más",
+    "desirable_headline": "Competencias Deseadas ⭐️",
+    "desirable": "<ul><li><strong>Certificación:</strong> ISO 27001 Foundation (será un requisito obligatorio más adelante para tu ascenso a nivel Analyst, por lo que es un gran plus si ya la tienes).</li><li><strong>Uso de IA:</strong> Interés y capacidad para usar herramientas de Inteligencia Artificial de forma segura para acelerar tareas simples (resumir, redactar), protegiendo siempre la información clasificada.</li><li class=\"lexxy-nested-listitem\"><strong>Soft Skills clave:</strong><ul><li><strong>Grit &amp; Accountability:</strong> Das seguimiento a las tareas hasta su cierre y respondes por la calidad y trazabilidad de tu documentación.</li><li><strong>Pensamiento crítico y Resolución de problemas:</",
+    "remote": true,
+    "remote_modality": "fully_remote",
+    "remote_zone": null,
+    "countries": [
+     "Remote"
+    ],
+    "lang": "lang_not_specified",
+    "category_name": "Cybersecurity",
+    "perks": [
+     "remote_full",
+     "flexible_hours",
+     "remote_partial",
+     "health_coverage",
+     "computer_provided",
+     "informal_dresscode",
+     "vacation_over_legal",
+     "vacation_on_birthday",
+     "parental_leave_over_legal"
+    ],
+    "min_salary": null,
+    "max_salary": null,
+    "published_at": 1794582115,
+    "response_time_in_days": {
+     "min": null,
+     "max": null
+    },
+    "applications_count": 300,
+    "location_regions": {
+     "data": []
+    },
+    "location_tenants": {
+     "data": []
+    },
+    "location_cities": {
+     "data": []
+    },
+    "modality": {
+     "data": {
+      "id": 1,
+      "type": "modality"
+     }
+    },
+    "seniority": {
+     "data": {
+      "id": 2,
+      "type": "seniority"
+     }
+    },
+    "tags": {
+     "data": [
+      {
+       "id": 943,
+       "type": "tag"
+      },
+      {
+       "id": 907,
+       "type": "tag"
+      },
+      {
+       "id": 38512,
+       "type": "tag"
+      },
+      {
+       "id": 9368,
+       "type": "tag"
+      },
+      {
+       "id": 1404,
+       "type": "tag"
+      },
+      {
+       "id": 721,
+       "type": "tag"
+      },
+      {
+       "id": 4888,
+       "type": "tag"
+      },
+      {
+       "id": 39414,
+       "type": "tag"
+      },
+      {
+       "id": 36810,
+       "type": "tag"
+      }
+     ]
+    },
+    "company": {
+     "data": {
+      "id": "lemontech",
+      "type": "company",
+      "attributes": {
+       "name": "LemonTech"
+      }
+     }
+    }
+   },
+   "links": {
+    "public_url": "https://www.getonbrd.com/jobs/infosec-analyst-i-lemontech-remote"
+   }
+  },
+  {
+   "id": "database-administrator-junior-prontopaga-santiago",
+   "type": "job",
+   "attributes": {
+    "title": "Database Administrator (Junior)",
+    "description_headline": "Requerimientos del cargo",
+    "description": "<ul><li><strong>Formación Académica:</strong></li><li>Titulado de la carrera de Ingeniería en Informática o carrera afín.</li><li>Deseable formación complementaria en bases de datos, cloud o infraestructura.</li><li><strong>Experiencia:</strong></li><li>Entre 1 y 3 años de experiencia profesional formal en el área tecnológica.</li><li>Experiencia en desarrollo backend, ingeniería de software, infraestructura, DevOps o áreas relacionadas.</li><li><strong>Conocimientos y habilidades técnicas:</strong>Conocimientos de SQL y fundamentos de bases de datos relacionales.</li><li>Nociones de bases de datos no relacionales, documentales y otros modelos de almacenamiento.</li><li>Conocimientos o exper",
+    "projects": "<p>Buscamos un Profesional responsable de apoyar la administración, monitoreo y mantenimiento de las bases de datos corporativas, contribuyendo a asegurar su disponibilidad, seguridad, rendimiento y continuidad operativa en motores MariaDB, PostgreSQL y MongoDB. Su labor incluye el monitoreo del rendimiento, la ejecución y validación de respaldos, el apoyo en la optimización de consultas y estructuras de datos, y la administración de usuarios y permisos. Asimismo, participa en la atención de incidentes y solicitudes operativas, brinda soporte a los equipos internos y colabora en procesos de actualización, migración y mejora continua.</p>",
+    "functions_headline": "Funciones del cargo",
+    "functions": "<figure class=\"lexxy-content__table-wrapper\"><table><tbody><tr><td><ul><li><strong>Monitoreo y administración de bases de dato:</strong> Apoyar el monitoreo, administración y mantenimiento de bases de datos relacionales y no relacionales, identificando alertas, anomalías y posibles problemas de rendimiento.</li><li><strong>Respaldos y recuperación de información:</strong> Colaborar en la ejecución y validación de respaldos, pruebas de restauración y procedimientos de recuperación de información, siguiendo los estándares establecidos.</li><li><strong>Optimización y modelamiento de bases de datos:</strong> Apoyar la revisión y optimización de consultas SQL, índices y estructuras de datos, cont",
+    "benefits_headline": "Condiciones",
+    "benefits": "<p>Beneficios:</p><ul><li>Bono de cumpleaños</li><li>Seguro complementario de salud</li><li>Convenio colectivo oncológico</li><li>Ambiente de apoyo y crecimiento.</li></ul>",
+    "desirable_headline": "Opcionales",
+    "desirable": "<ul><li><strong>Deseables:</strong></li><li>Inglés técnico a nivel oral y escrito.</li><li>Experiencia en MariaDB, PostgreSQL, MongoDB y DynamoDB.</li></ul>",
+    "remote": false,
+    "remote_modality": "hybrid",
+    "remote_zone": null,
+    "countries": [
+     "Chile"
+    ],
+    "lang": "lang_not_specified",
+    "category_name": "SysAdmin / DevOps / QA",
+    "perks": [],
+    "min_salary": null,
+    "max_salary": null,
+    "published_at": 1794517830,
+    "response_time_in_days": {
+     "min": null,
+     "max": null
+    },
+    "applications_count": 152,
+    "location_regions": {
+     "data": []
+    },
+    "location_tenants": {
+     "data": []
+    },
+    "location_cities": {
+     "data": [
+      {
+       "id": 1,
+       "type": "location_city"
+      }
+     ]
+    },
+    "modality": {
+     "data": {
+      "id": 1,
+      "type": "modality"
+     }
+    },
+    "seniority": {
+     "data": {
+      "id": 2,
+      "type": "seniority"
+     }
+    },
+    "tags": {
+     "data": [
+      {
+       "id": 64,
+       "type": "tag"
+      },
+      {
+       "id": 85,
+       "type": "tag"
+      },
+      {
+       "id": 887,
+       "type": "tag"
+      },
+      {
+       "id": 4323,
+       "type": "tag"
+      },
+      {
+       "id": 36857,
+       "type": "tag"
+      },
+      {
+       "id": 4204,
+       "type": "tag"
+      }
+     ]
+    },
+    "company": {
+     "data": {
+      "id": "pronto-paga-latam",
+      "type": "company",
+      "attributes": {
+       "name": "ProntoPaga"
+      }
+     }
+    }
+   },
+   "links": {
+    "public_url": "https://www.getonbrd.com/jobs/database-administrator-junior-prontopaga-santiago"
+   }
+  },
+  {
+   "id": "junior-ad-ops-specialist-project-ad-ops-llc-remote",
+   "type": "job",
+   "attributes": {
+    "title": "Junior Ad Ops Specialist",
+    "description_headline": "Required Skills",
+    "description": "<p><strong>GCM360 Experience (2+ Years):</strong> Direct, hands-on experience trafficking campaigns, setting up placement structures, and assigning creatives in Google Campaign Manager 360.</p><p><strong>Fluent English:</strong> Exceptional written and verbal English for daily internal syncs and polished client-facing documentation.</p><p><strong>Attention to Detail:</strong> Hyper-vigilant precision. You naturally catch naming convention typos, mismatched dimensions, and missing landing pages before they go live.</p><p><strong>Remote Autonomy:</strong> Proven ability to manage your own queue and communicate delays proactively. Consistently follows through on assignments. You build trust acr",
+    "projects": "<p>We are a lean, agile \"Ad Ops as a Service\" team headquartered in Denver with tech roots in Buenos Aires. We do not believe in traditional ad ops processes. Instead, we rely on early, continuous delivery and proprietary automation so we can focus on high-value execution, not endless manual data entry.</p><p>As our Junior Ad Ops Specialist in LATAM, you will be our hands-on execution engine. Working directly with our leadership team, you will manage complex omni-channel campaigns, intake media assets, traffic campaigns flawlessly in GCM360, and lead QA for Floodlight conversion tags.</p><p>If you are an ambitious, meticulous operator looking for stability, a highly collaborative global team",
+    "functions_headline": "Key Responsibilities:",
+    "functions": "<p><strong>Campaign Intake &amp; Workflow Management:</strong> Manage the intake of ad ops requests via project management software, email, and chat, while coordinating daily deliverables, documenting agency requirements, and ensuring accurate timekeeping records.</p><p><strong>Data Ingestion &amp; Formatting:</strong> Prepare, format, and map agency media plans into our proprietary cloud ingestion workflows with zero data-entry errors, maintaining strict naming conventions and operational workflows.</p><p><strong>GCM360 Execution:</strong> Build, traffic, and manage a high volume of campaigns, placements, ads, and creatives in Google Campaign Manager 360 utilizing our proprietary toolset.</",
+    "benefits_headline": "Conditions & Benefits",
+    "benefits": "<p><strong>Contract Structure:</strong> Long-term, annual B2B independent contractor agreement managed transparently via Oyster HR.</p><p><strong>Pay As You Go Compensation:</strong> $10.00 USD per hour (~$20,800 USD annually)</p><p><strong>Additional Compensation:</strong> Monthly incentives based on performance.</p><p><strong>Currency:</strong> Paid compliantly in USD via Oyster on a Monthly schedule.</p><p><strong>Equipment:</strong> Contractor provides their own laptop computer.</p><p><strong>Connectivity:</strong> Contractor must have a stable and secure internet connection.</p><p><strong>Mutual Pilot:</strong> The first 30 days serve as a paid, mutual trial to ensure our working styles",
+    "desirable_headline": "Desirable Skills",
+    "desirable": "<p><strong>Google Tag Manager (GTM):</strong> Familiarity with setting up, debugging, and verifying container tags and Floodlight triggers.</p><p><strong>Media Planning and Buying Exposure:</strong> Interest, knowledge and/or certifications in Demands Side Platforms (DSP) platforms such as Google Display &amp; Video 360, The Trade Desk, Yahoo, Basis, Amazon, etc.</p><p><strong>Data Literacy:</strong> Strong comfort level manipulating structured datasets in Google Sheets/Excel (VLOOKUPs, pivot tables). Basic SQL (BigQuery) is a massive plus.</p>",
+    "remote": true,
+    "remote_modality": "remote_local",
+    "remote_zone": null,
+    "countries": [
+     "Remote"
+    ],
+    "lang": "en",
+    "category_name": "Digital Marketing",
+    "perks": [
+     "flexible_hours",
+     "informal_dresscode"
+    ],
+    "min_salary": 1500,
+    "max_salary": 2000,
+    "published_at": 1793764865,
+    "response_time_in_days": {
+     "min": null,
+     "max": null
+    },
+    "applications_count": 39,
+    "location_regions": {
+     "data": []
+    },
+    "location_tenants": {
+     "data": [
+      {
+       "id": 6,
+       "type": "location_tenant"
+      },
+      {
+       "id": 2,
+       "type": "location_tenant"
+      },
+      {
+       "id": 7,
+       "type": "location_tenant"
+      },
+      {
+       "id": 24,
+       "type": "location_tenant"
+      },
+      {
+       "id": 29,
+       "type": "location_tenant"
+      }
+     ]
+    },
+    "location_cities": {
+     "data": []
+    },
+    "modality": {
+     "data": {
+      "id": 1,
+      "type": "modality"
+     }
+    },
+    "seniority": {
+     "data": {
+      "id": 2,
+      "type": "seniority"
+     }
+    },
+    "tags": {
+     "data": [
+      {
+       "id": 732,
+       "type": "tag"
+      },
+      {
+       "id": 1448,
+       "type": "tag"
+      },
+      {
+       "id": 115,
+       "type": "tag"
+      },
+      {
+       "id": 1654,
+       "type": "tag"
+      },
+      {
+       "id": 64,
+       "type": "tag"
+      }
+     ]
+    },
+    "company": {
+     "data": {
+      "id": "project-ad-ops-llc",
+      "type": "company",
+      "attributes": {
+       "name": "Project Ad Ops, LLC."
+      }
+     }
+    }
+   },
+   "links": {
+    "public_url": "https://www.getonbrd.com/jobs/junior-ad-ops-specialist-project-ad-ops-llc-remote"
+   }
+  },
+  {
+   "id": "ejecutivo-de-onboarding-junior-agendapro-ciudad-de-mexico",
+   "type": "job",
+   "attributes": {
+    "title": "Ejecutivo de Onboarding Junior",
+    "description_headline": "Lo que buscamos en ti:",
+    "description": "<p>• Licenciatura concluida.<br>• Excelente comunicación verbal y escrita.<br>• Facilidad para explicar conceptos tecnológicos de manera simple.<br>• Organización para administrar múltiples clientes en simultáneo.<br>• Pensamiento analítico y orientación a resultados.<br>• Empatía y gusto por trabajar con emprendedores y dueños de negocio.<br>• Proactividad para identificar oportunidades de mejora y resolver problemas.<br>• Escucha activa. </p><p>Suma puntos: <br>• Experiencia en empresas SaaS.<br>• Experiencia en Customer Success, Implementación, Capacitación, Consultoría o Atención a Clientes.<br>• Conocimiento en CRM, sistemas de gestión o plataformas tecnológicas.<br>• Experiencia impart",
+    "projects": "<p>AgendaPro es la plataforma líder en LATAM para gestionar agenda, pagos y crecimiento en negocios de belleza, salud y bienestar, con más de 12 años creciendo y respaldo de Y Combinator y una Serie B de US$35M.</p><p>Estamos en plena transformación: pasamos de un SaaS horizontal a un modelo de verticales con agentes de IA, y estamos armando los equipos que van a llevar estas nuevas líneas de negocio al mercado. Es una etapa temprana donde todavía hay muchísimo por construir, probar y escalar — y queremos que seas parte desde el principio.</p>",
+    "functions_headline": "¿Qué harás en tu día a día?",
+    "functions": "<p>Buscamos un/a Onboarding Junior para sumarse a AgendaPro.</p><p>Buscamos gente con ganas de aprender, orientación a resultados y gusto real por acompañar a los clientes, que entienda que detrás de cada implementación hay un emprendedor confiando en nosotros.</p><p>📍 Modalidad presencial– oficina en Ciudad de México. </p><p>Tu desafío: Que cada cliente nuevo arranque con el pie derecho. Vas a llevar la implementación de punta a punta; configurar, capacitar y acompañar— para que el negocio empiece a operar rápido, adopte la plataforma y vea sus primeros resultados. Eres el consultor estratégico que convierte un cliente recién llegado en un cliente que ya no puede vivir sin AgendaPro.</p><p>",
+    "benefits_headline": "Lo que te ofrecemos:",
+    "benefits": "<div>En AgendaPro te cuidamos para que cuides a nuestros clientes:</div><ul><li><strong>Bienestar:</strong> Cobertura de salud y programas de bienestar mental/físico.</li><li><strong>Tiempo para ti:</strong> Vacaciones pagadas extra (al cumplir el año) y tu día de cumpleaños libre.</li><li><strong>Equipamiento:</strong> Te proporcionamos computadora y teléfono celular laboral.</li><li><strong>Desarrollo:</strong> Entrenamiento constante en consultoría de negocios y éxito del cliente.</li><li>Teletrabajo: 2 semanas al año para teletrabajar desde donde quieras</li></ul>",
+    "desirable_headline": "",
+    "desirable": "",
+    "remote": false,
+    "remote_modality": "no_remote",
+    "remote_zone": null,
+    "countries": [
+     "Mexico"
+    ],
+    "lang": "es",
+    "category_name": "Customer Support",
+    "perks": [],
+    "min_salary": null,
+    "max_salary": null,
+    "published_at": 1793732064,
+    "response_time_in_days": {
+     "min": null,
+     "max": null
+    },
+    "applications_count": 52,
+    "location_regions": {
+     "data": []
+    },
+    "location_tenants": {
+     "data": []
+    },
+    "location_cities": {
+     "data": [
+      {
+       "id": 200,
+       "type": "location_city"
+      }
+     ]
+    },
+    "modality": {
+     "data": {
+      "id": 1,
+      "type": "modality"
+     }
+    },
+    "seniority": {
+     "data": {
+      "id": 2,
+      "type": "seniority"
+     }
+    },
+    "tags": {
+     "data": [
+      {
+       "id": 438,
+       "type": "tag"
+      },
+      {
+       "id": 4198,
+       "type": "tag"
+      },
+      {
+       "id": 1490,
+       "type": "tag"
+      },
+      {
+       "id": 1890,
+       "type": "tag"
+      },
+      {
+       "id": 213,
+       "type": "tag"
+      },
+      {
+       "id": 4688,
+       "type": "tag"
+      },
+      {
+       "id": 39709,
+       "type": "tag"
+      }
+     ]
+    },
+    "company": {
+     "data": {
+      "id": "agendapro",
+      "type": "company",
+      "attributes": {
+       "name": "AgendaPro"
+      }
+     }
+    }
+   },
+   "links": {
+    "public_url": "https://www.getonbrd.com/jobs/ejecutivo-de-onboarding-junior-agendapro-ciudad-de-mexico"
+   }
+  },
+  {
+   "id": "head-of-seo-medical-accounts-tier3-media-remote",
+   "type": "job",
+   "attributes": {
+    "title": "Head of SEO — Medical Accounts",
+    "description_headline": "Requirements:",
+    "description": "<ul><li>Available 9:00 AM to 5:00 PM US Eastern, Monday to Friday. This schedule is fixed - our clients are American and you will be on their calls. Please check what that means where you live before applying.</li><li>Fluent in the stack: Screaming Frog or an equivalent crawler, Google Search Console, GA4, Ahrefs or Semrush, WordPress at agency scale, Google Business Profile, and structured data.</li><li>Managed at least two people for at least a year — actually managed them, including telling someone their work wasn't good enough and keeping them on the team afterwards</li><li>Have been the accountable person for a domain's organic performance, not a contributor to it</li><li>Can hold a 45-",
+    "projects": "<p>Tier3 Media is a US agency. We run SEO for medical spas, dermatology, plastic surgery and dental practices across the United States. Our clients are physician-owners: smart, busy, skeptical, and quick to tell whether the person on the call actually understands their market.</p><p>We are hiring one senior person to own our entire SEO department.</p>",
+    "functions_headline": "What you own",
+    "functions": "<ul><li>The technical standard across every account — crawl health, indexation, schema, Core Web Vitals, migrations, and the judgment calls above them</li><li>The client relationship. You run the recurring SEO calls yourself: set the agenda, present results, defend the plan when a client pushes back, and say no when what they want will hurt them</li><li>A team of junior SEO specialists. You assign their work, review it before it ships, and tell them directly when it isn't good enough</li><li>Coverage. Every account has a named backup with real context, so a week of your absence moves nothing</li></ul><p><strong>Your first 90 days</strong></p><p>You take over the recurring client calls. You p",
+    "benefits_headline": "What we offer",
+    "benefits": "<ul><li>USD compensation paid via Wise, on the 15th and last day of each month</li><li>A written 90-day review against a defined scorecard, with a raise attached to it</li><li>Full ownership of the SEO department - you set the standard rather than inherit someone else's</li><li>A junior team to build and lead, with real hiring input</li><li>A direct working relationship with the founder. No layers, no politics</li><li>Fixed hours and no on-call. When your day ends, it ends</li></ul>",
+    "desirable_headline": "Nice to have",
+    "desirable": "<p>Experience with medical, dental, legal or other regulated/YMYL accounts<br>• Google Business Profile and multi-location local SEO<br>• WordPress at agency scale<br>• Experience building a junior team from scratch, not just inheriting one<br>• Familiarity with AI-assisted SEO workflows and AI search visibility<br>• Bilingual Spanish/English — our team spans several countries</p>",
+    "remote": true,
+    "remote_modality": "remote_local",
+    "remote_zone": null,
+    "countries": [
+     "Remote"
+    ],
+    "lang": "en",
+    "category_name": "Digital Marketing",
+    "perks": [
+     "informal_dresscode"
+    ],
+    "min_salary": 3500,
+    "max_salary": 4500,
+    "published_at": 1787617362,
+    "response_time_in_days": {
+     "min": null,
+     "max": null
+    },
+    "applications_count": 46,
+    "location_regions": {
+     "data": [
+      {
+       "id": 9,
+       "type": "location_region"
+      },
+      {
+       "id": 6,
+       "type": "location_region"
+      }
+     ]
+    },
+    "location_tenants": {
+     "data": [
+      {
+       "id": 7,
+       "type": "location_tenant"
+      }
+     ]
+    },
+    "location_cities": {
+     "data": []
+    },
+    "modality": {
+     "data": {
+      "id": 1,
+      "type": "modality"
+     }
+    },
+    "seniority": {
+     "data": {
+      "id": 4,
+      "type": "seniority"
+     }
+    },
+    "tags": {
+     "data": [
+      {
+       "id": 1828,
+       "type": "tag"
+      },
+      {
+       "id": 85578,
+       "type": "tag"
+      },
+      {
+       "id": 37725,
+       "type": "tag"
+      },
+      {
+       "id": 1656,
+       "type": "tag"
+      },
+      {
+       "id": 6583,
+       "type": "tag"
+      },
+      {
+       "id": 37,
+       "type": "tag"
+      },
+      {
+       "id": 86095,
+       "type": "tag"
+      }
+     ]
+    },
+    "company": {
+     "data": {
+      "id": "tier3-media",
+      "type": "company",
+      "attributes": {
+       "name": "Tier3 Media"
+      }
+     }
+    }
+   },
+   "links": {
+    "public_url": "https://www.getonbrd.com/jobs/head-of-seo-medical-accounts-tier3-media-remote"
+   }
+  }
+ ],
+ "meta": {
+  "page": 1,
+  "per_page": 100,
+  "total_pages": 1
+ }
+}
