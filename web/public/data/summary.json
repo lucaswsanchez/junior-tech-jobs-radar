@@ -1,0 +1,178 @@
+{
+ "generated_at": "2026-11-17T22:04:11.746478Z",
+ "active_window_days": 7,
+ "totals": {
+  "active_jobs": 88,
+  "new_last_7_days": 14,
+  "pct_english": 84.1,
+  "pct_remote": 100.0,
+  "sources": 4,
+  "tracked_all_time": 88
+ },
+ "by_role": [
+  {
+   "name": "Development",
+   "count": 15
+  },
+  {
+   "name": "QA",
+   "count": 6
+  },
+  {
+   "name": "Data",
+   "count": 12
+  },
+  {
+   "name": "IT Support",
+   "count": 14
+  },
+  {
+   "name": "AI/Annotation",
+   "count": 14
+  },
+  {
+   "name": "Admin/VA",
+   "count": 19
+  },
+  {
+   "name": "Other",
+   "count": 8
+  }
+ ],
+ "by_language": [
+  {
+   "name": "en",
+   "count": 74
+  },
+  {
+   "name": "es",
+   "count": 14
+  }
+ ],
+ "by_location_scope": [
+  {
+   "name": "Argentina",
+   "count": 58
+  },
+  {
+   "name": "Worldwide",
+   "count": 30
+  }
+ ],
+ "by_seniority": [
+  {
+   "name": "Entry level",
+   "count": 84
+  },
+  {
+   "name": "Junior",
+   "count": 4
+  }
+ ],
+ "by_source": [
+  {
+   "name": "Himalayas",
+   "count": 82,
+   "url": "https://himalayas.app"
+  },
+  {
+   "name": "Get on Board",
+   "count": 4,
+   "url": "https://www.getonbrd.com"
+  },
+  {
+   "name": "Remotive",
+   "count": 1,
+   "url": "https://remotive.com"
+  },
+  {
+   "name": "RemoteOK",
+   "count": 1,
+   "url": "https://remoteok.com"
+  }
+ ],
+ "weekly": [
+  {
+   "week": "2026-08-31",
+   "count": 0
+  },
+  {
+   "week": "2026-09-07",
+   "count": 0
+  },
+  {
+   "week": "2026-09-14",
+   "count": 2
+  },
+  {
+   "week": "2026-09-21",
+   "count": 0
+  },
+  {
+   "week": "2026-09-28",
+   "count": 4
+  },
+  {
+   "week": "2026-10-05",
+   "count": 5
+  },
+  {
+   "week": "2026-10-12",
+   "count": 5
+  },
+  {
+   "week": "2026-10-19",
+   "count": 4
+  },
+  {
+   "week": "2026-10-26",
+   "count": 40
+  },
+  {
+   "week": "2026-11-02",
+   "count": 11
+  },
+  {
+   "week": "2026-11-09",
+   "count": 8
+  },
+  {
+   "week": "2026-11-16",
+   "count": 6
+  }
+ ],
+ "last_run": {
+  "started_at": "2026-11-17T22:03:30.033993Z",
+  "finished_at": "2026-11-17T22:04:11.741484Z",
+  "status": "success",
+  "fetched": 742,
+  "kept": 88,
+  "inserted": 88,
+  "updated": 0,
+  "rejected": {
+   "duplicate": 42,
+   "seniority": 504,
+   "not_tech": 76,
+   "location": 32
+  },
+  "source_stats": {
+   "Get on Board": {
+    "fetched": 181,
+    "kept": 4
+   },
+   "Himalayas": {
+    "fetched": 448,
+    "kept": 82
+   },
+   "Remotive": {
+    "fetched": 16,
+    "kept": 1
+   },
+   "RemoteOK": {
+    "fetched": 97,
+    "kept": 1
+   }
+  },
+  "errors": []
+ }
+}
