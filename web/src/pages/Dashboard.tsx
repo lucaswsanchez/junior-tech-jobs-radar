@@ -1,3 +1,4 @@
+import { JobsTable } from '../components/JobsTable'
 import { KpiCards } from '../components/KpiCards'
 import { RoleDistribution } from '../components/RoleDistribution'
 import { SkillsChart } from '../components/SkillsChart'
@@ -38,7 +39,7 @@ export function Dashboard() {
   if (state.status === 'loading') return <LoadingState />
   if (state.status === 'error') return <ErrorState message={state.message} onRetry={retry} />
 
-  const { summary, skills } = state.data
+  const { summary, skills, jobs } = state.data
   return (
     <div className="space-y-6">
       <Header data={state.data} />
@@ -55,6 +56,7 @@ export function Dashboard() {
         </div>
         <SourcesList sources={summary.by_source} total={summary.totals.active_jobs} />
       </div>
+      <JobsTable jobs={jobs.jobs} />
     </div>
   )
 }
