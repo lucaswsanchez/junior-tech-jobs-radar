@@ -1,5 +1,5 @@
 -- 02. Remote share by role type
--- Question: how many junior jobs open to Argentina can be done 100% remotely?
+-- Question: how many junior jobs open to Argentina can be done fully remotely?
 -- How: conditional aggregation with FILTER over active jobs; the ROLLUP row (role_type
 --      IS NULL) is the overall total.
 SELECT
