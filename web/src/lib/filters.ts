@@ -13,7 +13,10 @@ export const EMPTY_FILTERS: JobFilters = { query: '', role: ANY, language: ANY, 
 
 /** Lowercase and strip accents so "analista" matches "Análista" and vice versa. */
 export function normalize(text: string): string {
-  return text.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
+  return text
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
 }
 
 /** Every word of the query must appear in the title, company, location or skills. */
