@@ -164,7 +164,7 @@ export function RunFunnel({ data }: { data: Snapshot }) {
           />
         ))}
       </div>
-      <ol className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm sm:grid-cols-3 lg:grid-cols-6">
+      <ol className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm sm:grid-cols-3 lg:flex lg:justify-between">
         <li className="flex items-center gap-1.5 text-muted">
           <span className="size-2 rounded-[1px] border border-subtle" aria-hidden="true" />
           <span className="num text-fg">{run.fetched}</span> fetched
