@@ -32,6 +32,13 @@ export function relativeDays(iso: string | null | undefined, now: Date = new Dat
   return months === 1 ? '1 month ago' : `${months} months ago`
 }
 
+/** Compact age for tables: "0d", "3d", "2mo". */
+export function ageShort(iso: string | null | undefined, now: Date = new Date()): string {
+  if (!iso) return '—'
+  const days = Math.max(0, Math.floor((now.getTime() - new Date(iso).getTime()) / 86_400_000))
+  return days < 60 ? `${days}d` : `${Math.floor(days / 30)}mo`
+}
+
 export function formatWeek(isoDate: string): string {
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(
     new Date(`${isoDate}T00:00:00`),
@@ -40,13 +47,26 @@ export function formatWeek(isoDate: string): string {
 
 export const LANGUAGE_LABELS: Record<string, string> = { en: 'English', es: 'Spanish' }
 
-/** One color per role type, used consistently across charts and badges. */
+export const SCOPE_LABELS: Record<string, string> = {
+  Argentina: 'Names Argentina',
+  LATAM: 'LATAM-wide',
+  Worldwide: 'Worldwide',
+}
+
+/** Categorical palette tuned for the dark canvas; one color per role type everywhere. */
 export const ROLE_COLORS: Record<string, string> = {
-  Development: '#0d9488',
-  QA: '#6366f1',
-  Data: '#f59e0b',
-  'IT Support': '#0ea5e9',
-  'AI/Annotation': '#d946ef',
-  'Admin/VA': '#64748b',
-  Other: '#94a3b8',
+  Development: '#b7e36b',
+  QA: '#70b8d6',
+  Data: '#e3c46b',
+  'IT Support': '#6bd6b0',
+  'AI/Annotation': '#c49be0',
+  'Admin/VA': '#94a7b6',
+  Other: '#5d7180',
+}
+
+/** Eligibility uses a neutral ramp so it never reads as a role type color. */
+export const SCOPE_COLORS: Record<string, string> = {
+  Argentina: '#e8eef2',
+  LATAM: '#a3b1bc',
+  Worldwide: '#4f6b7d',
 }
