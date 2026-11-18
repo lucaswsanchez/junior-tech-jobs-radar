@@ -154,7 +154,7 @@ export function Methodology() {
               field.
             </li>
             <li>
-              <A href="https://remoteok.com">Remote OK</A>: remote jobs feed. As its API terms
+              <A href="https://remoteok.com">RemoteOK</A>: remote jobs feed. As its API terms
               require, every job links back to its original posting and names the source.
             </li>
           </ul>
