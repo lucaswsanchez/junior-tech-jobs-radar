@@ -232,7 +232,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
           type="button"
           onClick={() => setFilters(EMPTY_FILTERS)}
           disabled={!isFiltered}
-          className="rounded-md border border-line px-3 py-2 text-sm text-muted hover:border-subtle hover:text-fg disabled:cursor-not-allowed disabled:opacity-40"
+          className="rounded-md border border-line px-3 py-2 text-sm text-muted enabled:hover:border-subtle enabled:hover:text-fg disabled:cursor-not-allowed disabled:text-subtle"
         >
           Reset
         </button>
@@ -340,7 +340,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
                 type="button"
                 onClick={() => table.previousPage()}
                 disabled={!table.getCanPreviousPage()}
-                className="rounded-md border border-line px-3 py-1.5 text-muted hover:text-fg disabled:opacity-40"
+                className="rounded-md border border-line px-3 py-1.5 text-muted enabled:hover:text-fg disabled:cursor-not-allowed disabled:text-subtle"
               >
                 ← Previous
               </button>
@@ -351,7 +351,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
                 type="button"
                 onClick={() => table.nextPage()}
                 disabled={!table.getCanNextPage()}
-                className="rounded-md border border-line px-3 py-1.5 text-muted hover:text-fg disabled:opacity-40"
+                className="rounded-md border border-line px-3 py-1.5 text-muted enabled:hover:text-fg disabled:cursor-not-allowed disabled:text-subtle"
               >
                 Next →
               </button>

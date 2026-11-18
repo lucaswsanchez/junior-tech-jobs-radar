@@ -49,7 +49,7 @@ export function Figure({
 }) {
   return (
     <figure className={className}>
-      <figcaption className="mb-3 flex items-baseline justify-between gap-3">
+      <figcaption className="mb-3 flex min-h-8 flex-wrap items-center justify-between gap-x-3 gap-y-1">
         <span className="eyebrow">{label}</span>
         {note && <span className="text-xs text-subtle">{note}</span>}
       </figcaption>

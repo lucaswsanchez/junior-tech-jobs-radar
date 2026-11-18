@@ -66,7 +66,7 @@ export const ROLE_COLORS: Record<string, string> = {
 
 /** Eligibility uses a neutral ramp so it never reads as a role type color. */
 export const SCOPE_COLORS: Record<string, string> = {
-  Argentina: '#e8eef2',
+  Argentina: '#b4c3cd',
   LATAM: '#a3b1bc',
   Worldwide: '#4f6b7d',
 }

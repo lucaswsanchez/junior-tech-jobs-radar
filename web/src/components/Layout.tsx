@@ -7,7 +7,7 @@ const SOURCES = [
   { name: 'Get on Board', url: 'https://www.getonbrd.com' },
   { name: 'Himalayas', url: 'https://himalayas.app' },
   { name: 'Remotive', url: 'https://remotive.com' },
-  { name: 'Remote OK', url: 'https://remoteok.com' },
+  { name: 'RemoteOK', url: 'https://remoteok.com' },
 ]
 
 function Mark() {

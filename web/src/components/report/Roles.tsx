@@ -1,47 +1,82 @@
 import { useMemo } from 'react'
-import { crossTab, pct, ROLE_ORDER } from '../../lib/analytics'
-import { LANGUAGE_LABELS, ROLE_COLORS, SCOPE_COLORS, SCOPE_LABELS } from '../../lib/format'
+import { crossTab, pct } from '../../lib/analytics'
+import { ROLE_COLORS, SCOPE_COLORS, SCOPE_LABELS } from '../../lib/format'
 import type { Job, NamedCount } from '../../lib/types'
 import { Figure, Section } from '../Section'
 import { EmptyState } from '../States'
 
 const SCOPE_ORDER = ['Argentina', 'LATAM', 'Worldwide']
 
-function StackedBar({
-  parts,
-  total,
-}: {
-  parts: { key: string; count: number; color: string }[]
-  total: number
-}) {
+function Meter({ value, color }: { value: number; color: string }) {
   return (
-    <div
-      className="flex h-2.5 w-full overflow-hidden rounded-[1px] bg-surface-2"
-      aria-hidden="true"
-    >
-      {parts
-        .filter((p) => p.count > 0)
-        .map((p) => (
-          <div
-            key={p.key}
-            className="h-full border-r border-canvas transition-[width] duration-500 last:border-r-0"
-            style={{ width: `${(100 * p.count) / total}%`, background: p.color }}
-          />
-        ))}
-    </div>
+    <span className="relative block h-2 flex-1 rounded-[1px] bg-surface-2" aria-hidden="true">
+      <span
+        className="absolute inset-y-0 left-0 rounded-[1px] transition-[width] duration-500"
+        style={{ width: `${value}%`, background: color }}
+      />
+    </span>
   )
 }
 
-function RoleComposition({ roles }: { roles: NamedCount[] }) {
-  const total = roles.reduce((s, r) => s + r.count, 0)
-  const sorted = [...roles].sort((a, b) => b.count - a.count)
-  if (total === 0) return <EmptyState title="No active jobs" />
+function ScopeBar({
+  counts,
+  total,
+  scopes,
+}: {
+  counts: Record<string, number>
+  total: number
+  scopes: string[]
+}) {
   return (
-    <Figure label="Role type · share of active jobs" note={`n=${total}`}>
+    <span className="flex h-2 flex-1 overflow-hidden rounded-[1px] bg-surface-2" aria-hidden="true">
+      {scopes
+        .filter((s) => counts[s] > 0)
+        .map((s) => (
+          <span
+            key={s}
+            className="h-full border-r border-canvas last:border-r-0"
+            style={{ width: `${(100 * counts[s]) / total}%`, background: SCOPE_COLORS[s] }}
+          />
+        ))}
+    </span>
+  )
+}
+
+/** One table: role type × share × eligibility × language, rows in a single shared order. */
+function RoleTable({ roles, jobs }: { roles: NamedCount[]; jobs: Job[] }) {
+  const total = roles.reduce((s, r) => s + r.count, 0)
+  const sorted = useMemo(() => [...roles].sort((a, b) => b.count - a.count), [roles])
+  const scope = useMemo(
+    () => crossTab(jobs, 'role_type', 'location_scope', [], SCOPE_ORDER),
+    [jobs],
+  )
+  const lang = useMemo(() => crossTab(jobs, 'role_type', 'language', [], ['en', 'es']), [jobs])
+  if (total === 0) return <EmptyState title="No active jobs" />
+  const scopes = scope.cols
+  const maxShare = Math.max(...sorted.map((r) => pct(r.count, total)))
+
+  return (
+    <Figure
+      label="Role type × eligibility × language"
+      note={
+        <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          {scopes.map((s) => (
+            <span key={s} className="flex items-center gap-1.5">
+              <span
+                className="size-2 rounded-[1px]"
+                style={{ background: SCOPE_COLORS[s] }}
+                aria-hidden="true"
+              />
+              {SCOPE_LABELS[s] ?? s}
+            </span>
+          ))}
+        </span>
+      }
+    >
       <div
-        className="flex h-10 w-full overflow-hidden rounded-[2px]"
+        className="flex h-6 w-full overflow-hidden rounded-[2px]"
         role="img"
-        aria-label={sorted.map((r) => `${r.name} ${pct(r.count, total)}%`).join(', ')}
+        aria-label={`Role type composition: ${sorted.map((r) => `${r.name} ${pct(r.count, total)}%`).join(', ')}`}
       >
         {sorted.map((r) => (
           <div
@@ -52,102 +87,95 @@ function RoleComposition({ roles }: { roles: NamedCount[] }) {
           />
         ))}
       </div>
-      <table className="mt-5 w-full text-sm">
-        <thead className="sr-only">
-          <tr>
-            <th>Role type</th>
-            <th>Jobs</th>
-            <th>Share</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sorted.map((r) => (
-            <tr key={r.name} className="border-b border-line/60 last:border-0">
-              <td className="py-2">
-                <span className="flex items-center gap-2">
-                  <span
-                    className="size-2.5 rounded-[1px]"
-                    style={{ background: ROLE_COLORS[r.name] }}
-                    aria-hidden="true"
-                  />
-                  {r.name}
+
+      <div className="mt-5 overflow-x-auto">
+        <table className="w-full min-w-[40rem] table-fixed text-sm">
+          <caption className="sr-only">
+            Active jobs per role type, with the share that names Argentina and the share written in
+            English
+          </caption>
+          <thead>
+            <tr className="border-b border-line">
+              <th scope="col" className="eyebrow w-40 pb-2 text-left font-medium">
+                Role type
+              </th>
+              <th scope="col" className="eyebrow w-14 pb-2 text-right font-medium">
+                Jobs
+              </th>
+              <th scope="col" className="eyebrow pb-2 pl-6 text-left font-medium">
+                Share of all jobs
+              </th>
+              <th scope="col" className="eyebrow pb-2 pl-6 text-left font-medium">
+                Names Argentina
+              </th>
+              <th scope="col" className="eyebrow w-24 pb-2 text-right font-medium">
+                In English
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {sorted.map((r) => {
+              const share = pct(r.count, total)
+              const counts = scope.counts[r.name] ?? {}
+              const en = lang.counts[r.name]?.en ?? 0
+              return (
+                <tr key={r.name} className="h-10 border-b border-line/60">
+                  <td>
+                    <span className="flex items-center gap-2">
+                      <span
+                        className="size-2.5 shrink-0 rounded-[1px]"
+                        style={{ background: ROLE_COLORS[r.name] }}
+                        aria-hidden="true"
+                      />
+                      <span className="truncate">{r.name}</span>
+                    </span>
+                  </td>
+                  <td className="num text-right text-muted">{r.count}</td>
+                  <td className="pl-6">
+                    <span className="flex items-center gap-3">
+                      <Meter value={(100 * share) / maxShare} color={ROLE_COLORS[r.name]} />
+                      <span className="num w-12 text-right">{share}%</span>
+                    </span>
+                  </td>
+                  <td className="pl-6">
+                    <span className="flex items-center gap-3">
+                      <ScopeBar counts={counts} total={r.count} scopes={scopes} />
+                      <span className="num w-12 text-right">
+                        {pct(counts.Argentina ?? 0, r.count)}%
+                      </span>
+                    </span>
+                  </td>
+                  <td className="num text-right">{pct(en, r.count)}%</td>
+                </tr>
+              )
+            })}
+          </tbody>
+          <tfoot>
+            <tr className="h-10">
+              <th scope="row" className="text-left font-medium text-muted">
+                All roles
+              </th>
+              <td className="num text-right text-fg">{total}</td>
+              <td className="pl-6">
+                <span className="flex items-center gap-3">
+                  <span className="flex-1" />
+                  <span className="num w-12 text-right text-muted">100%</span>
                 </span>
               </td>
-              <td className="num py-2 text-right text-muted">{r.count}</td>
-              <td className="num w-16 py-2 text-right">{pct(r.count, total)}%</td>
+              <td className="pl-6">
+                <span className="flex items-center gap-3">
+                  <ScopeBar counts={scope.colTotals} total={scope.total} scopes={scopes} />
+                  <span className="num w-12 text-right text-fg">
+                    {pct(scope.colTotals.Argentina ?? 0, scope.total)}%
+                  </span>
+                </span>
+              </td>
+              <td className="num text-right text-fg">{pct(lang.colTotals.en ?? 0, lang.total)}%</td>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </Figure>
-  )
-}
-
-function Eligibility({ jobs }: { jobs: Job[] }) {
-  const byRole = useMemo(
-    () => crossTab(jobs, 'role_type', 'location_scope', ROLE_ORDER, SCOPE_ORDER),
-    [jobs],
-  )
-  const byLang = useMemo(
-    () => crossTab(jobs, 'language', 'location_scope', ['en', 'es'], SCOPE_ORDER),
-    [jobs],
-  )
-  if (jobs.length === 0) return <EmptyState title="No active jobs" />
-  const scopes = byRole.cols
-
-  const row = (label: string, counts: Record<string, number>, total: number, swatch?: string) => (
-    <li key={label} className="grid grid-cols-[8.5rem_1fr_2.5rem] items-center gap-3 text-sm">
-      <span className="flex items-center gap-2 truncate">
-        {swatch && (
-          <span
-            className="size-2 shrink-0 rounded-[1px]"
-            style={{ background: swatch }}
-            aria-hidden="true"
-          />
-        )}
-        {label}
-      </span>
-      <StackedBar
-        parts={scopes.map((s) => ({ key: s, count: counts[s], color: SCOPE_COLORS[s] }))}
-        total={total}
-      />
-      <span className="num text-right text-xs text-subtle">{total}</span>
-    </li>
-  )
-
-  return (
-    <Figure label="Where can you work from?" note="Jobs per eligibility scope">
-      <div className="flex flex-wrap gap-x-5 gap-y-2">
-        {scopes.map((s) => (
-          <div key={s}>
-            <p className="flex items-center gap-1.5 text-xs text-muted">
-              <span
-                className="size-2 rounded-[1px]"
-                style={{ background: SCOPE_COLORS[s] }}
-                aria-hidden="true"
-              />
-              {SCOPE_LABELS[s] ?? s}
-            </p>
-            <p className="num mt-0.5 text-2xl">
-              {byRole.colTotals[s]}
-              <span className="ml-1 text-sm text-subtle">
-                {pct(byRole.colTotals[s], byRole.total)}%
-              </span>
-            </p>
-          </div>
-        ))}
+          </tfoot>
+        </table>
       </div>
-      <p className="eyebrow mt-6 mb-2">By role type</p>
-      <ul className="space-y-2">
-        {byRole.rows.map((r) => row(r, byRole.counts[r], byRole.rowTotals[r], ROLE_COLORS[r]))}
-      </ul>
-      <p className="eyebrow mt-6 mb-2">By posting language</p>
-      <ul className="space-y-2">
-        {byLang.rows.map((l) =>
-          row(LANGUAGE_LABELS[l] ?? l, byLang.counts[l], byLang.rowTotals[l]),
-        )}
-      </ul>
-      <p className="mt-4 text-xs leading-relaxed text-subtle">
+      <p className="mt-3 text-xs leading-relaxed text-subtle">
         “Names Argentina” = the posting lists Argentina explicitly (alone or among other countries).
         “Worldwide” = remote with no country restriction. Every job in this report accepts
         candidates in Argentina by design.
@@ -162,16 +190,9 @@ export function RolesSection({ roles, jobs }: { roles: NamedCount[]; jobs: Job[]
       id="roles"
       index="02"
       title="What kind of roles, and who can apply"
-      dek="Role type is classified from the job title. Eligibility shows whether a posting names Argentina or is open worldwide."
+      dek="Role type is classified from the job title. For each role: its share of the market, how many postings name Argentina explicitly and how many are written in English."
     >
-      <div className="grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <RoleComposition roles={roles} />
-        </div>
-        <div className="lg:col-span-7">
-          <Eligibility jobs={jobs} />
-        </div>
-      </div>
+      <RoleTable roles={roles} jobs={jobs} />
     </Section>
   )
 }

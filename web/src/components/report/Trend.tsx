@@ -175,12 +175,12 @@ export function TrendSection({ summary }: { summary: Summary }) {
       title="Market activity and coverage"
       dek="When the jobs were published and which boards they come from."
     >
-      <div className="grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-8">
-          <WeeklyTrend weekly={summary.weekly} />
-        </div>
-        <div className="lg:col-span-4">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <div className="min-w-0 lg:col-span-5">
           <SourcesTable sources={summary.by_source} total={summary.totals.active_jobs} />
+        </div>
+        <div className="min-w-0 lg:col-span-7">
+          <WeeklyTrend weekly={summary.weekly} />
         </div>
       </div>
     </Section>
