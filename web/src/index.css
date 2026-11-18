@@ -1,28 +1,58 @@
 @import 'tailwindcss';
 
+/* Design system: "research terminal". Dark, editorial, data first. */
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-500: #14b8a6;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-ink: #0f172a;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-canvas: #101820;
+  --color-surface: #192630;
+  --color-surface-2: #213240;
+  --color-line: #2a3b48;
+  --color-fg: #e8eef2;
+  --color-muted: #a3b1bc;
+  --color-subtle: #7f909d;
+  --color-accent: #b7e36b;
+  --color-accent-2: #70b8d6;
+  --color-warn: #e8b86b;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  @apply bg-slate-50 font-sans text-slate-800 antialiased;
+  @apply bg-canvas font-sans text-fg antialiased;
+  font-feature-settings: 'cv11', 'ss01';
 }
 
 :focus-visible {
-  @apply outline-2 outline-offset-2 outline-brand-600;
+  @apply outline-2 outline-offset-2 outline-accent;
 }
 
-.card {
-  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+::selection {
+  @apply bg-accent text-canvas;
+}
+
+/* Small uppercase label used for kickers, axis titles and table headers. */
+.eyebrow {
+  @apply font-mono text-[11px] font-medium tracking-[0.12em] text-subtle uppercase;
+}
+
+.num {
+  @apply font-mono tabular-nums;
+}
+
+.field {
+  @apply rounded-md border border-line bg-canvas px-3 py-2 text-sm text-fg placeholder:text-subtle hover:border-subtle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
 }
