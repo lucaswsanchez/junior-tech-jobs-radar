@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-19T00:46:28.059705Z",
+ "generated_at": "2026-11-19T12:09:00.098308Z",
  "active_window_days": 7,
  "totals": {
   "active_jobs": 90,
-  "new_last_7_days": 17,
+  "new_last_7_days": 16,
   "pct_english": 84.4,
   "pct_remote": 100.0,
   "sources": 4,
@@ -142,27 +142,23 @@
   }
  ],
  "last_run": {
-  "started_at": "2026-11-19T00:45:46.577240Z",
-  "finished_at": "2026-11-19T00:46:27.973461Z",
-  "status": "success",
-  "fetched": 746,
-  "kept": 90,
-  "inserted": 90,
-  "updated": 0,
+  "started_at": "2026-11-19T12:08:18.855035Z",
+  "finished_at": "2026-11-19T12:09:00.052309Z",
+  "status": "partial",
+  "fetched": 302,
+  "kept": 6,
+  "inserted": 0,
+  "updated": 6,
   "rejected": {
-   "duplicate": 42,
-   "seniority": 513,
-   "not_tech": 70,
+   "duplicate": 3,
+   "seniority": 257,
+   "not_tech": 5,
    "location": 31
   },
   "source_stats": {
    "Get on Board": {
-    "fetched": 186,
+    "fetched": 189,
     "kept": 4
-   },
-   "Himalayas": {
-    "fetched": 447,
-    "kept": 84
    },
    "Remotive": {
     "fetched": 16,
@@ -173,6 +169,11 @@
     "kept": 1
    }
   },
-  "errors": []
+  "errors": [
+   {
+    "source": "Himalayas",
+    "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://himalayas.app/jobs/api/search?q=data+analyst&country=AR&page=4'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+   }
+  ]
  }
 }
