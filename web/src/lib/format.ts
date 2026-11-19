@@ -61,12 +61,12 @@ export const ROLE_COLORS: Record<string, string> = {
   'IT Support': '#6bd6b0',
   'AI/Annotation': '#c49be0',
   'Admin/VA': '#94a7b6',
-  Other: '#5d7180',
+  Other: '#a3998a',
 }
 
 /** Eligibility uses a neutral ramp so it never reads as a role type color. */
 export const SCOPE_COLORS: Record<string, string> = {
   Argentina: '#b4c3cd',
   LATAM: '#a3b1bc',
-  Worldwide: '#4f6b7d',
+  Worldwide: '#6f8ea3',
 }

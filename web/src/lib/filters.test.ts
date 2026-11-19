@@ -1,6 +1,16 @@
 import { describe, expect, it } from 'vitest'
 import { relativeDays } from './format'
-import { ANY, EMPTY_FILTERS, filterJobs, normalize, uniqueValues } from './filters'
+import {
+  ANY,
+  EMPTY_FILTERS,
+  filterJobs,
+  filtersFromParams,
+  filtersToParams,
+  isFiltered,
+  normalize,
+  uniqueSkills,
+  uniqueValues,
+} from './filters'
 import type { Job } from './types'
 
 function job(overrides: Partial<Job>): Job {
@@ -68,8 +78,28 @@ describe('filterJobs', () => {
       role: 'Development',
       language: 'en',
       source: ANY,
+      skill: ANY,
     })
     expect(result.map((j) => j.id)).toEqual(['1'])
+  })
+})
+
+describe('skill filter and URL state', () => {
+  it('filters by an exact skill', () => {
+    expect(filterJobs(jobs, { ...EMPTY_FILTERS, skill: 'Selenium' }).map((j) => j.id)).toEqual([
+      '2',
+    ])
+    expect(uniqueSkills(jobs)).toEqual(['Python', 'Selenium', 'SQL'])
+  })
+
+  it('round-trips filters through URL params and omits defaults', () => {
+    const filters = { ...EMPTY_FILTERS, query: 'qa jr', skill: 'SQL' }
+    const params = filtersToParams(filters)
+    expect(params.toString()).toBe('q=qa+jr&skill=SQL')
+    expect(filtersFromParams(params)).toEqual(filters)
+    expect(filtersToParams(EMPTY_FILTERS).toString()).toBe('')
+    expect(isFiltered(EMPTY_FILTERS)).toBe(false)
+    expect(isFiltered(filters)).toBe(true)
   })
 })
 

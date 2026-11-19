@@ -8,7 +8,16 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import { useId, useMemo, useState } from 'react'
-import { ANY, EMPTY_FILTERS, filterJobs, type JobFilters, uniqueValues } from '../../lib/filters'
+import { toCsv } from '../../lib/analytics'
+import {
+  ANY,
+  EMPTY_FILTERS,
+  filterJobs,
+  isFiltered as hasFilters,
+  type JobFilters,
+  uniqueSkills,
+  uniqueValues,
+} from '../../lib/filters'
 import { ageShort, formatDate, LANGUAGE_LABELS, ROLE_COLORS, SCOPE_LABELS } from '../../lib/format'
 import type { Job } from '../../lib/types'
 import { Section } from '../Section'
@@ -51,7 +60,7 @@ const columns: ColumnDef<Job>[] = [
             <span className="sr-only"> (original posting on {job.source})</span>
           </a>
           <p className="mt-0.5 text-xs text-subtle">
-            {job.company || 'Company not disclosed'} · {job.seniority}
+            {job.company || 'Company not disclosed'} · {job.seniority} · {job.location}
           </p>
         </div>
       )
@@ -121,9 +130,6 @@ const columns: ColumnDef<Job>[] = [
   },
 ]
 
-/** Hidden on small screens to keep the table readable; the info stays in other cells. */
-const HIDE_ON_MOBILE = new Set(['skills', 'scope', 'language'])
-
 function Select({
   label,
   value,
@@ -155,8 +161,66 @@ function Select({
   )
 }
 
-export function ExplorerSection({ jobs }: { jobs: Job[] }) {
-  const [filters, setFilters] = useState<JobFilters>(EMPTY_FILTERS)
+function downloadCsv(jobs: Job[]) {
+  const blob = new Blob([toCsv(jobs)], { type: 'text/csv;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `junior-tech-jobs-${new Date().toISOString().slice(0, 10)}.csv`
+  link.click()
+  URL.revokeObjectURL(url)
+}
+
+function JobCard({ job }: { job: Job }) {
+  const posted = postedAt(job)
+  return (
+    <li className="py-3.5">
+      <div className="flex items-center gap-2 text-xs text-muted">
+        <span
+          className="size-2 rounded-[1px]"
+          style={{ background: ROLE_COLORS[job.role_type] }}
+          aria-hidden="true"
+        />
+        {job.role_type}
+        <span className="text-subtle">·</span>
+        <time dateTime={posted} title={formatDate(posted)} className="num">
+          {ageShort(posted)}
+        </time>
+        <span className="text-subtle">·</span>
+        <span className="num uppercase">{job.language}</span>
+      </div>
+      <a href={job.url} className="mt-1 block font-medium text-fg hover:underline">
+        {job.title}
+        <span className="sr-only"> (original posting on {job.source})</span>
+      </a>
+      <p className="mt-0.5 text-xs text-subtle">
+        {job.company || 'Company not disclosed'} · {job.seniority}
+      </p>
+      <p className="mt-1 text-xs text-muted">
+        {SCOPE_LABELS[job.location_scope] ?? job.location_scope} · {job.location}
+      </p>
+      {job.skills.length > 0 && (
+        <p className="mt-1.5 font-mono text-[11px] leading-relaxed text-muted">
+          {job.skills.join(' · ')}
+        </p>
+      )}
+      <a href={job.url} className="mt-1.5 inline-block text-xs text-accent-2 hover:underline">
+        View on {job.source} ↗
+      </a>
+    </li>
+  )
+}
+
+export function ExplorerSection({
+  jobs,
+  filters,
+  onChange,
+}: {
+  jobs: Job[]
+  filters: JobFilters
+  onChange: (filters: JobFilters) => void
+}) {
+  const setFilters = onChange
   const [sorting, setSorting] = useState<SortingState>([{ id: 'posted', desc: true }])
   const searchId = useId()
 
@@ -165,6 +229,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
       roles: uniqueValues(jobs, 'role_type'),
       languages: uniqueValues(jobs, 'language'),
       sources: uniqueValues(jobs, 'source'),
+      skills: uniqueSkills(jobs),
     }),
     [jobs],
   )
@@ -182,8 +247,8 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
     autoResetPageIndex: true,
   })
 
-  const update = (patch: Partial<JobFilters>) => setFilters((f) => ({ ...f, ...patch }))
-  const isFiltered = JSON.stringify(filters) !== JSON.stringify(EMPTY_FILTERS)
+  const update = (patch: Partial<JobFilters>) => setFilters({ ...filters, ...patch })
+  const isFiltered = hasFilters(filters)
   const { pageIndex } = table.getState().pagination
   const from = filtered.length === 0 ? 0 : pageIndex * PAGE_SIZE + 1
   const to = Math.min((pageIndex + 1) * PAGE_SIZE, filtered.length)
@@ -193,9 +258,9 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
       id="explorer"
       index="04"
       title="Job explorer"
-      dek="Every active posting in this report. Search, filter and sort; each row links to the original posting on its source board."
+      dek="Every active posting in this report. Search, filter, sort and export; filters are kept in the page URL so a view can be shared. Each row links to the original posting on its source board."
     >
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_auto] lg:items-end">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] lg:items-end">
         <div className="flex flex-col gap-1">
           <label htmlFor={searchId} className="eyebrow">
             Search
@@ -228,6 +293,12 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
           options={options.sources}
           onChange={(source) => update({ source })}
         />
+        <Select
+          label="Skill"
+          value={filters.skill}
+          options={options.skills}
+          onChange={(skill) => update({ skill })}
+        />
         <button
           type="button"
           onClick={() => setFilters(EMPTY_FILTERS)}
@@ -238,16 +309,26 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
         </button>
       </div>
 
-      <p className="mt-4 text-sm text-muted" aria-live="polite">
-        <span className="num text-fg">{filtered.length}</span> of{' '}
-        <span className="num">{jobs.length}</span> jobs
-        {filtered.length > 0 && (
-          <span className="text-subtle">
-            {' '}
-            · showing {from}–{to}
-          </span>
-        )}
-      </p>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-muted" aria-live="polite">
+          <span className="num text-fg">{filtered.length}</span> of{' '}
+          <span className="num">{jobs.length}</span> jobs
+          {filtered.length > 0 && (
+            <span className="text-subtle">
+              {' '}
+              · showing {from}–{to}
+            </span>
+          )}
+        </p>
+        <button
+          type="button"
+          onClick={() => downloadCsv(table.getSortedRowModel().rows.map((r) => r.original))}
+          disabled={filtered.length === 0}
+          className="rounded-md border border-line px-3 py-1.5 text-xs text-muted enabled:hover:border-subtle enabled:hover:text-fg disabled:cursor-not-allowed disabled:text-subtle"
+        >
+          Export {filtered.length} rows as CSV
+        </button>
+      </div>
 
       {filtered.length === 0 ? (
         <EmptyState title="No jobs match these filters">
@@ -263,7 +344,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
         </EmptyState>
       ) : (
         <>
-          <div className="mt-3 overflow-x-auto border-t border-line">
+          <div className="mt-3 hidden overflow-x-auto border-t border-line lg:block">
             <table className="w-full text-sm">
               <caption className="sr-only">Active junior tech jobs, sortable by column</caption>
               <thead>
@@ -271,9 +352,6 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
                   <tr key={group.id} className="border-b border-line">
                     {group.headers.map((header) => {
                       const sorted = header.column.getIsSorted()
-                      const hide = HIDE_ON_MOBILE.has(header.column.id)
-                        ? 'hidden md:table-cell'
-                        : ''
                       return (
                         <th
                           key={header.id}
@@ -285,7 +363,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
                                 ? 'descending'
                                 : 'none'
                           }
-                          className={`py-2.5 pr-4 text-left font-medium ${hide}`}
+                          className="py-2.5 pr-4 text-left font-medium"
                         >
                           {header.column.getCanSort() ? (
                             <button
@@ -319,10 +397,7 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
                     className="border-b border-line/60 align-top transition-colors hover:bg-surface"
                   >
                     {row.getVisibleCells().map((cell) => (
-                      <td
-                        key={cell.id}
-                        className={`py-3 pr-4 ${HIDE_ON_MOBILE.has(cell.column.id) ? 'hidden md:table-cell' : ''}`}
-                      >
+                      <td key={cell.id} className="py-3 pr-4">
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </td>
                     ))}
@@ -331,6 +406,11 @@ export function ExplorerSection({ jobs }: { jobs: Job[] }) {
               </tbody>
             </table>
           </div>
+          <ul className="mt-3 divide-y divide-line/60 border-t border-line lg:hidden">
+            {table.getRowModel().rows.map((row) => (
+              <JobCard key={row.id} job={row.original} />
+            ))}
+          </ul>
           {table.getPageCount() > 1 && (
             <nav
               className="mt-4 flex items-center justify-between gap-3 text-sm"

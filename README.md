@@ -38,7 +38,9 @@ refreshed every day by GitHub Actions.
   - headline indicators and a pipeline funnel (746 postings fetched → 90 junior jobs kept on the first production run)
   - skills ranking and a skills × role heatmap
   - role × eligibility × language table, weekly trend and sources
-  - a sortable, filterable job explorer, where every row links to the original posting
+  - a sortable, filterable job explorer with CSV export and shareable filtered URLs, where every row links to the original posting
+  - drill-down from any skill, role or source to the postings behind it
+  - an explicit coverage note: one board supplies most postings, and the report says so
 - **Methodology page** that explains every rule and metric.
 
 ## Tech stack
@@ -48,7 +50,7 @@ refreshed every day by GitHub Actions.
 | Pipeline | Python 3.12, httpx, pydantic v2, SQLAlchemy 2 (Core), psycopg 3 |
 | Database | PostgreSQL (Supabase) · SQLite for local development |
 | Automation | GitHub Actions (CI on every PR, daily cron pipeline) |
-| Frontend | React 19, TypeScript, Vite, Tailwind CSS v4, Recharts, TanStack Table |
+| Frontend | React 19, TypeScript, Vite, Tailwind CSS v4, TanStack Table, custom HTML/SVG charts |
 | Hosting | Vercel (static) |
 | Quality | pytest + coverage, Vitest, Ruff, mypy (strict), oxlint, Prettier |
 | Local stack | Docker Compose (optional) |

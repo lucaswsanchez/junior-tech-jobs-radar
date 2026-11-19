@@ -1,5 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import { crossTab, pct, runFunnel, skillMatrix, weekExtremes } from './analytics'
+import {
+  crossTab,
+  peakNote,
+  pct,
+  roleGroups,
+  runFunnel,
+  skillMatrix,
+  skillRoleShare,
+  toCsv,
+  topSource,
+  weekExtremes,
+} from './analytics'
 import type { Job, LastRun } from './types'
 
 function job(overrides: Partial<Job>): Job {
@@ -94,5 +105,75 @@ describe('runFunnel', () => {
     expect(steps.map((s) => s.key)).toEqual(['kept', 'seniority', 'location'])
     expect(steps.reduce((sum, s) => sum + s.count, 0)).toBe(10)
     expect(runFunnel(null)).toEqual([])
+  })
+})
+
+describe('roleGroups', () => {
+  it('sums role types into core tech, AI data work and tech-adjacent groups', () => {
+    const groups = roleGroups([
+      { name: 'Development', count: 6 },
+      { name: 'QA', count: 2 },
+      { name: 'AI/Annotation', count: 4 },
+      { name: 'Admin/VA', count: 8 },
+    ])
+    expect(groups.map((g) => [g.key, g.count, g.pct])).toEqual([
+      ['core', 8, 40],
+      ['ai', 4, 20],
+      ['adjacent', 8, 40],
+    ])
+  })
+})
+
+describe('topSource', () => {
+  it('returns the board with the largest share', () => {
+    const sources = [
+      { name: 'Himalayas', count: 84, url: null },
+      { name: 'Remotive', count: 6, url: null },
+    ]
+    expect(topSource(sources, 90)).toEqual({ name: 'Himalayas', count: 84, pct: 93.3 })
+    expect(topSource([], 0)).toBeNull()
+  })
+})
+
+describe('peakNote', () => {
+  it('explains a peak week dominated by one publication day', () => {
+    const batch = Array.from({ length: 4 }, () =>
+      job({ published_at: '2026-11-01T10:00:00Z', source: 'Himalayas' }),
+    )
+    const other = job({ published_at: '2026-10-27T10:00:00Z', source: 'Remotive' })
+    const weekly = [
+      { week: '2026-10-19', count: 1 },
+      { week: '2026-10-26', count: 5 },
+    ]
+    expect(peakNote(weekly, [...batch, other])).toEqual({
+      week: '2026-10-26',
+      weekCount: 5,
+      day: '2026-11-01',
+      dayCount: 4,
+      sources: ['Himalayas'],
+    })
+  })
+
+  it('stays silent when the peak is spread across days', () => {
+    const spread = ['2026-10-26', '2026-10-27', '2026-10-28'].map((d) =>
+      job({ published_at: `${d}T10:00:00Z` }),
+    )
+    expect(peakNote([{ week: '2026-10-26', count: 3 }], spread)).toBeNull()
+  })
+})
+
+describe('skillRoleShare', () => {
+  it('measures how concentrated a skill is in one role type', () => {
+    expect(skillRoleShare(jobs, 'SQL', 'Data')).toEqual({ total: 2, inRole: 1, pct: 50 })
+  })
+})
+
+describe('toCsv', () => {
+  it('writes a header and escapes commas and quotes', () => {
+    const csv = toCsv([job({ title: 'Dev, "Jr"', skills: ['Python', 'SQL'] })])
+    const [header, row] = csv.split(String.fromCharCode(10))
+    expect(header.startsWith('title,company,role_type')).toBe(true)
+    expect(row.startsWith('"Dev, ""Jr""",Acme,Development')).toBe(true)
+    expect(row).toContain('Python; SQL')
   })
 })
