@@ -5,6 +5,19 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-11-19
+
+### Added
+
+- Jobicy connector (fifth source): remote jobs from its Argentina and LATAM region feeds.
+
+### Fixed
+
+- A rate-limited source (HTTP 429) is now retried after the `Retry-After` wait, or 5 s, 10 s
+  and 20 s without one, capped at 60 s. Himalayas requests are spaced 3 s apart.
+- A source that fails midway keeps the pages it already fetched instead of losing all of them.
+  On 2026-11-19 a 429 on the last page dropped every Himalayas posting from the run.
+
 ## [1.1.0] - 2026-11-19
 
 Changes from an independent UI/UX and data-visualization audit. No pipeline logic, metric or
@@ -60,5 +73,6 @@ First public release, live at https://junior-tech-jobs-radar.vercel.app.
 - **Tooling**: Dockerfile and Docker Compose stack (PostgreSQL + pipeline + dashboard),
   `.env.example`, `.editorconfig`.
 
+[1.2.0]: https://github.com/lucaswsanchez/junior-tech-jobs-radar/releases/tag/v1.2.0
 [1.1.0]: https://github.com/lucaswsanchez/junior-tech-jobs-radar/releases/tag/v1.1.0
 [1.0.0]: https://github.com/lucaswsanchez/junior-tech-jobs-radar/releases/tag/v1.0.0

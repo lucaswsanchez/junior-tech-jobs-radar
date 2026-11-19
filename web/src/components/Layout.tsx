@@ -8,6 +8,7 @@ const SOURCES = [
   { name: 'Himalayas', url: 'https://himalayas.app' },
   { name: 'Remotive', url: 'https://remotive.com' },
   { name: 'RemoteOK', url: 'https://remoteok.com' },
+  { name: 'Jobicy', url: 'https://jobicy.com' },
 ]
 
 function Mark() {

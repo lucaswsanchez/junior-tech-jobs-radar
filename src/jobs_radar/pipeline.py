@@ -14,7 +14,7 @@ from sqlalchemy import Engine
 
 from jobs_radar.config import Settings
 from jobs_radar.export import export_json
-from jobs_radar.extract import ALL_SOURCES, HttpClient, Source
+from jobs_radar.extract import ALL_SOURCES, HttpClient, PartialFetchError, Source
 from jobs_radar.load.repository import finish_run, start_run, upsert_jobs
 from jobs_radar.load.schema import create_schema, make_engine
 from jobs_radar.models import JobPosting
@@ -44,6 +44,11 @@ def extract_all(sources: Sequence[Source]) -> tuple[list[JobPosting], dict[str, 
     for source in sources:
         try:
             found = source.run()
+        except PartialFetchError as exc:
+            logger.exception("Source %s failed midway", source.name)
+            found = exc.postings
+            note = f"kept {len(found)} postings fetched before the failure; {exc}"
+            errors.append({"source": source.name, "error": note[:500]})
         except Exception as exc:
             logger.exception("Source %s failed", source.name)
             errors.append({"source": source.name, "error": f"{type(exc).__name__}: {exc}"[:500]})

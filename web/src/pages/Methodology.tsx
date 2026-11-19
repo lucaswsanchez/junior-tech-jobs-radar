@@ -191,7 +191,7 @@ export function Methodology() {
         <Block id="pipeline" n={1} title="Pipeline">
           <p>
             A Python ETL runs every day at 10:00 UTC on GitHub Actions. It <strong>extracts</strong>{' '}
-            postings from four public APIs, <strong>transforms</strong> them (filters and
+            postings from five public APIs, <strong>transforms</strong> them (filters and
             enrichment), <strong>loads</strong> them into PostgreSQL with an idempotent upsert and
             exports three static JSON files that this site reads. There is no backend server.
           </p>
@@ -216,11 +216,17 @@ export function Methodology() {
               <A href="https://remoteok.com">RemoteOK</A>: remote jobs feed. As its API terms
               require, every job links back to its original posting and names the source.
             </li>
+            <li>
+              <A href="https://jobicy.com">Jobicy</A>: remote jobs, queried with its Argentina and
+              LATAM region filters. As its API asks, jobs link to the original posting and the
+              source is credited here.
+            </li>
           </ul>
           <p>
             Only official public APIs are used (no HTML scraping). Requests carry an identifiable
-            User-Agent and wait between calls. If one API fails, the others still run and the
-            failure is recorded.
+            User-Agent and wait between calls; a rate-limited API (HTTP 429) is retried after the
+            wait it asks for. If one API fails, the others still run and the failure is recorded; if
+            it fails midway, the pages already fetched are kept.
           </p>
           <Coverage />
           <p>
@@ -374,7 +380,7 @@ export function Methodology() {
         <Block id="limitations" n={8} title="Limitations">
           <ul className="list-disc space-y-1.5 pl-5 marker:text-subtle">
             <li>
-              Four boards are covered, not the whole market. LinkedIn and local boards without a
+              Five boards are covered, not the whole market. LinkedIn and local boards without a
               public API are not included.
             </li>
             <li>

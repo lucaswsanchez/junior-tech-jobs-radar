@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jobs-radar"
-version = "1.0.0"
+version = "1.2.0"
 description = "ETL pipeline that tracks junior tech jobs open to candidates in Argentina and LATAM"
 readme = "README.md"
 license = "MIT"

@@ -11,14 +11,22 @@ from jobs_radar.extract import (
     GetOnBoardSource,
     HimalayasSource,
     HttpClient,
+    JobicySource,
+    PartialFetchError,
     RemoteOKSource,
     RemotiveSource,
 )
 from tests.conftest import load_fixture
 
 
-def make_client(handler: Any, retries: int = 2) -> HttpClient:
-    return HttpClient(delay_seconds=0, retries=retries, transport=httpx.MockTransport(handler))
+def make_client(handler: Any, retries: int = 2, sleeps: list[float] | None = None) -> HttpClient:
+    record = sleeps if sleeps is not None else []
+    return HttpClient(
+        delay_seconds=0,
+        retries=retries,
+        transport=httpx.MockTransport(handler),
+        sleep=record.append,
+    )
 
 
 def offline_client() -> HttpClient:
@@ -138,6 +146,50 @@ def test_remoteok_skips_legal_notice_and_fixes_encoding() -> None:
     assert all(j.url.startswith("https://remoteOK.com/") for j in jobs)
 
 
+# --- Jobicy -----------------------------------------------------------------------------
+
+
+def test_jobicy_parses_fixture() -> None:
+    jobs = JobicySource(offline_client()).parse_many(load_fixture("jobicy.json")["jobs"])
+    by_id = {j.source_id: j for j in jobs}
+
+    video = by_id["149160"]
+    assert video.source == "Jobicy"
+    assert video.location == "LATAM"
+    assert video.remote is True
+    assert video.seniority_hint == "Entry-Level, Junior"
+    assert video.tags == ["Data Science & Analytics"]
+    assert video.published_at == datetime(2026, 11, 16, 3, 5, 34, tzinfo=UTC)
+    assert "<" not in video.description
+    assert by_id["163303"].location == "Argentina"
+    assert by_id["163303"].seniority_hint == "Senior"
+    # "Any" is not a level: the title decides instead.
+    assert by_id["163256"].seniority_hint is None
+
+
+def test_jobicy_normalizes_region_lists_and_anywhere() -> None:
+    base = load_fixture("jobicy.json")["jobs"][0]
+    source = JobicySource(offline_client())
+    regions = source.parse({**base, "jobGeo": "EMEA,  LATAM,  Canada,  USA"})
+    anywhere = source.parse({**base, "jobGeo": "Anywhere"})
+
+    assert regions is not None and regions.location == "EMEA, LATAM, Canada, USA"
+    assert anywhere is not None and anywhere.location == "Worldwide"
+
+
+def test_jobicy_fetch_queries_each_region_and_collapses_repeats() -> None:
+    geos: list[str] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        geos.append(request.url.params["geo"])
+        assert request.url.params["count"] == "100"
+        return httpx.Response(200, json=load_fixture("jobicy.json"))
+
+    jobs = JobicySource(make_client(handler)).run()
+    assert geos == ["argentina", "latam"]
+    assert len(jobs) == 3
+
+
 # --- Shared behaviour -------------------------------------------------------------------
 
 
@@ -189,3 +241,64 @@ def test_http_client_does_not_retry_client_errors() -> None:
 def test_published_dates_are_parsed_from_epoch() -> None:
     jobs = RemoteOKSource(offline_client()).parse_many(load_fixture("remoteok.json")[1:])
     assert all(isinstance(j.published_at, datetime) for j in jobs)
+
+
+def test_http_client_honours_retry_after_on_rate_limit() -> None:
+    attempts = 0
+    sleeps: list[float] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal attempts
+        attempts += 1
+        if attempts == 1:
+            return httpx.Response(429, headers={"Retry-After": "7"})
+        return httpx.Response(200, json={"ok": True})
+
+    assert make_client(handler, sleeps=sleeps).get_json("https://example.test") == {"ok": True}
+    assert sleeps == [7.0]
+
+
+def test_http_client_backs_off_longer_on_rate_limit_without_header() -> None:
+    sleeps: list[float] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(429, headers={"Retry-After": "Wed, 21 Oct 2026 07:28:00 GMT"})
+
+    with pytest.raises(httpx.HTTPStatusError):
+        make_client(handler, retries=3, sleeps=sleeps).get_json("https://example.test")
+    assert sleeps == [5.0, 10.0, 20.0]
+
+
+def test_http_client_caps_retry_wait() -> None:
+    sleeps: list[float] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(429, headers={"Retry-After": "3600"})
+
+    with pytest.raises(httpx.HTTPStatusError):
+        make_client(handler, retries=1, sleeps=sleeps).get_json("https://example.test")
+    assert sleeps == [60.0]
+
+
+def test_source_keeps_pages_fetched_before_a_failure() -> None:
+    page_one = load_fixture("himalayas.json")
+    page_one = {**page_one, "jobs": page_one["jobs"] * 4}  # a full page: keep paging
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.params["page"] == "1":
+            return httpx.Response(200, json=page_one)
+        return httpx.Response(404)
+
+    source = HimalayasSource(make_client(handler), queries=["qa"])
+    with pytest.raises(PartialFetchError) as info:
+        source.run()
+    assert len(info.value.postings) == 3
+    assert isinstance(info.value.cause, httpx.HTTPStatusError)
+
+
+def test_source_with_nothing_fetched_raises_the_original_error() -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(404)
+
+    with pytest.raises(httpx.HTTPStatusError):
+        HimalayasSource(make_client(handler), queries=["qa"]).run()
