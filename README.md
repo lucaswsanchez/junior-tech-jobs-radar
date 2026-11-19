@@ -12,7 +12,7 @@
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 
-### [🔗 Live demo](#live-demo) · [📐 Methodology](#methodology) · [📋 Project board](https://github.com/users/lucaswsanchez/projects/1)
+### [🔗 Live demo](https://junior-tech-jobs-radar.vercel.app) · [📐 Methodology](https://junior-tech-jobs-radar.vercel.app/methodology) · [📋 Project board](https://github.com/users/lucaswsanchez/projects/1)
 
 <img src="docs/img/dashboard.png" alt="Junior Tech Jobs Radar dashboard: headline indicators, pipeline funnel, skills ranking and skills by role matrix" width="900" />
 
@@ -23,7 +23,7 @@
 The dashboard is a static site, so it loads instantly (no backend cold start). Its data is
 refreshed every day by GitHub Actions.
 
-> **Live URL:** added with the deployment. See issue [#12](https://github.com/lucaswsanchez/junior-tech-jobs-radar/issues/12).
+> **[junior-tech-jobs-radar.vercel.app](https://junior-tech-jobs-radar.vercel.app)**: open it, no sign-up needed. Data is stored in Supabase PostgreSQL and refreshed daily at 10:00 UTC.
 
 ## Features
 
@@ -35,7 +35,7 @@ refreshed every day by GitHub Actions.
 - **PostgreSQL warehouse** with an idempotent upsert and run metrics (`pipeline_runs`).
 - **8 analytical SQL queries**: top skills by role, remote share, weekly trend, skill co-occurrence with lift, and more.
 - **Market report dashboard**:
-  - headline indicators and a pipeline funnel (742 fetched → 88 kept on the first run)
+  - headline indicators and a pipeline funnel (746 postings fetched → 90 junior jobs kept on the first production run)
   - skills ranking and a skills × role heatmap
   - role × eligibility × language table, weekly trend and sources
   - a sortable, filterable job explorer, where every row links to the original posting
