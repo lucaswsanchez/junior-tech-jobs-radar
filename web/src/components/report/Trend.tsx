@@ -1,117 +1,115 @@
-import {
-  Bar,
-  BarChart,
-  Cell,
-  LabelList,
-  ReferenceLine,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts'
-import { pct, weekExtremes } from '../../lib/analytics'
-import { formatWeek } from '../../lib/format'
-import type { SourceCount, Summary } from '../../lib/types'
+import { useMemo } from 'react'
+import { pct, peakNote, topSource, weekExtremes } from '../../lib/analytics'
+import type { JobFilters } from '../../lib/filters'
+import { formatDate, formatWeek } from '../../lib/format'
+import type { Job, SourceCount, Summary } from '../../lib/types'
 import { Figure, Section } from '../Section'
 
-const AXIS = { fill: '#7f909d', fontSize: 11, fontFamily: 'IBM Plex Mono' }
-
-function TooltipBox({
-  active,
-  payload,
-}: {
-  active?: boolean
-  payload?: { payload: { week: string; count: number } }[]
-}) {
-  if (!active || !payload?.length) return null
-  const { week, count } = payload[0].payload
-  return (
-    <div className="rounded-md border border-line bg-canvas px-3 py-2 text-xs shadow-lg">
-      <p className="text-subtle">Week of {formatWeek(week)}</p>
-      <p className="num mt-0.5 text-fg">{count} new postings</p>
-    </div>
-  )
+function niceMax(value: number): number {
+  if (value <= 5) return 5
+  const step = value <= 20 ? 5 : 10
+  return Math.ceil(value / step) * step
 }
 
-function WeeklyTrend({ weekly }: { weekly: Summary['weekly'] }) {
-  const { peak, average } = weekExtremes(weekly)
+/** Dependency-free bar chart: HTML bars keep labels legible at every width. */
+function WeeklyBars({ weekly, jobs }: { weekly: Summary['weekly']; jobs: Job[] }) {
+  const { average, peak } = weekExtremes(weekly)
+  const note = useMemo(() => peakNote(weekly, jobs), [weekly, jobs])
+  const top = niceMax(Math.max(...weekly.map((w) => w.count), 1))
+  const ticks = [0, top / 2, top]
+
   return (
     <Figure
-      label="New postings per week · last 12 weeks"
+      label="Publication week of the jobs that are open today"
       note={
         <>
-          avg <span className="num text-muted">{average}</span>/week
-          {peak && (
-            <>
-              {' '}
-              · peak <span className="num text-accent">{peak.count}</span> (wk of{' '}
-              {formatWeek(peak.week)})
-            </>
-          )}
+          avg <span className="num text-muted">{average}</span> postings/week
         </>
       }
     >
-      <div
-        className="h-64"
-        role="img"
-        aria-label={`Weekly new postings. Peak of ${peak?.count ?? 0} in the week of ${peak ? formatWeek(peak.week) : 'n/a'}; average ${average} per week.`}
-      >
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={weekly} margin={{ top: 20, right: 4, left: -24, bottom: 0 }}>
-            <XAxis
-              dataKey="week"
-              tickFormatter={formatWeek}
-              tickLine={false}
-              axisLine={{ stroke: '#2a3b48' }}
-              tick={AXIS}
-              minTickGap={12}
-            />
-            <YAxis allowDecimals={false} tickLine={false} axisLine={false} tick={AXIS} />
-            <ReferenceLine y={average} stroke="#70b8d6" strokeDasharray="3 4" strokeOpacity={0.7} />
-            <Tooltip content={<TooltipBox />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
-            <Bar dataKey="count" radius={[2, 2, 0, 0]} maxBarSize={36} isAnimationActive={false}>
-              {weekly.map((w) => (
-                <Cell key={w.week} fill={peak && w.week === peak.week ? '#b7e36b' : '#3b5566'} />
-              ))}
-              <LabelList
-                dataKey="count"
-                position="top"
-                content={(props) => {
-                  const { x, y, width, value } = props as {
-                    x: number
-                    y: number
-                    width: number
-                    value: number
-                  }
-                  if (!peak || value !== peak.count) return null
-                  return (
-                    <text
-                      x={x + width / 2}
-                      y={y - 6}
-                      textAnchor="middle"
-                      fill="#b7e36b"
-                      fontSize={11}
-                      fontFamily="IBM Plex Mono"
-                    >
-                      {value}
-                    </text>
-                  )
-                }}
-              />
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+      <div className="relative mt-6 h-60 pl-8">
+        {/* y axis */}
+        <span className="eyebrow absolute top-0 left-0 -translate-y-5 !text-[10px]">Postings</span>
+        {ticks.map((t) => (
+          <div
+            key={t}
+            className="absolute right-0 left-8 border-t border-line/70"
+            style={{ bottom: `calc(1.375rem + (100% - 3rem) * ${t / top})` }}
+            aria-hidden="true"
+          >
+            <span className="num absolute -left-8 -translate-y-1/2 text-[11px] text-subtle">
+              {t}
+            </span>
+          </div>
+        ))}
+        <div
+          className="absolute right-0 left-8 border-t border-dashed border-accent-2/80"
+          style={{ bottom: `calc(1.375rem + (100% - 3rem) * ${average / top})` }}
+          aria-hidden="true"
+        />
+        <ol
+          className="relative flex h-full items-end gap-1 sm:gap-2"
+          aria-label="Postings per week"
+        >
+          {weekly.map((w, i) => {
+            const isPeak = !!peak && w.week === peak.week
+            return (
+              <li key={w.week} className="flex h-full min-w-0 flex-1 flex-col justify-end">
+                <span className="sr-only">
+                  Week of {formatWeek(w.week)}: {w.count} postings
+                </span>
+                <span
+                  className={`num mb-1 text-center text-[11px] ${isPeak ? 'text-fg' : 'text-subtle'}`}
+                  aria-hidden="true"
+                >
+                  {w.count > 0 ? w.count : ''}
+                </span>
+                <span
+                  className={`block rounded-t-[2px] ${isPeak && note ? 'bg-[repeating-linear-gradient(135deg,#4f7286_0_4px,#3b5566_4px_8px)]' : 'bg-[#4f7286]'}`}
+                  style={{ height: `calc((100% - 3rem) * ${w.count / top})` }}
+                  aria-hidden="true"
+                />
+                <span
+                  className={`num mt-1.5 h-4 truncate text-center text-[10px] text-subtle ${i % 3 === 0 ? '' : 'invisible sm:visible'}`}
+                  aria-hidden="true"
+                >
+                  {formatWeek(w.week)}
+                </span>
+              </li>
+            )
+          })}
+        </ol>
       </div>
-      <p className="mt-2 text-xs leading-relaxed text-subtle">
-        Bars group every job tracked by the pipeline by publication week. Dashed line: weekly
-        average. History grows with each daily run, so early weeks only include postings that were
-        still open on the first run.
-      </p>
+      <div className="mt-3 space-y-1.5 text-xs leading-relaxed text-subtle">
+        {note && (
+          <p className="border-l-2 border-warn pl-3 text-muted">
+            <span className="font-medium text-warn">Batch upload, not a demand spike.</span>{' '}
+            {note.dayCount} of the {note.weekCount} postings in the week of {formatWeek(note.week)}{' '}
+            carry the same publication date ({formatDate(`${note.day}T12:00:00Z`)}) and come from{' '}
+            {note.sources.join(', ')} (hatched bar).
+          </p>
+        )}
+        <p>
+          Each bar counts the jobs that are active in this report by the week they were published.
+          Older postings that already closed are not included, so the chart cannot show how the
+          market changes over time yet; that series starts with the daily pipeline history. Dashed
+          line: weekly average.
+        </p>
+      </div>
     </Figure>
   )
 }
 
-function SourcesTable({ sources, total }: { sources: SourceCount[]; total: number }) {
+function SourcesTable({
+  sources,
+  total,
+  onExplore,
+}: {
+  sources: SourceCount[]
+  total: number
+  onExplore: (patch: Partial<JobFilters>) => void
+}) {
+  const top = topSource(sources, total)
   return (
     <Figure label="Sources · active jobs">
       <table className="w-full text-sm">
@@ -123,7 +121,7 @@ function SourcesTable({ sources, total }: { sources: SourceCount[]; total: numbe
             <th scope="col" className="eyebrow pb-2 text-right font-medium">
               Jobs
             </th>
-            <th scope="col" className="eyebrow w-24 pb-2 pl-3 font-medium">
+            <th scope="col" className="eyebrow w-28 pb-2 pl-3 font-medium">
               Share
             </th>
           </tr>
@@ -133,15 +131,25 @@ function SourcesTable({ sources, total }: { sources: SourceCount[]; total: numbe
             const share = pct(s.count, total)
             return (
               <tr key={s.name} className="border-b border-line/60 last:border-0">
-                <td className="py-2.5">
-                  {s.url ? (
-                    <a href={s.url} className="hover:text-accent hover:underline">
-                      {s.name}
+                <th scope="row" className="py-2.5 text-left font-normal">
+                  <button
+                    type="button"
+                    onClick={() => onExplore({ source: s.name })}
+                    className="hover:text-accent hover:underline"
+                    aria-label={`Show jobs from ${s.name}`}
+                  >
+                    {s.name}
+                  </button>
+                  {s.url && (
+                    <a
+                      href={s.url}
+                      className="ml-2 text-xs text-accent-2 hover:underline"
+                      aria-label={`${s.name} website`}
+                    >
+                      ↗
                     </a>
-                  ) : (
-                    s.name
                   )}
-                </td>
+                </th>
                 <td className="num py-2.5 text-right text-muted">{s.count}</td>
                 <td className="py-2.5 pl-3">
                   <span className="flex items-center gap-2">
@@ -151,7 +159,7 @@ function SourcesTable({ sources, total }: { sources: SourceCount[]; total: numbe
                         style={{ width: `${Math.max(share, 1)}%` }}
                       />
                     </span>
-                    <span className="num w-10 text-right text-xs text-subtle">{share}%</span>
+                    <span className="num w-11 text-right text-xs text-subtle">{share}%</span>
                   </span>
                 </td>
               </tr>
@@ -162,25 +170,45 @@ function SourcesTable({ sources, total }: { sources: SourceCount[]; total: numbe
       <p className="mt-3 text-xs leading-relaxed text-subtle">
         Counts after filtering: boards publish many more postings, but most are not junior or not
         open to Argentina.
+        {top && top.pct >= 50 && (
+          <>
+            {' '}
+            <span className="text-muted">
+              {top.name} supplies {top.pct}% of the report, so shares mostly describe its listings.
+            </span>
+          </>
+        )}
       </p>
     </Figure>
   )
 }
 
-export function TrendSection({ summary }: { summary: Summary }) {
+export function TrendSection({
+  summary,
+  jobs,
+  onExplore,
+}: {
+  summary: Summary
+  jobs: Job[]
+  onExplore: (patch: Partial<JobFilters>) => void
+}) {
   return (
     <Section
       id="trend"
       index="03"
-      title="Market activity and coverage"
-      dek="When the jobs were published and which boards they come from."
+      title="Coverage and posting dates"
+      dek="Which boards the jobs come from, and when the jobs that are open today were published."
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="min-w-0 lg:col-span-5">
-          <SourcesTable sources={summary.by_source} total={summary.totals.active_jobs} />
+          <SourcesTable
+            sources={summary.by_source}
+            total={summary.totals.active_jobs}
+            onExplore={onExplore}
+          />
         </div>
         <div className="min-w-0 lg:col-span-7">
-          <WeeklyTrend weekly={summary.weekly} />
+          <WeeklyBars weekly={summary.weekly} jobs={jobs} />
         </div>
       </div>
     </Section>

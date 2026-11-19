@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { REPO_URL } from '../components/Layout'
-import { runFunnel } from '../lib/analytics'
+import { pct, ROLE_GROUPS, runFunnel } from '../lib/analytics'
 import { formatDateTime } from '../lib/format'
 import { useSnapshot } from '../lib/useSnapshot'
 
@@ -10,6 +10,8 @@ const SECTIONS = [
   { id: 'filters', title: 'Filters' },
   { id: 'classification', title: 'Classification & skills' },
   { id: 'metrics', title: 'Metrics' },
+  { id: 'dictionary', title: 'Data dictionary' },
+  { id: 'geography', title: 'Why no country comparison' },
   { id: 'limitations', title: 'Limitations' },
 ]
 
@@ -56,6 +58,63 @@ function A({ href, children }: { href: string; children: ReactNode }) {
     <a href={href} className="text-accent-2 underline-offset-2 hover:underline">
       {children}
     </a>
+  )
+}
+
+function Coverage() {
+  const { state } = useSnapshot()
+  if (state.status !== 'ready' || !state.data.summary.last_run) return null
+  const { summary } = state.data
+  const stats = summary.last_run?.source_stats ?? {}
+  const active = new Map(summary.by_source.map((s) => [s.name, s.count]))
+  const total = summary.totals.active_jobs
+  const names = [...new Set([...Object.keys(stats), ...active.keys()])].sort(
+    (a, b) => (active.get(b) ?? 0) - (active.get(a) ?? 0),
+  )
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full min-w-[32rem] text-sm">
+        <caption className="eyebrow mb-2 text-left">Coverage by source · last run</caption>
+        <thead>
+          <tr className="border-b border-line text-left">
+            <th scope="col" className="eyebrow pb-2 font-medium">
+              Board
+            </th>
+            <th scope="col" className="eyebrow pb-2 text-right font-medium">
+              Fetched
+            </th>
+            <th scope="col" className="eyebrow pb-2 text-right font-medium">
+              Kept
+            </th>
+            <th scope="col" className="eyebrow pb-2 text-right font-medium">
+              Keep rate
+            </th>
+            <th scope="col" className="eyebrow pb-2 text-right font-medium">
+              Share of report
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {names.map((name) => {
+            const fetched = stats[name]?.fetched ?? 0
+            const kept = stats[name]?.kept ?? 0
+            return (
+              <tr key={name} className="border-b border-line/60">
+                <th scope="row" className="py-2 text-left font-normal text-fg">
+                  {name}
+                </th>
+                <td className="num py-2 text-right">{fetched}</td>
+                <td className="num py-2 text-right">{kept}</td>
+                <td className="num py-2 text-right">{pct(kept, fetched)}%</td>
+                <td className="num py-2 text-right text-fg">
+                  {pct(active.get(name) ?? 0, total)}%
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
   )
 }
 
@@ -163,6 +222,13 @@ export function Methodology() {
             User-Agent and wait between calls. If one API fails, the others still run and the
             failure is recorded.
           </p>
+          <Coverage />
+          <p>
+            <strong>Source concentration.</strong> Most of the report comes from one board: it is
+            the only source queried directly for Argentina, and it labels seniority. Shares in the
+            report therefore describe that board&apos;s junior listings more than the whole market.
+            The dashboard states this next to the headline figures.
+          </p>
         </Block>
 
         <Block id="filters" n={3} title="Filters">
@@ -196,6 +262,18 @@ export function Methodology() {
             Data, IT Support, Development), then source tags as a fallback, otherwise Other.
           </p>
           <p>
+            <strong>Role groups</strong> are a reading aid on top of the role types and do not
+            change the classification:{' '}
+            {ROLE_GROUPS.map((g, i) => (
+              <span key={g.key}>
+                {i > 0 && '; '}
+                <em>{g.label}</em> = {g.roles.join(', ')}
+              </span>
+            ))}
+            . Admin/VA (customer support, virtual assistants) passes the tech filter because those
+            postings name tech tools, so it is reported as tech-adjacent rather than as core tech.
+          </p>
+          <p>
             <strong>Skills</strong> are detected with a dictionary of 100+ technologies and regular
             expressions with word boundaries, so <Code>Java</Code> does not match{' '}
             <Code>JavaScript</Code> and <Code>SQL</Code> does not match <Code>MySQL</Code>.
@@ -208,6 +286,11 @@ export function Methodology() {
             <strong>Language</strong> is English or Spanish, from the source field when available,
             otherwise by comparing the frequency of common English and Spanish words.
           </p>
+          <p>
+            Some dictionary entries describe a task rather than a technology (for example{' '}
+            <Code>Data Annotation</Code>). The skills matrix flags them and shows how concentrated
+            they are in a single role type.
+          </p>
         </Block>
 
         <Block id="metrics" n={5} title="Metrics">
@@ -216,20 +299,24 @@ export function Methodology() {
               ['Active jobs', 'Jobs seen by the pipeline in the last 7 days.'],
               ['New this week', 'Active jobs published in the last 7 days.'],
               [
-                'Skill share',
-                'Percentage of active jobs (in the selected role type) that mention the skill.',
+                'Skill share (All roles)',
+                'Percentage of all active jobs that mention the skill, with the job count in brackets.',
               ],
               [
                 'Skills × role matrix',
-                'For each role type with at least 3 jobs, the share of its jobs that mention each of the 12 most requested skills.',
+                'For each role type with at least 3 jobs, the share of its jobs that mention each of the 15 most requested skills.',
               ],
               [
                 'Eligibility',
                 '“Names Argentina” if the location lists Argentina; “Worldwide” if remote with no country restriction.',
               ],
               [
-                'Weekly trend',
-                'All tracked jobs grouped by publication week; the dashed line is the weekly average.',
+                'Posting dates',
+                'Active jobs grouped by publication week. It is a snapshot of open postings, not a time series: closed postings are not included. A week dominated by one publication day is flagged as a batch upload.',
+              ],
+              [
+                'Funnel',
+                'Raw postings fetched in the last run, minus each rejection reason, equals the jobs in the report.',
               ],
             ].map(([term, def]) => (
               <div key={term}>
@@ -240,15 +327,63 @@ export function Methodology() {
           </dl>
         </Block>
 
-        <Block id="limitations" n={6} title="Limitations">
+        <Block id="dictionary" n={6} title="Data dictionary">
+          <p>
+            Fields of <Code>jobs_latest.json</Code>, the file behind the explorer and its CSV
+            export. Aggregates live in <Code>summary.json</Code> and <Code>skills.json</Code>.
+          </p>
+          <dl className="grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
+            {[
+              ['title, company, url', 'As published by the source; url is the original posting.'],
+              ['source', 'Board the posting was fetched from.'],
+              ['role_type', 'Development, QA, Data, IT Support, AI/Annotation, Admin/VA or Other.'],
+              ['seniority', 'Entry level or Junior (everything else is filtered out).'],
+              ['language', 'en or es.'],
+              ['location', 'Location text from the source (normalized).'],
+              [
+                'location_scope',
+                'Argentina (named explicitly), LATAM or Worldwide (remote, no country restriction).',
+              ],
+              ['remote', 'True when the source marks the job as remote.'],
+              ['skills', 'Technologies detected by the skill dictionary.'],
+              [
+                'published_at / first_seen_at',
+                'Publication date at the source / first time the pipeline saw it (UTC).',
+              ],
+            ].map(([term, def]) => (
+              <div key={term}>
+                <dt className="font-mono text-xs text-fg">{term}</dt>
+                <dd className="mt-0.5">{def}</dd>
+              </div>
+            ))}
+          </dl>
+        </Block>
+
+        <Block id="geography" n={7} title="Why no country comparison">
+          <p>
+            The radar answers one question: which junior tech jobs can a candidate based in
+            Argentina apply to? Every posting in the report passes that filter, so a country
+            breakdown would compare a pre-filtered sample with itself. Sources also list eligible
+            countries inconsistently (a single country, a region or “+44 countries”), which does not
+            support a reliable per-country count. A map would therefore be decorative, so the report
+            shows eligibility (names Argentina vs worldwide) instead. Querying each LATAM country
+            separately is on the roadmap.
+          </p>
+        </Block>
+
+        <Block id="limitations" n={8} title="Limitations">
           <ul className="list-disc space-y-1.5 pl-5 marker:text-subtle">
             <li>
               Four boards are covered, not the whole market. LinkedIn and local boards without a
               public API are not included.
             </li>
             <li>
-              Every job in the report accepts candidates in Argentina by design, so the radar does
-              not compare countries.
+              One board supplies most postings, so results reflect its listings more than the whole
+              market.
+            </li>
+            <li>
+              The report is a snapshot of open postings; trends over time need the daily history
+              that the pipeline is now accumulating.
             </li>
             <li>
               Rules are keyword-based: some postings will be misclassified. They are covered by unit

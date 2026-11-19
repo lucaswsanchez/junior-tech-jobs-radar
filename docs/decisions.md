@@ -60,8 +60,9 @@ page should not look like a generic admin template.
 
 **Decision.** A "market report" layout with a dark palette, numbered sections, a 12-column grid
 with a shared 5/7 split, and IBM Plex Mono for figures. The skills ranking and matrix share the
-same table geometry, so their rows line up. Recharts is used only where a chart library
-helps (weekly trend), and TanStack Table powers the explorer (sorting, pagination).
+same table geometry, so their rows line up. Charts are small custom HTML/SVG components:
+after a design audit, Recharts was removed because it was used for a single bar chart and doubled
+the bundle (736 KB → 369 KB). TanStack Table powers the explorer (sorting, pagination).
 ECharts, MapLibre and a component kit were evaluated and left out: the data has no per-country
 breakdown, and the custom components stay small.
 

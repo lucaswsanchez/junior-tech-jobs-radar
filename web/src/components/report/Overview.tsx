@@ -1,23 +1,72 @@
-import { pct, runFunnel } from '../../lib/analytics'
+import { pct, roleGroups, runFunnel, topSource } from '../../lib/analytics'
 import { formatDate, formatDateTime, relativeDays } from '../../lib/format'
 import type { Snapshot } from '../../lib/types'
 
-function argentinaCount(data: Snapshot): number {
-  return data.summary.by_location_scope.find((s) => s.name === 'Argentina')?.count ?? 0
+function count(list: { name: string; count: number }[], name: string): number {
+  return list.find((s) => s.name === name)?.count ?? 0
+}
+
+/** Three-segment summary: core tech vs AI data work vs tech-adjacent roles. */
+function GroupBar({ data }: { data: Snapshot }) {
+  const groups = roleGroups(data.summary.by_role)
+  const total = groups.reduce((s, g) => s + g.count, 0)
+  if (total === 0) return null
+  return (
+    <figure className="mt-6" aria-labelledby="groups-caption">
+      <figcaption id="groups-caption" className="eyebrow mb-2">
+        What the {total} jobs are · by role group
+      </figcaption>
+      <div className="flex h-9 w-full overflow-hidden rounded-[2px]">
+        {groups
+          .filter((g) => g.count > 0)
+          .map((g) => (
+            <div
+              key={g.key}
+              className="flex h-full min-w-0 items-center border-r-2 border-canvas px-1.5 last:border-r-0 sm:px-2"
+              style={{ width: `${(100 * g.count) / total}%`, background: g.color }}
+            >
+              <span className="num truncate text-[11px] font-medium text-canvas sm:text-xs">
+                {g.pct}%
+              </span>
+            </div>
+          ))}
+      </div>
+      <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs text-muted">
+        {groups.map((g) => (
+          <li key={g.key} className="flex items-center gap-1.5">
+            <span
+              className="size-2 rounded-[1px]"
+              style={{ background: g.color }}
+              aria-hidden="true"
+            />
+            <span className="text-fg">{g.label}</span>
+            <span className="num">{g.count}</span>
+            <span className="text-subtle">({g.roles.join(', ')})</span>
+          </li>
+        ))}
+      </ul>
+    </figure>
+  )
 }
 
 /** Headline written from the data itself, plus a fact sheet of how the report is built. */
 export function Lede({ data }: { data: Snapshot }) {
   const { summary, skills } = data
   const updated = summary.last_run?.finished_at ?? summary.generated_at
-  const topSkill = skills.overall[0]
-  const topRole = [...summary.by_role].sort((a, b) => b.count - a.count)[0]
   const total = summary.totals.active_jobs
+  const topSkill = skills.overall[0]
+  const [core] = roleGroups(summary.by_role)
+  const top = topSource(summary.by_source, total)
   const facts = [
     { term: 'Edition', value: formatDate(updated) },
     { term: 'Refresh', value: 'Daily · 10:00 UTC' },
     { term: 'Active window', value: `Seen in the last ${summary.active_window_days} days` },
-    { term: 'Sources', value: summary.by_source.map((s) => s.name).join(', ') || '—' },
+    {
+      term: 'Source mix',
+      value: top
+        ? `${top.name} ${top.pct}% · ${summary.by_source.length - 1} other boards ${Math.round((100 - top.pct) * 10) / 10}%`
+        : '—',
+    },
     { term: 'Tracked since launch', value: `${summary.totals.tracked_all_time} jobs` },
   ]
 
@@ -30,51 +79,55 @@ export function Lede({ data }: { data: Snapshot }) {
             updated {relativeDays(updated)}
           </time>
         </p>
-        <h1 className="mt-3 text-3xl leading-[1.1] font-semibold tracking-tight text-balance sm:text-5xl">
+        <h1 className="mt-3 text-3xl leading-[1.1] font-semibold tracking-tight text-balance sm:text-[2.75rem]">
           <span className="num text-accent">{total}</span> junior tech roles are open to candidates
           based in Argentina
         </h1>
         {total > 0 && (
-          <p className="mt-4 text-lg leading-relaxed text-pretty text-muted">
-            {summary.totals.pct_english}% of them are written in English.
+          <p className="mt-3 text-lg leading-relaxed text-pretty text-muted">
+            <strong className="font-medium text-fg">{core.pct}%</strong> are core tech roles
+            (development, QA, data, IT support). {summary.totals.pct_english}% are written in
+            English
             {topSkill && (
               <>
-                {' '}
-                <strong className="font-medium text-fg">{topSkill.name}</strong> is the most
-                requested skill, mentioned in {topSkill.pct}% of postings
-              </>
-            )}
-            {topRole && (
-              <>
-                , and <strong className="font-medium text-fg">{topRole.name}</strong> is the largest
-                role type with {pct(topRole.count, total)}% of openings
+                , and <strong className="font-medium text-fg">{topSkill.name}</strong> is the most
+                requested skill ({topSkill.pct}% of postings)
               </>
             )}
             .
           </p>
         )}
+        <GroupBar data={data} />
       </header>
       <aside
         aria-label="About this report"
         className="min-w-0 lg:col-span-4 lg:border-l lg:border-line lg:pl-8"
       >
         <p className="eyebrow">About this report</p>
-        <dl className="mt-3 divide-y divide-line/60 text-sm">
+        <dl className="mt-2 divide-y divide-line/60 text-sm">
           {facts.map((f) => (
-            <div key={f.term} className="grid grid-cols-[9rem_1fr] gap-3 py-2">
+            <div key={f.term} className="grid grid-cols-[8.5rem_1fr] gap-3 py-1.5">
               <dt className="text-subtle">{f.term}</dt>
               <dd className="text-fg">{f.value}</dd>
             </div>
           ))}
         </dl>
+        {top && top.pct >= 50 && (
+          <p className="mt-3 border-l-2 border-warn pl-3 text-xs leading-relaxed text-muted">
+            <span className="font-medium text-warn">Coverage note.</span> {top.pct}% of the jobs
+            come from {top.name}. Read every share in this report as mostly reflecting that
+            board&apos;s junior listings.
+          </p>
+        )}
       </aside>
     </div>
   )
 }
 
 export function Indicators({ data }: { data: Snapshot }) {
-  const { totals, active_window_days } = data.summary
-  const ar = argentinaCount(data)
+  const { totals, active_window_days, by_location_scope, by_source } = data.summary
+  const ar = count(by_location_scope, 'Argentina')
+  const top = topSource(by_source, totals.active_jobs)
   const items = [
     {
       label: 'Active jobs',
@@ -99,17 +152,17 @@ export function Indicators({ data }: { data: Snapshot }) {
       label: 'Sources',
       value: totals.sources,
       unit: '',
-      note: 'public job boards',
+      note: top ? `${top.pct}% from ${top.name}` : 'public job boards',
     },
   ]
   return (
-    <dl className="grid grid-cols-2 border-y border-line sm:grid-cols-5">
+    <dl className="grid grid-cols-2 border-y border-line lg:grid-cols-5">
       {items.map((item, i) => (
         <div
           key={item.label}
-          className={`min-w-0 py-5 ${i === 0 ? 'sm:pr-4' : 'sm:border-l sm:border-line sm:px-4'} ${
+          className={`min-w-0 py-5 ${i === 0 ? 'lg:pr-4' : 'lg:border-l lg:border-line lg:px-4'} ${i % 2 === 1 ? 'pl-4 lg:pl-4' : ''} ${
             i === items.length - 1
-              ? 'col-span-2 border-t border-line sm:col-span-1 sm:border-t-0'
+              ? 'col-span-2 border-t border-line lg:col-span-1 lg:border-t-0'
               : ''
           }`}
         >
@@ -125,15 +178,28 @@ export function Indicators({ data }: { data: Snapshot }) {
   )
 }
 
-const FUNNEL_COLORS: Record<string, string> = {
-  kept: 'var(--color-accent)',
-  seniority: '#3b4f5e',
-  not_tech: '#33505a',
-  location: '#2e4452',
-  duplicate: '#283a46',
+/** Dimensions that barely vary are stated as findings instead of being charted. */
+export function Findings({ data }: { data: Snapshot }) {
+  const { totals, by_seniority } = data.summary
+  const entry = count(by_seniority, 'Entry level')
+  const junior = count(by_seniority, 'Junior')
+  const total = totals.active_jobs
+  if (total === 0) return null
+  return (
+    <p className="text-sm text-muted">
+      <span className="eyebrow mr-2">Also in the data</span>
+      Seniority: <span className="num text-fg">{pct(entry, total)}%</span> entry level ({entry}) and{' '}
+      <span className="num text-fg">{pct(junior, total)}%</span> junior ({junior}) · Work mode:{' '}
+      <span className="num text-fg">{totals.pct_remote}%</span> remote. Both are shown as figures,
+      not charts, because they barely vary.
+    </p>
+  )
 }
 
-/** How the last run went from raw postings to the jobs in this report. */
+const KEPT = 'var(--color-accent)'
+const REJECTED = '#3a4d5b'
+
+/** How the last run went from raw postings to the jobs in this report, labelled in place. */
 export function RunFunnel({ data }: { data: Snapshot }) {
   const run = data.summary.last_run
   const steps = runFunnel(run)
@@ -144,7 +210,9 @@ export function RunFunnel({ data }: { data: Snapshot }) {
         id="funnel-caption"
         className="flex flex-wrap items-baseline justify-between gap-2"
       >
-        <span className="eyebrow">Last pipeline run · from raw postings to this report</span>
+        <span className="eyebrow">
+          Last pipeline run · {run.fetched} raw postings → {run.kept} in this report
+        </span>
         <span className="text-xs text-subtle">
           {formatDateTime(run.finished_at)} · status{' '}
           <span className={run.status === 'success' ? 'text-accent' : 'text-warn'}>
@@ -152,42 +220,67 @@ export function RunFunnel({ data }: { data: Snapshot }) {
           </span>
         </span>
       </figcaption>
-      <div className="mt-3 flex h-3 w-full overflow-hidden rounded-sm" aria-hidden="true">
-        {steps.map((s) => (
-          <div
-            key={s.key}
-            style={{
-              width: `${(100 * s.count) / run.fetched}%`,
-              background: FUNNEL_COLORS[s.key] ?? '#2a3b48',
-            }}
-            className="h-full border-r border-canvas last:border-r-0"
-          />
-        ))}
-      </div>
-      <ol className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm sm:grid-cols-3 lg:flex lg:justify-between">
-        <li className="flex items-center gap-1.5 text-muted">
-          <span className="size-2 rounded-[1px] border border-subtle" aria-hidden="true" />
-          <span className="num text-fg">{run.fetched}</span> fetched
-        </li>
-        {steps.map((s) => (
-          <li key={s.key} className="flex items-center gap-1.5 whitespace-nowrap text-muted">
-            <span
-              className="size-2 shrink-0 rounded-[1px]"
-              style={{ background: FUNNEL_COLORS[s.key] }}
-              aria-hidden="true"
-            />
-            {s.key === 'kept' ? (
-              <>
-                <span className="num font-medium text-accent">{s.count}</span> kept
-              </>
-            ) : (
-              <>
-                <span className="num text-fg">−{s.count}</span> {s.label}
-              </>
-            )}
-          </li>
-        ))}
+      <ol
+        className="mt-3 flex h-12 w-full overflow-hidden rounded-[2px]"
+        aria-label="Pipeline funnel"
+      >
+        {steps.map((s) => {
+          const share = (100 * s.count) / run.fetched
+          const kept = s.key === 'kept'
+          return (
+            <li
+              key={s.key}
+              className="flex h-full min-w-0 flex-col justify-center border-r-2 border-canvas px-2 last:border-r-0"
+              style={{ width: `${share}%`, background: kept ? KEPT : REJECTED }}
+              title={`${kept ? 'Kept' : `Removed: ${s.label}`}: ${s.count}`}
+            >
+              {share >= 9 && (
+                <>
+                  <span
+                    className={`num truncate text-sm font-medium ${kept ? 'text-canvas' : 'text-fg'}`}
+                  >
+                    {kept ? s.count : `−${s.count}`}
+                  </span>
+                  <span
+                    className={`truncate text-[11px] ${kept ? 'text-canvas/80' : 'text-muted'}`}
+                  >
+                    {kept ? 'kept' : s.label}
+                  </span>
+                </>
+              )}
+            </li>
+          )
+        })}
       </ol>
+      <p className="mt-2 text-xs text-subtle">
+        Removed:{' '}
+        {steps
+          .filter((s) => s.key !== 'kept')
+          .map((s) => `${s.count} ${s.label}`)
+          .join(' · ')}
+        . Segments are in order of size; only the kept share is highlighted.
+      </p>
     </figure>
+  )
+}
+
+const SECTIONS = [
+  { id: 'skills', label: 'Skills' },
+  { id: 'roles', label: 'Roles' },
+  { id: 'trend', label: 'Activity' },
+  { id: 'explorer', label: 'Explorer' },
+]
+
+/** In-page index: the report is long, especially on mobile. */
+export function SectionNav() {
+  return (
+    <nav aria-label="Report sections" className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+      {SECTIONS.map((s, i) => (
+        <a key={s.id} href={`#${s.id}`} className="text-muted hover:text-fg">
+          <span className="num mr-1.5 text-accent">{String(i + 1).padStart(2, '0')}</span>
+          {s.label}
+        </a>
+      ))}
+    </nav>
   )
 }

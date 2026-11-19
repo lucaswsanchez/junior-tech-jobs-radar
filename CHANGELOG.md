@@ -5,6 +5,32 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-11-19
+
+Changes from an independent UI/UX and data-visualization audit. No pipeline logic, metric or
+classification was changed.
+
+### Added
+
+- Coverage note and "Source mix" fact: 93% of the report comes from one board, now stated next to
+  the headline figures and in a per-source coverage table on the Methodology page.
+- Role groups (core tech, AI data work, tech-adjacent) as a reading aid, with a summary bar above
+  the fold.
+- Drill-down: selecting a skill, role or source opens the job explorer filtered to it.
+- Explorer filters stored in the URL (shareable views), a skill filter, CSV export of the filtered
+  rows, the original location per job, and a card layout below 1024 px.
+- Methodology: data dictionary and a "Why no country comparison" section.
+
+### Changed
+
+- The posting-date chart is described as a snapshot of open postings and flags a batch upload
+  (33 of 40 postings in one week share a single publication day) instead of highlighting it as a peak.
+- The skills ranking is merged into the skills × role matrix as its first column (15 skills).
+- The pipeline funnel is labelled in place; seniority and work mode are reported as figures.
+- Roles section: grouped table on desktop, cards on mobile.
+- Recharts replaced by a dependency-free chart: bundle 736 KB → 369 KB (216 → 112 KB gzipped).
+- Higher contrast for the "Other" role color and the "Worldwide" segment.
+
 ## [1.0.0] - 2026-11-18
 
 First public release, live at https://junior-tech-jobs-radar.vercel.app.
@@ -34,4 +60,5 @@ First public release, live at https://junior-tech-jobs-radar.vercel.app.
 - **Tooling**: Dockerfile and Docker Compose stack (PostgreSQL + pipeline + dashboard),
   `.env.example`, `.editorconfig`.
 
+[1.1.0]: https://github.com/lucaswsanchez/junior-tech-jobs-radar/releases/tag/v1.1.0
 [1.0.0]: https://github.com/lucaswsanchez/junior-tech-jobs-radar/releases/tag/v1.0.0
