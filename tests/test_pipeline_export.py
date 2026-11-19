@@ -11,7 +11,7 @@ from sqlalchemy import Engine, select
 from jobs_radar.cli import main
 from jobs_radar.config import Settings
 from jobs_radar.export import build_snapshot, export_json
-from jobs_radar.extract.base import HttpClient, RawItem, Source
+from jobs_radar.extract.base import HttpClient, PartialFetchError, RawItem, Source
 from jobs_radar.load.schema import create_schema, make_engine, pipeline_runs
 from jobs_radar.models import JobPosting
 from jobs_radar.pipeline import run_pipeline
@@ -43,6 +43,13 @@ class BrokenSource(FakeSource):
 
     def run(self) -> list[JobPosting]:
         raise ConnectionError("API is down")
+
+
+class HalfwaySource(FakeSource):
+    name = "Himalayas"
+
+    def run(self) -> list[JobPosting]:
+        raise PartialFetchError(self.postings, ConnectionError("429 on page 4"))
 
 
 def sample_postings() -> list[JobPosting]:
@@ -88,6 +95,19 @@ def test_run_pipeline_isolates_failing_sources_and_records_metrics(
         "skills.json",
         "summary.json",
     ]
+
+
+def test_partial_source_keeps_what_it_fetched(engine: Engine) -> None:
+    postings = [p.model_copy(update={"source": "Himalayas"}) for p in sample_postings()]
+
+    report = run_pipeline(Settings(), sources=[HalfwaySource(postings)], engine=engine)
+
+    assert report.status == "partial"
+    assert report.source_stats == {"Himalayas": {"fetched": 3, "kept": 2}}
+    assert report.inserted == 2
+    assert report.errors[0]["source"] == "Himalayas"
+    assert report.errors[0]["error"].startswith("kept 3 postings fetched before the failure")
+    assert "429 on page 4" in report.errors[0]["error"]
 
 
 def test_second_run_updates_instead_of_inserting(engine: Engine) -> None:

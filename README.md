@@ -27,7 +27,7 @@ refreshed every day by GitHub Actions.
 
 ## Features
 
-- **Daily ETL** from four public job APIs: Get on Board, Himalayas, Remotive and RemoteOK.
+- **Daily ETL** from five public job APIs: Get on Board, Himalayas, Remotive, RemoteOK and Jobicy.
 - **Junior-only, Argentina-eligible filtering.** It uses the seniority field from the source, title rules and a
   "3+ years of experience" guard. It keeps jobs that name Argentina or are open to LATAM or worldwide.
 - **Enrichment**: role type (Development, QA, Data, IT Support, AI/Annotation, Admin/VA, Other),
@@ -64,6 +64,7 @@ flowchart LR
         HIM[Himalayas]
         REM[Remotive]
         ROK[RemoteOK]
+        JOB[Jobicy]
     end
 
     subgraph GHA["GitHub Actions · daily cron"]
@@ -78,7 +79,7 @@ flowchart LR
     WEB[React dashboard<br/>on Vercel]
     SQL[sql/ analytical queries]
 
-    GOB & HIM & REM & ROK --> EX --> TR --> LD --> DB
+    GOB & HIM & REM & ROK & JOB --> EX --> TR --> LD --> DB
     DB --> EXP --> REPO -->|commit triggers redeploy| WEB
     DB --> SQL
 ```

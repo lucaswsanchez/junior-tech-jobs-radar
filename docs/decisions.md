@@ -18,11 +18,13 @@ ad-hoc questions go through the SQL queries in `sql/` instead.
 
 **Context.** Scraping LinkedIn or local boards breaks their terms of service and is fragile.
 
-**Decision.** Use only official public APIs (Get on Board, Himalayas, Remotive, RemoteOK). Each
+**Decision.** Use only official public APIs (Get on Board, Himalayas, Remotive, RemoteOK, Jobicy). Each
 connector implements `fetch()` (network) and `parse()` (a pure function). The run catches errors
-per source and records them in `pipeline_runs.errors` with status `partial`.
+per source and records them in `pipeline_runs.errors` with status `partial`; a source that
+fails midway keeps the pages it already fetched. HTTP 429 responses are retried after the
+`Retry-After` wait (or 5 s, 10 s, 20 s), capped at 60 s.
 
-**Trade-offs.** Coverage is limited to four boards, but the pipeline is legal, polite (custom
+**Trade-offs.** Coverage is limited to five boards, but the pipeline is legal, polite (custom
 User-Agent, delays, retries) and resilient. Pure parsers can be tested offline with saved
 fixtures.
 

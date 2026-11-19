@@ -1,0 +1,53 @@
+{
+  "apiVersion": "2.2.22",
+  "jobCount": 3,
+  "success": true,
+  "jobs": [
+    {
+      "id": 149160,
+      "url": "https://jobicy.com/jobs/149160-video-collection-latam-freelance-ai-trainer-project",
+      "jobSlug": "149160-video-collection-latam-freelance-ai-trainer-project",
+      "jobTitle": "Video Collection (LATAM) - Freelance AI Trainer Project",
+      "companyName": "Invisible Technologies",
+      "jobIndustry": ["Data Science & Analytics"],
+      "jobType": ["Full-Time"],
+      "jobGeo": "LATAM",
+      "jobLevel": "Entry-Level, Junior",
+      "jobExcerpt": "We’re looking for experts in LATAM to record short, first-person videos of everyday manual tasks using a head-mounted smartphone.",
+      "jobDescription": "<p>We’re looking for experts in LATAM to record short, first-person videos of everyday manual tasks using a head-mounted smartphone.</p><p>Main Requirements</p><ul>\n<li>Based in LATAM.</li>\n<li>Own a compatible smartphone.</li>\n</ul>",
+      "pubDate": "2026-11-16T03:05:34+00:00"
+    },
+    {
+      "id": 163303,
+      "url": "https://jobicy.com/jobs/163303-senior-software-engineer-26",
+      "jobSlug": "163303-senior-software-engineer-26",
+      "jobTitle": "Senior Software Engineer",
+      "companyName": "R/GA",
+      "jobIndustry": ["Software Engineering"],
+      "jobType": ["Full-Time"],
+      "jobGeo": "Argentina",
+      "jobLevel": "Senior",
+      "jobExcerpt": "Senior Software Engineer (Backend Applications) We are a global digital innovation agency.",
+      "jobDescription": "<h3><strong>Senior Software Engineer (Backend Applications)</strong></h3>\n<p>We are a global digital innovation agency for the Intelligence Age.</p>",
+      "pubDate": "2026-11-19T13:05:05+00:00"
+    },
+    {
+      "id": 163256,
+      "url": "https://jobicy.com/jobs/163256-1192-sr-bim-software-developer",
+      "jobSlug": "163256-1192-sr-bim-software-developer",
+      "jobTitle": "1192 - Sr. BIM Software Developer",
+      "companyName": "GoFasti",
+      "jobIndustry": ["Software Engineering"],
+      "jobType": ["Contract"],
+      "jobGeo": "LATAM",
+      "jobLevel": "Any",
+      "jobExcerpt": "We need an English-fluent Sr. BIM Software Developer, based in Latin America.",
+      "jobDescription": "<p>We need an English-fluent <strong>Sr. BIM Software Developer</strong>, based in Latin America, available to work remotely.</p>",
+      "pubDate": "2026-11-19T10:30:10+00:00",
+      "salaryMin": 3500,
+      "salaryMax": 4500,
+      "salaryCurrency": "USD",
+      "salaryPeriod": "monthly"
+    }
+  ]
+}
