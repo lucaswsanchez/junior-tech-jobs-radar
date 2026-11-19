@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-19T12:09:00.098308Z",
+ "generated_at": "2026-11-19T17:02:08.597233Z",
  "active_window_days": 7,
  "totals": {
-  "active_jobs": 90,
-  "new_last_7_days": 16,
-  "pct_english": 84.4,
+  "active_jobs": 93,
+  "new_last_7_days": 24,
+  "pct_english": 83.9,
   "pct_remote": 100.0,
-  "sources": 4,
-  "tracked_all_time": 90
+  "sources": 5,
+  "tracked_all_time": 93
  },
  "by_role": [
   {
@@ -28,7 +28,7 @@
   },
   {
    "name": "AI/Annotation",
-   "count": 14
+   "count": 16
   },
   {
    "name": "Admin/VA",
@@ -36,33 +36,37 @@
   },
   {
    "name": "Other",
-   "count": 9
+   "count": 10
   }
  ],
  "by_language": [
   {
    "name": "en",
-   "count": 76
+   "count": 78
   },
   {
    "name": "es",
-   "count": 14
+   "count": 15
   }
  ],
  "by_location_scope": [
   {
    "name": "Argentina",
-   "count": 59
+   "count": 60
   },
   {
    "name": "Worldwide",
-   "count": 31
+   "count": 32
+  },
+  {
+   "name": "LATAM",
+   "count": 1
   }
  ],
  "by_seniority": [
   {
    "name": "Entry level",
-   "count": 86
+   "count": 89
   },
   {
    "name": "Junior",
@@ -72,13 +76,18 @@
  "by_source": [
   {
    "name": "Himalayas",
-   "count": 84,
+   "count": 86,
    "url": "https://himalayas.app"
   },
   {
    "name": "Get on Board",
    "count": 4,
    "url": "https://www.getonbrd.com"
+  },
+  {
+   "name": "Jobicy",
+   "count": 1,
+   "url": "https://jobicy.com"
   },
   {
    "name": "Remotive",
@@ -126,54 +135,56 @@
   },
   {
    "week": "2026-10-26",
-   "count": 40
+   "count": 41
   },
   {
    "week": "2026-11-02",
-   "count": 11
+   "count": 7
   },
   {
    "week": "2026-11-09",
-   "count": 8
+   "count": 4
   },
   {
    "week": "2026-11-16",
-   "count": 11
+   "count": 21
   }
  ],
  "last_run": {
-  "started_at": "2026-11-19T12:08:18.855035Z",
-  "finished_at": "2026-11-19T12:09:00.052309Z",
-  "status": "partial",
-  "fetched": 302,
-  "kept": 6,
-  "inserted": 0,
-  "updated": 6,
+  "started_at": "2026-11-19T17:00:34.033337Z",
+  "finished_at": "2026-11-19T17:02:08.476539Z",
+  "status": "success",
+  "fetched": 883,
+  "kept": 89,
+  "inserted": 3,
+  "updated": 86,
   "rejected": {
-   "duplicate": 3,
-   "seniority": 257,
-   "not_tech": 5,
-   "location": 31
+   "duplicate": 42,
+   "seniority": 650,
+   "not_tech": 70,
+   "location": 32
   },
   "source_stats": {
    "Get on Board": {
-    "fetched": 189,
+    "fetched": 188,
     "kept": 4
    },
+   "Himalayas": {
+    "fetched": 446,
+    "kept": 83
+   },
    "Remotive": {
-    "fetched": 16,
+    "fetched": 15,
     "kept": 1
    },
    "RemoteOK": {
-    "fetched": 97,
+    "fetched": 97
+   },
+   "Jobicy": {
+    "fetched": 137,
     "kept": 1
    }
   },
-  "errors": [
-   {
-    "source": "Himalayas",
-    "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://himalayas.app/jobs/api/search?q=data+analyst&country=AR&page=4'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
-   }
-  ]
+  "errors": []
  }
 }

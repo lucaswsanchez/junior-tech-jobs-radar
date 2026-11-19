@@ -1,96 +1,96 @@
 {
- "generated_at": "2026-11-19T12:09:00.098308Z",
+ "generated_at": "2026-11-19T17:02:08.597233Z",
  "top_n": 15,
  "overall": [
+  {
+   "name": "Data Annotation",
+   "category": "AI & ML",
+   "count": 17,
+   "pct": 18.3
+  },
   {
    "name": "SQL",
    "category": "Languages",
    "count": 17,
-   "pct": 18.9
-  },
-  {
-   "name": "Data Annotation",
-   "category": "AI & ML",
-   "count": 16,
-   "pct": 17.8
+   "pct": 18.3
   },
   {
    "name": "Python",
    "category": "Languages",
-   "count": 14,
-   "pct": 15.6
+   "count": 15,
+   "pct": 16.1
+  },
+  {
+   "name": "JavaScript",
+   "category": "Languages",
+   "count": 11,
+   "pct": 11.8
   },
   {
    "name": "Excel",
    "category": "Data & BI",
    "count": 10,
-   "pct": 11.1
+   "pct": 10.8
   },
   {
-   "name": "JavaScript",
-   "category": "Languages",
+   "name": "Git",
+   "category": "Tools & Practices",
    "count": 10,
-   "pct": 11.1
+   "pct": 10.8
   },
   {
    "name": "Agile/Scrum",
    "category": "Tools & Practices",
    "count": 9,
-   "pct": 10.0
+   "pct": 9.7
   },
   {
    "name": "CSS",
    "category": "Frontend",
    "count": 9,
-   "pct": 10.0
-  },
-  {
-   "name": "Git",
-   "category": "Tools & Practices",
-   "count": 9,
-   "pct": 10.0
+   "pct": 9.7
   },
   {
    "name": "HTML",
    "category": "Frontend",
    "count": 9,
-   "pct": 10.0
+   "pct": 9.7
+  },
+  {
+   "name": "Linux",
+   "category": "Cloud & DevOps",
+   "count": 9,
+   "pct": 9.7
   },
   {
    "name": "Machine Learning",
    "category": "AI & ML",
    "count": 9,
-   "pct": 10.0
-  },
-  {
-   "name": "Linux",
-   "category": "Cloud & DevOps",
-   "count": 8,
-   "pct": 8.9
+   "pct": 9.7
   },
   {
    "name": "PHP",
    "category": "Languages",
    "count": 8,
-   "pct": 8.9
+   "pct": 8.6
   },
   {
    "name": "Windows",
    "category": "IT & Support",
    "count": 7,
-   "pct": 7.8
+   "pct": 7.5
   },
   {
-   "name": "React",
-   "category": "Frontend",
+   "name": "AWS",
+   "category": "Cloud & DevOps",
    "count": 6,
-   "pct": 6.7
+   "pct": 6.5
   },
   {
-   "name": "Statistics",
-   "category": "Data & BI",
+   "name": "Jira",
+   "category": "Tools & Practices",
    "count": 6,
-   "pct": 6.7
+   "pct": 6.5
   }
  ],
  "by_role": {
@@ -418,20 +418,20 @@
    {
     "name": "Data Annotation",
     "category": "AI & ML",
-    "count": 13,
-    "pct": 92.9
+    "count": 14,
+    "pct": 87.5
    },
    {
     "name": "Prompt Engineering",
     "category": "AI & ML",
     "count": 2,
-    "pct": 14.3
+    "pct": 12.5
    },
    {
     "name": "Machine Learning",
     "category": "AI & ML",
     "count": 1,
-    "pct": 7.1
+    "pct": 6.2
    }
   ],
   "Admin/VA": [
@@ -513,91 +513,91 @@
     "name": "Agile/Scrum",
     "category": "Tools & Practices",
     "count": 4,
-    "pct": 44.4
+    "pct": 40.0
    },
    {
     "name": "JavaScript",
     "category": "Languages",
-    "count": 3,
-    "pct": 33.3
+    "count": 4,
+    "pct": 40.0
    },
    {
     "name": "SQL",
     "category": "Languages",
     "count": 3,
-    "pct": 33.3
+    "pct": 30.0
+   },
+   {
+    "name": "Git",
+    "category": "Tools & Practices",
+    "count": 2,
+    "pct": 20.0
+   },
+   {
+    "name": "Jira",
+    "category": "Tools & Practices",
+    "count": 2,
+    "pct": 20.0
    },
    {
     "name": "LLMs",
     "category": "AI & ML",
     "count": 2,
-    "pct": 22.2
+    "pct": 20.0
+   },
+   {
+    "name": "Linux",
+    "category": "Cloud & DevOps",
+    "count": 2,
+    "pct": 20.0
    },
    {
     "name": "PHP",
     "category": "Languages",
     "count": 2,
-    "pct": 22.2
+    "pct": 20.0
+   },
+   {
+    "name": "Python",
+    "category": "Languages",
+    "count": 2,
+    "pct": 20.0
+   },
+   {
+    "name": "AWS",
+    "category": "Cloud & DevOps",
+    "count": 1,
+    "pct": 10.0
    },
    {
     "name": "Android",
     "category": "Mobile",
     "count": 1,
-    "pct": 11.1
+    "pct": 10.0
    },
    {
     "name": "Figma",
     "category": "Tools & Practices",
     "count": 1,
-    "pct": 11.1
-   },
-   {
-    "name": "Git",
-    "category": "Tools & Practices",
-    "count": 1,
-    "pct": 11.1
+    "pct": 10.0
    },
    {
     "name": "GitHub",
     "category": "Tools & Practices",
     "count": 1,
-    "pct": 11.1
+    "pct": 10.0
    },
    {
     "name": "HTML",
     "category": "Frontend",
     "count": 1,
-    "pct": 11.1
+    "pct": 10.0
    },
    {
-    "name": "Jira",
-    "category": "Tools & Practices",
+    "name": "Help Desk Tools",
+    "category": "IT & Support",
     "count": 1,
-    "pct": 11.1
-   },
-   {
-    "name": "Linux",
-    "category": "Cloud & DevOps",
-    "count": 1,
-    "pct": 11.1
-   },
-   {
-    "name": "Machine Learning",
-    "category": "AI & ML",
-    "count": 1,
-    "pct": 11.1
-   },
-   {
-    "name": "MySQL",
-    "category": "Databases",
-    "count": 1,
-    "pct": 11.1
-   },
-   {
-    "name": "Node.js",
-    "category": "Backend",
-    "count": 1,
-    "pct": 11.1
+    "pct": 10.0
    }
   ]
  }
