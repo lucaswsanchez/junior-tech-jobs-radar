@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2026-11-18
 
-First public release.
+First public release, live at https://junior-tech-jobs-radar.vercel.app.
 
 ### Added
 
@@ -29,6 +29,8 @@ First public release.
   explorer; Methodology page; loading, error and empty states; responsive layout.
 - **Quality**: 164 Python tests (pytest, 100% coverage of the transform package) and 13 frontend
   tests (Vitest); Ruff, mypy (strict), oxlint and Prettier; CI on every pull request.
+- **Deployment**: Supabase PostgreSQL as the warehouse (daily GitHub Actions run) and Vercel for
+  the static dashboard, with SPA rewrites and no-cache headers for the data snapshot.
 - **Tooling**: Dockerfile and Docker Compose stack (PostgreSQL + pipeline + dashboard),
   `.env.example`, `.editorconfig`.
 
