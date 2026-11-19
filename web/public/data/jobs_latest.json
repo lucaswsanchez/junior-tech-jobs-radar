@@ -1,7 +1,133 @@
 {
- "generated_at": "2026-11-17T22:04:11.746478Z",
- "count": 88,
+ "generated_at": "2026-11-19T00:46:28.059705Z",
+ "count": 90,
  "jobs": [
+  {
+   "id": "6026dd2b24f66614",
+   "title": "Full Stack Developer Intern",
+   "company": "ASG Company",
+   "url": "https://himalayas.app/companies/asg-company/jobs/full-stack-developer-intern?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-18T19:31:12Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby"
+   ]
+  },
+  {
+   "id": "e6cc18cedf73fcfc",
+   "title": "Junior Software Developer - Observability",
+   "company": "Canonical",
+   "url": "https://himalayas.app/companies/canonical/jobs/junior-software-developer-observability-9517049738?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +194 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-18T17:05:32Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Go",
+    "Kubernetes",
+    "Linux",
+    "Python"
+   ]
+  },
+  {
+   "id": "80af3ad23ed72485",
+   "title": "Junior Project Manager",
+   "company": "Canonical",
+   "url": "https://himalayas.app/companies/canonical/jobs/junior-project-manager?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +108 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Other",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-18T17:04:52Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Linux"
+   ]
+  },
+  {
+   "id": "043c31e4f3353222",
+   "title": "Developer/Programmer (LATAM only)",
+   "company": "My VA Support, Inc.",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/developer-programmer-latam-only?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-18T12:13:59Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "AWS",
+    "CI/CD",
+    "CSS",
+    "Cypress",
+    "Docker",
+    "Git",
+    "GitHub",
+    "GitHub Actions",
+    "JUnit",
+    "Java",
+    "Jest",
+    "Kotlin",
+    "Linux",
+    "PostgreSQL",
+    "Postman",
+    "REST APIs",
+    "React",
+    "React Native",
+    "Spring Boot",
+    "Tailwind CSS",
+    "Test Automation",
+    "TypeScript"
+   ]
+  },
+  {
+   "id": "66b8ae508ef4fea8",
+   "title": "Product Designer Junior+",
+   "company": "Banco Plata, S.A., Institución de Banca Múltiple",
+   "url": "https://himalayas.app/companies/banco-plata-s-a-institucion-de-banca-multiple/jobs/product-designer-junior?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Other",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-18T11:29:29Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Android",
+    "Figma",
+    "iOS"
+   ]
+  },
   {
    "id": "4d0fa3a9591833c3",
    "title": "Jr. Operations Assistant",
@@ -16,7 +142,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-17T18:30:47Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -33,7 +159,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-17T17:38:28Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum"
    ]
@@ -52,7 +178,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-17T17:25:24Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -69,7 +195,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-17T16:29:09Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Help Desk Tools",
     "Windows"
@@ -89,7 +215,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-17T08:20:17Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Machine Learning",
     "Python",
@@ -110,7 +236,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-16T19:30:32Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     ".NET",
     "AWS",
@@ -149,7 +275,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-15T20:27:42Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Machine Learning",
     "Python",
@@ -170,7 +296,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-14T17:44:51Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -187,7 +313,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-14T00:41:22Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "AWS",
     "Azure",
@@ -211,7 +337,7 @@
    "seniority": "Junior",
    "language": "es",
    "published_at": "2026-11-13T15:01:55Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Cybersecurity"
    ]
@@ -230,7 +356,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-12T19:30:19Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -247,7 +373,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-12T05:36:40Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Cybersecurity",
     "Linux",
@@ -271,7 +397,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-11T20:17:48Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "CSS",
     "Excel",
@@ -296,7 +422,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-11T16:28:04Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -313,7 +439,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-07T19:30:37Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Jira",
     "Manual Testing",
@@ -334,7 +460,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-07T00:49:15Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum",
     "Git",
@@ -357,7 +483,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-07T00:20:27Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -376,7 +502,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-06T11:35:41Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "SQL"
    ]
@@ -395,7 +521,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-06T11:35:30Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "ETL",
     "SQL"
@@ -415,7 +541,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-06T07:03:02Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -432,7 +558,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-04T19:00:05Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "SQL",
     "Statistics"
@@ -452,7 +578,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-04T04:35:07Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Linux"
    ]
@@ -471,7 +597,7 @@
    "seniority": "Junior",
    "language": "en",
    "published_at": "2026-11-03T16:49:36Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation",
     "Excel",
@@ -492,7 +618,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-03T09:22:49Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -509,10 +635,27 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-02T01:25:47Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
+  },
+  {
+   "id": "bd781a3f112236e2",
+   "title": "Healthcare Virtual Assistant - Mexico (affiliate job post)",
+   "company": "Wing Assistant",
+   "url": "https://himalayas.app/companies/wing-assistant/jobs/healthcare-virtual-assistant-mexico-affiliate-job-post?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-01T13:19:04Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": []
   },
   {
    "id": "befc1d020c4b1128",
@@ -528,7 +671,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T13:14:30Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -547,7 +690,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T13:13:16Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation",
     "Prompt Engineering"
@@ -567,7 +710,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T13:13:11Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation",
     "Prompt Engineering"
@@ -587,7 +730,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T13:12:06Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Flutter"
    ]
@@ -606,7 +749,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T13:11:56Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum"
    ]
@@ -625,7 +768,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-01T13:11:13Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Excel"
    ]
@@ -644,7 +787,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-01T13:11:10Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "BigQuery",
     "Docker",
@@ -673,53 +816,12 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-01T13:10:36Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "HTML",
     "JavaScript",
     "PHP",
     "Python"
-   ]
-  },
-  {
-   "id": "e6cc18cedf73fcfc",
-   "title": "Junior Software Developer - Observability",
-   "company": "Canonical",
-   "url": "https://himalayas.app/companies/canonical/jobs/junior-software-developer-observability-9517049738?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +194 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-01T12:55:02Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
-   "skills": [
-    "Go",
-    "Kubernetes",
-    "Linux",
-    "Python"
-   ]
-  },
-  {
-   "id": "80af3ad23ed72485",
-   "title": "Junior Project Manager",
-   "company": "Canonical",
-   "url": "https://himalayas.app/companies/canonical/jobs/junior-project-manager?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +108 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Other",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-01T12:54:44Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
-   "skills": [
-    "Linux"
    ]
   },
   {
@@ -736,7 +838,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:53:07Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation",
     "Machine Learning"
@@ -756,7 +858,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:52:40Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -773,7 +875,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-01T12:52:16Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     ".NET",
     "Agile/Scrum",
@@ -805,7 +907,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:51:38Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Excel"
    ]
@@ -824,7 +926,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:30:13Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Excel",
     "Python",
@@ -845,7 +947,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:19:55Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Excel",
     "Google Sheets"
@@ -865,7 +967,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:15:21Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation",
     "Excel",
@@ -886,7 +988,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:15:19Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -905,7 +1007,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:13:26Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "CSS",
     "HTML"
@@ -925,7 +1027,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:12:51Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -944,7 +1046,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:12:38Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -963,7 +1065,26 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T12:12:28Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Data Annotation"
+   ]
+  },
+  {
+   "id": "a767c4b8ebfce992",
+   "title": "Language Alignment & Resource Partner (Amharic) - Freelance AI Trainer Project",
+   "company": "Invisible Technologies",
+   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-amharic-freelance-ai-trainer-project?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "AI/Annotation",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-01T12:12:28Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -982,7 +1103,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:57:20Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "CSS",
     "HTML",
@@ -1004,7 +1125,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:57:14Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -1021,7 +1142,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:57:11Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Windows"
    ]
@@ -1040,7 +1161,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:44:36Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Looker",
     "Power BI",
@@ -1064,7 +1185,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:44:28Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "BigQuery",
     "Machine Learning",
@@ -1090,7 +1211,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:43:14Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Excel",
     "Statistics"
@@ -1110,7 +1231,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:37:55Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -1129,7 +1250,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T11:37:38Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation"
    ]
@@ -1148,7 +1269,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T02:58:43Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Machine Learning"
    ]
@@ -1167,7 +1288,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T01:28:27Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Machine Learning"
    ]
@@ -1186,7 +1307,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-11-01T00:24:23Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Excel",
     "SQL"
@@ -1206,7 +1327,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-30T22:47:02Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "SQL",
     "Tableau"
@@ -1226,7 +1347,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-29T09:12:44Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -1243,7 +1364,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-29T01:20:25Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Data Annotation",
     "Excel",
@@ -1268,7 +1389,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-28T12:06:56Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum",
     "LLMs",
@@ -1289,7 +1410,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-10-27T09:17:45Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Git",
     "React"
@@ -1309,7 +1430,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-10-27T04:44:36Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Figma"
    ]
@@ -1328,7 +1449,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-27T03:23:09Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "BigQuery",
     "CI/CD",
@@ -1356,7 +1477,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-25T06:35:30Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -1373,7 +1494,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-24T02:16:00Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Help Desk Tools"
    ]
@@ -1392,7 +1513,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-23T19:30:31Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "CSS",
     "Git",
@@ -1402,26 +1523,6 @@
     "React",
     "SQL",
     "Vue"
-   ]
-  },
-  {
-   "id": "d27883fa4c3448de",
-   "title": "Remote UI/UX Reviewer & Quality Assurance (QA)",
-   "company": "Resilio Partners",
-   "url": "https://himalayas.app/companies/resilio-partners/jobs/remote-ui-ux-reviewer-quality-assurance-qa?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "QA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-10-19T06:11:59Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
-   "skills": [
-    "Figma",
-    "Jira"
    ]
   },
   {
@@ -1438,7 +1539,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-18T16:57:07Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "C++",
     "CI/CD",
@@ -1463,7 +1564,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-18T07:40:09Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -1480,7 +1581,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-18T03:09:26Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Help Desk Tools"
    ]
@@ -1499,7 +1600,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-17T00:25:24Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "AWS",
     "Azure",
@@ -1508,23 +1609,6 @@
     "Networking",
     "Windows"
    ]
-  },
-  {
-   "id": "052c8feae393d78e",
-   "title": "Search Engine Evaluator - Spanish (Argentina)",
-   "company": "RWS Group",
-   "url": "https://himalayas.app/companies/rws-group/jobs/search-engine-evaluator-spanish-argentina?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "AI/Annotation",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-10-15T06:25:05Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
-   "skills": []
   },
   {
    "id": "ecc7d7f6576fd09a",
@@ -1540,7 +1624,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-11T19:33:36Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum",
     "JavaScript",
@@ -1564,7 +1648,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-10-10T10:04:39Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Cybersecurity"
    ]
@@ -1583,7 +1667,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-10-10T04:50:51Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Bash",
     "Cybersecurity",
@@ -1605,7 +1689,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-07T19:01:43Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "AWS",
     "Bash",
@@ -1634,7 +1718,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-05T03:11:02Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Active Directory",
     "Azure",
@@ -1657,7 +1741,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-03T17:54:08Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -1674,7 +1758,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-10-02T07:07:59Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum",
     "LLMs",
@@ -1695,7 +1779,7 @@
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-10-01T03:02:47Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Agile/Scrum"
    ]
@@ -1714,7 +1798,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-09-29T19:31:58Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   },
   {
@@ -1731,33 +1815,13 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-09-20T03:51:13Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Bash",
     "C++",
     "JavaScript",
     "Linux",
     "Ruby"
-   ]
-  },
-  {
-   "id": "33358b9cbb202b6b",
-   "title": "Graduate Customer Success Manager",
-   "company": "Canonical",
-   "url": "https://himalayas.app/companies/canonical/jobs/graduate-customer-success-manager?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-09-19T20:20:35Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
-   "skills": [
-    "Kubernetes",
-    "Linux"
    ]
   },
   {
@@ -1774,7 +1838,7 @@
    "seniority": "Junior",
    "language": "en",
    "published_at": "2026-08-22T22:07:04Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Help Desk Tools",
     "Jira",
@@ -1797,7 +1861,7 @@
    "seniority": "Junior",
    "language": "en",
    "published_at": "2026-08-19T11:57:07Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "CSS",
     "HTML",
@@ -1819,7 +1883,7 @@
    "seniority": "Entry level",
    "language": "en",
    "published_at": "2026-08-15T00:00:25Z",
-   "first_seen_at": "2026-11-17T22:03:30.033993Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
   }
  ]
