@@ -1,96 +1,96 @@
 {
- "generated_at": "2026-11-19T18:54:10.976320Z",
+ "generated_at": "2026-11-20T18:22:16.686681Z",
  "top_n": 15,
  "overall": [
   {
    "name": "Data Annotation",
    "category": "AI & ML",
-   "count": 17,
-   "pct": 18.1
+   "count": 18,
+   "pct": 18.6
   },
   {
    "name": "SQL",
    "category": "Languages",
    "count": 17,
-   "pct": 18.1
+   "pct": 17.5
   },
   {
    "name": "Python",
    "category": "Languages",
    "count": 15,
-   "pct": 16.0
+   "pct": 15.5
   },
   {
    "name": "JavaScript",
    "category": "Languages",
    "count": 11,
-   "pct": 11.7
+   "pct": 11.3
   },
   {
    "name": "Excel",
    "category": "Data & BI",
    "count": 10,
-   "pct": 10.6
+   "pct": 10.3
   },
   {
    "name": "Git",
    "category": "Tools & Practices",
    "count": 10,
-   "pct": 10.6
+   "pct": 10.3
   },
   {
    "name": "Linux",
    "category": "Cloud & DevOps",
    "count": 10,
-   "pct": 10.6
+   "pct": 10.3
   },
   {
    "name": "Agile/Scrum",
    "category": "Tools & Practices",
    "count": 9,
-   "pct": 9.6
+   "pct": 9.3
   },
   {
    "name": "CSS",
    "category": "Frontend",
    "count": 9,
-   "pct": 9.6
+   "pct": 9.3
   },
   {
    "name": "HTML",
    "category": "Frontend",
    "count": 9,
-   "pct": 9.6
+   "pct": 9.3
   },
   {
    "name": "Machine Learning",
    "category": "AI & ML",
    "count": 9,
-   "pct": 9.6
+   "pct": 9.3
   },
   {
    "name": "PHP",
    "category": "Languages",
    "count": 8,
-   "pct": 8.5
+   "pct": 8.2
   },
   {
    "name": "Windows",
    "category": "IT & Support",
    "count": 7,
-   "pct": 7.4
+   "pct": 7.2
   },
   {
    "name": "AWS",
    "category": "Cloud & DevOps",
    "count": 6,
-   "pct": 6.4
+   "pct": 6.2
   },
   {
    "name": "Jira",
    "category": "Tools & Practices",
    "count": 6,
-   "pct": 6.4
+   "pct": 6.2
   }
  ],
  "by_role": {
@@ -439,79 +439,85 @@
     "name": "Excel",
     "category": "Data & BI",
     "count": 5,
-    "pct": 25.0
+    "pct": 21.7
    },
    {
     "name": "Help Desk Tools",
     "category": "IT & Support",
     "count": 3,
-    "pct": 15.0
+    "pct": 13.0
    },
    {
     "name": "Google Sheets",
     "category": "Data & BI",
     "count": 2,
-    "pct": 10.0
+    "pct": 8.7
    },
    {
     "name": "Linux",
     "category": "Cloud & DevOps",
     "count": 2,
-    "pct": 10.0
+    "pct": 8.7
    },
    {
     "name": "Agile/Scrum",
     "category": "Tools & Practices",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "CSS",
     "category": "Frontend",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
+   },
+   {
+    "name": "Data Annotation",
+    "category": "AI & ML",
+    "count": 1,
+    "pct": 4.3
    },
    {
     "name": "Git",
     "category": "Tools & Practices",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "HTML",
     "category": "Frontend",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "Kubernetes",
     "category": "Cloud & DevOps",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "MySQL",
     "category": "Databases",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "PHP",
     "category": "Languages",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "Statistics",
     "category": "Data & BI",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    },
    {
     "name": "Windows",
     "category": "IT & Support",
     "count": 1,
-    "pct": 5.0
+    "pct": 4.3
    }
   ],
   "Other": [

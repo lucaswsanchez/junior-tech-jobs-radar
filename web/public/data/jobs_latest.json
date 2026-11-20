@@ -1,7 +1,154 @@
 {
- "generated_at": "2026-11-19T18:54:10.976320Z",
- "count": 94,
+ "generated_at": "2026-11-20T18:22:16.686681Z",
+ "count": 97,
  "jobs": [
+  {
+   "id": "36f47f7a6db74c35",
+   "title": "Application Developer Intern",
+   "company": "KIS Solutions",
+   "url": "https://himalayas.app/companies/kis-solutions/jobs/application-developer-intern?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +20 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T16:56:10Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Agile/Scrum"
+   ]
+  },
+  {
+   "id": "22e369f60eeb3f93",
+   "title": "Trainee Flutter Developer",
+   "company": "NetForemost, Inc",
+   "url": "https://himalayas.app/companies/netforemost-inc/jobs/trainee-flutter-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T16:55:39Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Flutter"
+   ]
+  },
+  {
+   "id": "51ba4fb79fcc4880",
+   "title": "Client Support & Scheduling Specialist",
+   "company": "Pavago",
+   "url": "https://himalayas.app/companies/pavago/jobs/client-support-scheduling-specialist-3630158200?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "IT Support",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T16:52:20Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": []
+  },
+  {
+   "id": "1afcc4b0916811dd",
+   "title": "Junior Full-Stack Developer",
+   "company": "Appetiser Apps",
+   "url": "https://himalayas.app/companies/appetiser-apps/jobs/junior-full-stack-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T16:51:22Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    ".NET",
+    "AWS",
+    "Agile/Scrum",
+    "Angular",
+    "Azure",
+    "CSS",
+    "GCP",
+    "Git",
+    "HTML",
+    "Java",
+    "JavaScript",
+    "Laravel",
+    "Node.js",
+    "PHP",
+    "Postman",
+    "REST APIs",
+    "React",
+    "SQL",
+    "TypeScript",
+    "Vue",
+    "iOS"
+   ]
+  },
+  {
+   "id": "38e10d5de5c86301",
+   "title": "Telecommunications Customer Support Specialist",
+   "company": "micro1",
+   "url": "https://himalayas.app/companies/micro1/jobs/telecommunications-customer-support-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T11:20:39Z",
+   "first_seen_at": "2026-11-20T18:20:43.832903Z",
+   "skills": []
+  },
+  {
+   "id": "9fe18e92b5d9a340",
+   "title": "Airline Customer Service Specialist",
+   "company": "micro1",
+   "url": "https://himalayas.app/companies/micro1/jobs/airline-customer-service-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T11:20:38Z",
+   "first_seen_at": "2026-11-20T18:20:43.832903Z",
+   "skills": []
+  },
+  {
+   "id": "4b79a4efb91d2c68",
+   "title": "Retail Customer Support Specialist",
+   "company": "micro1",
+   "url": "https://himalayas.app/companies/micro1/jobs/retail-customer-support-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-20T11:20:38Z",
+   "first_seen_at": "2026-11-20T18:20:43.832903Z",
+   "skills": [
+    "Data Annotation"
+   ]
+  },
   {
    "id": "bd781a3f112236e2",
    "title": "Healthcare Virtual Assistant - Mexico (affiliate job post)",
@@ -121,44 +268,6 @@
    ]
   },
   {
-   "id": "36f47f7a6db74c35",
-   "title": "Application Developer Intern",
-   "company": "KIS Solutions",
-   "url": "https://himalayas.app/companies/kis-solutions/jobs/application-developer-intern?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +20 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T18:17:12Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Agile/Scrum"
-   ]
-  },
-  {
-   "id": "22e369f60eeb3f93",
-   "title": "Trainee Flutter Developer",
-   "company": "NetForemost, Inc",
-   "url": "https://himalayas.app/companies/netforemost-inc/jobs/trainee-flutter-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T18:17:12Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Flutter"
-   ]
-  },
-  {
    "id": "945d16cfe33efa2a",
    "title": "Junior Web Developer",
    "company": "Community Sports Partners",
@@ -202,6 +311,27 @@
    "skills": [
     "SQL",
     "Statistics"
+   ]
+  },
+  {
+   "id": "971041440e058fbf",
+   "title": "QA Analyst Jr.",
+   "company": "Flux IT",
+   "url": "https://himalayas.app/companies/flux-it/jobs/qa-analyst-jr?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "QA",
+   "seniority": "Entry level",
+   "language": "es",
+   "published_at": "2026-11-19T18:11:10Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Jira",
+    "Manual Testing",
+    "SQL"
    ]
   },
   {
@@ -340,62 +470,6 @@
    "skills": [
     "Data Annotation",
     "Machine Learning"
-   ]
-  },
-  {
-   "id": "51ba4fb79fcc4880",
-   "title": "Client Support & Scheduling Specialist",
-   "company": "Pavago",
-   "url": "https://himalayas.app/companies/pavago/jobs/client-support-scheduling-specialist-3630158200?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "IT Support",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T18:02:51Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": []
-  },
-  {
-   "id": "1afcc4b0916811dd",
-   "title": "Junior Full-Stack Developer",
-   "company": "Appetiser Apps",
-   "url": "https://himalayas.app/companies/appetiser-apps/jobs/junior-full-stack-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T18:01:18Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    ".NET",
-    "AWS",
-    "Agile/Scrum",
-    "Angular",
-    "Azure",
-    "CSS",
-    "GCP",
-    "Git",
-    "HTML",
-    "Java",
-    "JavaScript",
-    "Laravel",
-    "Node.js",
-    "PHP",
-    "Postman",
-    "REST APIs",
-    "React",
-    "SQL",
-    "TypeScript",
-    "Vue",
-    "iOS"
    ]
   },
   {
@@ -821,30 +895,6 @@
    "skills": []
   },
   {
-   "id": "72d89a36d0884437",
-   "title": "Data Analyst | 100% Remote | LATAM - PH",
-   "company": "Prometeo Talent",
-   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:02:57Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Looker",
-    "Power BI",
-    "Python",
-    "SQL",
-    "Statistics",
-    "Tableau"
-   ]
-  },
-  {
    "id": "f1d706a0838c3d5a",
    "title": "AI Full-Stack Developer, New Grad",
    "company": "Concurrences",
@@ -896,6 +946,50 @@
     "Snowflake",
     "Statistics",
     "scikit-learn"
+   ]
+  },
+  {
+   "id": "72d89a36d0884437",
+   "title": "Data Analyst | 100% Remote | LATAM - PH",
+   "company": "Prometeo Talent",
+   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Data",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:02:57Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Looker",
+    "Power BI",
+    "Python",
+    "SQL",
+    "Statistics",
+    "Tableau"
+   ]
+  },
+  {
+   "id": "df497e687f6a0afe",
+   "title": "Admin and data analyst Assistant (ZM0625)",
+   "company": "Virtual Talent Latam",
+   "url": "https://himalayas.app/companies/virtual-talent-latam/jobs/admin-and-data-analyst-assistant-zm0625?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:02:46Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Excel",
+    "Statistics"
    ]
   },
   {
@@ -956,26 +1050,6 @@
     "Agile/Scrum",
     "LLMs",
     "SQL"
-   ]
-  },
-  {
-   "id": "df497e687f6a0afe",
-   "title": "Admin and data analyst Assistant (ZM0625)",
-   "company": "Virtual Talent Latam",
-   "url": "https://himalayas.app/companies/virtual-talent-latam/jobs/admin-and-data-analyst-assistant-zm0625?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:02:46Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Excel",
-    "Statistics"
    ]
   },
   {
@@ -1466,27 +1540,6 @@
     "HTML",
     "MySQL",
     "PHP"
-   ]
-  },
-  {
-   "id": "971041440e058fbf",
-   "title": "QA Analyst Jr.",
-   "company": "Flux IT",
-   "url": "https://himalayas.app/companies/flux-it/jobs/qa-analyst-jr?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "QA",
-   "seniority": "Entry level",
-   "language": "es",
-   "published_at": "2026-11-07T19:30:37Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Jira",
-    "Manual Testing",
-    "SQL"
    ]
   },
   {
