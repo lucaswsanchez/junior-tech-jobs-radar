@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-21T17:08:37.058171Z",
+ "generated_at": "2026-11-22T17:39:19.466723Z",
  "active_window_days": 7,
  "totals": {
   "active_jobs": 101,
-  "new_last_7_days": 75,
+  "new_last_7_days": 79,
   "pct_english": 85.1,
   "pct_remote": 100.0,
   "sources": 5,
@@ -135,7 +135,7 @@
   },
   {
    "week": "2026-10-26",
-   "count": 10
+   "count": 6
   },
   {
    "week": "2026-11-02",
@@ -147,31 +147,31 @@
   },
   {
    "week": "2026-11-16",
-   "count": 75
+   "count": 79
   }
  ],
  "last_run": {
-  "started_at": "2026-11-21T17:07:02.874734Z",
-  "finished_at": "2026-11-21T17:08:36.936872Z",
+  "started_at": "2026-11-22T17:37:46.230451Z",
+  "finished_at": "2026-11-22T17:39:19.376751Z",
   "status": "success",
-  "fetched": 894,
-  "kept": 86,
-  "inserted": 4,
-  "updated": 82,
+  "fetched": 893,
+  "kept": 90,
+  "inserted": 0,
+  "updated": 90,
   "rejected": {
-   "duplicate": 47,
-   "seniority": 664,
-   "not_tech": 70,
-   "location": 27
+   "duplicate": 49,
+   "seniority": 656,
+   "not_tech": 69,
+   "location": 29
   },
   "source_stats": {
    "Get on Board": {
-    "fetched": 186,
+    "fetched": 184,
     "kept": 4
    },
    "Himalayas": {
-    "fetched": 450,
-    "kept": 79
+    "fetched": 448,
+    "kept": 83
    },
    "Remotive": {
     "fetched": 16,
@@ -181,7 +181,7 @@
     "fetched": 100
    },
    "Jobicy": {
-    "fetched": 142,
+    "fetched": 145,
     "kept": 2
    }
   },
