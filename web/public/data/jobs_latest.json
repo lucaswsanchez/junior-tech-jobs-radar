@@ -1,7 +1,100 @@
 {
- "generated_at": "2026-11-22T17:39:19.466723Z",
- "count": 101,
+ "generated_at": "2026-11-23T21:55:55.817457Z",
+ "count": 104,
  "jobs": [
+  {
+   "id": "6026dd2b24f66614",
+   "title": "Full Stack Developer Intern",
+   "company": "ASG Company",
+   "url": "https://himalayas.app/companies/asg-company/jobs/full-stack-developer-intern?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-23T19:30:19Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby"
+   ]
+  },
+  {
+   "id": "e82882785e8ab3aa",
+   "title": "Software Engineer - Python - Cloud - graduate level",
+   "company": "Canonical",
+   "url": "https://jobicy.com/jobs/164019-software-engineer-python-cloud-graduate-level",
+   "source": "Jobicy",
+   "source_url": "https://jobicy.com",
+   "location": "LATAM, Canada, USA",
+   "location_scope": "LATAM",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-23T18:31:30Z",
+   "first_seen_at": "2026-11-23T21:54:21.970404Z",
+   "skills": [
+    "CI/CD",
+    "Linux",
+    "Python"
+   ]
+  },
+  {
+   "id": "593edcf0e3921f35",
+   "title": "Junior Full Stack Engineer (LATAM)",
+   "company": "LoanBud",
+   "url": "https://himalayas.app/companies/loanbud/jobs/junior-full-stack-engineer-latam?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, Costa Rica, Honduras, Uruguay",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-22T21:54:29Z",
+   "first_seen_at": "2026-11-23T21:54:21.970404Z",
+   "skills": [
+    "AWS",
+    "CI/CD",
+    "Docker",
+    "Git",
+    "GitHub",
+    "Java",
+    "JavaScript",
+    "PostgreSQL",
+    "REST APIs",
+    "SQL",
+    "Spring Boot",
+    "Test Automation",
+    "TypeScript"
+   ]
+  },
+  {
+   "id": "95b61e25aad488f9",
+   "title": "Talent Support Specialist",
+   "company": "micro1",
+   "url": "https://himalayas.app/companies/micro1/jobs/talent-support-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "IT Support",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-22T21:20:30Z",
+   "first_seen_at": "2026-11-23T21:54:21.970404Z",
+   "skills": []
+  },
   {
    "id": "5c67bd143ed0b925",
    "title": "Crawler Jr.",
@@ -187,30 +280,6 @@
     "Machine Learning",
     "NLP",
     "iOS"
-   ]
-  },
-  {
-   "id": "6026dd2b24f66614",
-   "title": "Full Stack Developer Intern",
-   "company": "ASG Company",
-   "url": "https://himalayas.app/companies/asg-company/jobs/full-stack-developer-intern?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-20T19:30:27Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "PHP",
-    "Python",
-    "Ruby"
    ]
   },
   {
@@ -1005,6 +1074,23 @@
    "skills": []
   },
   {
+   "id": "79e4c9f1757171c8",
+   "title": "Medical Virtual Assistant",
+   "company": "My VA Support, Inc.",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/medical-virtual-assistant?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:10:11Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": []
+  },
+  {
    "id": "cf036829bdda224a",
    "title": "Player Support (Confidential- LATAM)",
    "company": "Pole To Win International",
@@ -1022,23 +1108,6 @@
    "skills": [
     "Windows"
    ]
-  },
-  {
-   "id": "79e4c9f1757171c8",
-   "title": "Medical Virtual Assistant",
-   "company": "My VA Support, Inc.",
-   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/medical-virtual-assistant?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:10:11Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": []
   },
   {
    "id": "ea8acfcdcb714a41",
@@ -1461,6 +1530,26 @@
    ]
   },
   {
+   "id": "26348302565a68d1",
+   "title": "(Fluent English) Customer Support Consultant (remotely)",
+   "company": "SupportYourApp",
+   "url": "https://himalayas.app/companies/supportyourapp/jobs/fluent-english-customer-support-consultant-remotely-1090752734?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T16:39:52Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Help Desk Tools",
+    "Windows"
+   ]
+  },
+  {
    "id": "6a0b802cb8140418",
    "title": "L2 Incident Management / Support Analyst (SRE) — Remote, LATAM",
    "company": "Hiredfy",
@@ -1515,26 +1604,6 @@
     "Tailwind CSS",
     "Test Automation",
     "TypeScript"
-   ]
-  },
-  {
-   "id": "26348302565a68d1",
-   "title": "(Fluent English) Customer Support Consultant (remotely)",
-   "company": "SupportYourApp",
-   "url": "https://himalayas.app/companies/supportyourapp/jobs/fluent-english-customer-support-consultant-remotely-1090752734?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T16:39:52Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Help Desk Tools",
-    "Windows"
    ]
   },
   {
