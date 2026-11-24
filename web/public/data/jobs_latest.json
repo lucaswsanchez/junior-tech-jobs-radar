@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-23T21:55:55.817457Z",
- "count": 104,
+ "generated_at": "2026-11-24T20:31:24.352935Z",
+ "count": 105,
  "jobs": [
   {
    "id": "6026dd2b24f66614",
@@ -15,7 +15,7 @@
    "role_type": "Development",
    "seniority": "Entry level",
    "language": "en",
-   "published_at": "2026-11-23T19:30:19Z",
+   "published_at": "2026-11-24T19:30:25Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "CSS",
@@ -24,6 +24,50 @@
     "PHP",
     "Python",
     "Ruby"
+   ]
+  },
+  {
+   "id": "fe7f52ac8cf8d776",
+   "title": "Human Data Manager, New Grad",
+   "company": "micro1",
+   "url": "https://himalayas.app/companies/micro1/jobs/human-data-manager-new-grad-6398560180?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Data",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-23T22:20:29Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Data Annotation",
+    "Excel",
+    "Machine Learning",
+    "Power BI",
+    "Python",
+    "SQL",
+    "Tableau"
+   ]
+  },
+  {
+   "id": "4b79a4efb91d2c68",
+   "title": "Retail Customer Support Specialist",
+   "company": "micro1",
+   "url": "https://himalayas.app/companies/micro1/jobs/retail-customer-support-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-23T22:20:22Z",
+   "first_seen_at": "2026-11-20T18:20:43.832903Z",
+   "skills": [
+    "Data Annotation"
    ]
   },
   {
@@ -105,7 +149,7 @@
    "location": "Argentina, +55 countries",
    "location_scope": "Argentina",
    "remote": true,
-   "role_type": "Other",
+   "role_type": "Development",
    "seniority": "Entry level",
    "language": "es",
    "published_at": "2026-11-21T18:08:49Z",
@@ -409,25 +453,6 @@
    "published_at": "2026-11-20T11:20:38Z",
    "first_seen_at": "2026-11-20T18:20:43.832903Z",
    "skills": []
-  },
-  {
-   "id": "4b79a4efb91d2c68",
-   "title": "Retail Customer Support Specialist",
-   "company": "micro1",
-   "url": "https://himalayas.app/companies/micro1/jobs/retail-customer-support-specialist?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-20T11:20:38Z",
-   "first_seen_at": "2026-11-20T18:20:43.832903Z",
-   "skills": [
-    "Data Annotation"
-   ]
   },
   {
    "id": "bd781a3f112236e2",
@@ -938,6 +963,25 @@
    ]
   },
   {
+   "id": "b7c0f1de9d195c16",
+   "title": "Language Alignment & Resource Partner (Brazilian Portuguese) - Freelance AI Trai",
+   "company": "Invisible Technologies",
+   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-brazilian-portuguese-freelance-ai-trai?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "AI/Annotation",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:26:37Z",
+   "first_seen_at": "2026-11-19T17:00:34.033337Z",
+   "skills": [
+    "Data Annotation"
+   ]
+  },
+  {
    "id": "779b7a6798be2a69",
    "title": "Language Alignment & Resource Partner (Gujarati) - Freelance AI Trainer Project",
    "company": "Invisible Technologies",
@@ -1014,25 +1058,6 @@
    ]
   },
   {
-   "id": "b7c0f1de9d195c16",
-   "title": "Language Alignment & Resource Partner (Brazilian Portuguese) - Freelance AI Trai",
-   "company": "Invisible Technologies",
-   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-brazilian-portuguese-freelance-ai-trai?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "AI/Annotation",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:26:37Z",
-   "first_seen_at": "2026-11-19T17:00:34.033337Z",
-   "skills": [
-    "Data Annotation"
-   ]
-  },
-  {
    "id": "7c2f74eafb782836",
    "title": "IT Support Technician I - Buenos Aires",
    "company": "Interlaced",
@@ -1074,6 +1099,28 @@
    "skills": []
   },
   {
+   "id": "ea8acfcdcb714a41",
+   "title": "Web Developer",
+   "company": "My VA Support, Inc.",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:10:11Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP"
+   ]
+  },
+  {
    "id": "79e4c9f1757171c8",
    "title": "Medical Virtual Assistant",
    "company": "My VA Support, Inc.",
@@ -1110,25 +1157,22 @@
    ]
   },
   {
-   "id": "ea8acfcdcb714a41",
-   "title": "Web Developer",
-   "company": "My VA Support, Inc.",
-   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
+   "id": "87c5139caa836620",
+   "title": "Internship",
+   "company": "Acklen Avenue",
+   "url": "https://himalayas.app/companies/acklen-avenue/jobs/internship?utm_source=api",
    "source": "Himalayas",
    "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
+   "location": "Argentina, +16 countries",
    "location_scope": "Argentina",
    "remote": true,
-   "role_type": "Development",
+   "role_type": "QA",
    "seniority": "Entry level",
    "language": "en",
-   "published_at": "2026-11-19T17:10:11Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "published_at": "2026-11-19T17:03:23Z",
+   "first_seen_at": "2026-11-24T20:29:50.690564Z",
    "skills": [
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "PHP"
+    "Agile/Scrum"
    ]
   },
   {
@@ -1530,26 +1574,6 @@
    ]
   },
   {
-   "id": "26348302565a68d1",
-   "title": "(Fluent English) Customer Support Consultant (remotely)",
-   "company": "SupportYourApp",
-   "url": "https://himalayas.app/companies/supportyourapp/jobs/fluent-english-customer-support-consultant-remotely-1090752734?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T16:39:52Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Help Desk Tools",
-    "Windows"
-   ]
-  },
-  {
    "id": "6a0b802cb8140418",
    "title": "L2 Incident Management / Support Analyst (SRE) — Remote, LATAM",
    "company": "Hiredfy",
@@ -1604,6 +1628,26 @@
     "Tailwind CSS",
     "Test Automation",
     "TypeScript"
+   ]
+  },
+  {
+   "id": "26348302565a68d1",
+   "title": "(Fluent English) Customer Support Consultant (remotely)",
+   "company": "SupportYourApp",
+   "url": "https://himalayas.app/companies/supportyourapp/jobs/fluent-english-customer-support-consultant-remotely-1090752734?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T16:39:52Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Help Desk Tools",
+    "Windows"
    ]
   },
   {
@@ -1960,31 +2004,6 @@
    "published_at": "2026-10-29T09:12:44Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
-  },
-  {
-   "id": "fe7f52ac8cf8d776",
-   "title": "Human Data Manager, New Grad",
-   "company": "micro1",
-   "url": "https://himalayas.app/companies/micro1/jobs/human-data-manager-new-grad-6398560180?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-10-29T01:20:25Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Data Annotation",
-    "Excel",
-    "Machine Learning",
-    "Power BI",
-    "Python",
-    "SQL",
-    "Tableau"
-   ]
   },
   {
    "id": "f0359e52236ae078",

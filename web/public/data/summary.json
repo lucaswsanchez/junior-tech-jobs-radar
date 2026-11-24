@@ -1,22 +1,22 @@
 {
- "generated_at": "2026-11-23T21:55:55.817457Z",
+ "generated_at": "2026-11-24T20:31:24.352935Z",
  "active_window_days": 7,
  "totals": {
-  "active_jobs": 104,
+  "active_jobs": 105,
   "new_last_7_days": 81,
-  "pct_english": 85.6,
+  "pct_english": 85.7,
   "pct_remote": 100.0,
   "sources": 5,
-  "tracked_all_time": 104
+  "tracked_all_time": 105
  },
  "by_role": [
   {
    "name": "Development",
-   "count": 19
+   "count": 20
   },
   {
    "name": "QA",
-   "count": 6
+   "count": 7
   },
   {
    "name": "Data",
@@ -36,13 +36,13 @@
   },
   {
    "name": "Other",
-   "count": 10
+   "count": 9
   }
  ],
  "by_language": [
   {
    "name": "en",
-   "count": 89
+   "count": 90
   },
   {
    "name": "es",
@@ -52,7 +52,7 @@
  "by_location_scope": [
   {
    "name": "Argentina",
-   "count": 63
+   "count": 64
   },
   {
    "name": "Worldwide",
@@ -66,7 +66,7 @@
  "by_seniority": [
   {
    "name": "Entry level",
-   "count": 100
+   "count": 101
   },
   {
    "name": "Junior",
@@ -76,7 +76,7 @@
  "by_source": [
   {
    "name": "Himalayas",
-   "count": 95,
+   "count": 96,
    "url": "https://himalayas.app"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
    "week": "2026-10-26",
-   "count": 6
+   "count": 5
   },
   {
    "week": "2026-11-02",
@@ -147,31 +147,31 @@
   },
   {
    "week": "2026-11-23",
-   "count": 2
+   "count": 4
   }
  ],
  "last_run": {
-  "started_at": "2026-11-23T21:54:21.970404Z",
-  "finished_at": "2026-11-23T21:55:55.784476Z",
+  "started_at": "2026-11-24T20:29:50.690564Z",
+  "finished_at": "2026-11-24T20:31:24.306149Z",
   "status": "success",
-  "fetched": 893,
-  "kept": 91,
-  "inserted": 3,
-  "updated": 88,
+  "fetched": 894,
+  "kept": 92,
+  "inserted": 1,
+  "updated": 91,
   "rejected": {
    "duplicate": 50,
-   "location": 30,
-   "seniority": 654,
+   "location": 32,
+   "seniority": 652,
    "not_tech": 68
   },
   "source_stats": {
    "Get on Board": {
-    "fetched": 183,
+    "fetched": 182,
     "kept": 4
    },
    "Himalayas": {
-    "fetched": 449,
-    "kept": 84
+    "fetched": 450,
+    "kept": 85
    },
    "Remotive": {
     "fetched": 15,
@@ -181,7 +181,7 @@
     "fetched": 100
    },
    "Jobicy": {
-    "fetched": 146,
+    "fetched": 147,
     "kept": 2
    }
   },
