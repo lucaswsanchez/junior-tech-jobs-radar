@@ -1,7 +1,98 @@
 {
- "generated_at": "2026-11-24T20:31:24.352935Z",
- "count": 105,
+ "generated_at": "2026-11-25T19:48:25.282503Z",
+ "count": 110,
  "jobs": [
+  {
+   "id": "dcfc91cb8a925df2",
+   "title": "Business Analyst Jr.",
+   "company": "Flux IT",
+   "url": "https://himalayas.app/companies/flux-it/jobs/business-analyst-jr?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Other",
+   "seniority": "Entry level",
+   "language": "es",
+   "published_at": "2026-11-25T15:38:10Z",
+   "first_seen_at": "2026-11-25T19:46:51.249199Z",
+   "skills": [
+    "Agile/Scrum",
+    "SQL"
+   ]
+  },
+  {
+   "id": "aafaf1ee4e67878e",
+   "title": "Cloud Field Engineer",
+   "company": "Canonical",
+   "url": "https://jobicy.com/jobs/149523-cloud-field-engineer",
+   "source": "Jobicy",
+   "source_url": "https://jobicy.com",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-25T03:15:21Z",
+   "first_seen_at": "2026-11-25T19:46:51.249199Z",
+   "skills": [
+    "AWS",
+    "Azure",
+    "GCP",
+    "Kubernetes",
+    "Linux",
+    "Python"
+   ]
+  },
+  {
+   "id": "c32b67849da61263",
+   "title": "Web Frontend Engineer - JS, CSS, React, Flutter",
+   "company": "Canonical",
+   "url": "https://jobicy.com/jobs/149527-web-frontend-engineer-js-css-react-flutter",
+   "source": "Jobicy",
+   "source_url": "https://jobicy.com",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-25T03:05:10Z",
+   "first_seen_at": "2026-11-25T19:46:51.249199Z",
+   "skills": [
+    "CSS",
+    "Docker",
+    "Flutter",
+    "JavaScript",
+    "Kubernetes",
+    "Linux",
+    "REST APIs",
+    "React",
+    "TypeScript"
+   ]
+  },
+  {
+   "id": "1f50dae449d3b08e",
+   "title": "Junior Procurement Assistant / LATAM",
+   "company": "VELAIO",
+   "url": "https://himalayas.app/companies/velaio/jobs/junior-procurement-assistant-latam?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-24T21:11:19Z",
+   "first_seen_at": "2026-11-25T19:46:51.249199Z",
+   "skills": [
+    "Excel",
+    "SAP"
+   ]
+  },
   {
    "id": "6026dd2b24f66614",
    "title": "Full Stack Developer Intern",
@@ -963,48 +1054,10 @@
    ]
   },
   {
-   "id": "b7c0f1de9d195c16",
-   "title": "Language Alignment & Resource Partner (Brazilian Portuguese) - Freelance AI Trai",
-   "company": "Invisible Technologies",
-   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-brazilian-portuguese-freelance-ai-trai?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "AI/Annotation",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:26:37Z",
-   "first_seen_at": "2026-11-19T17:00:34.033337Z",
-   "skills": [
-    "Data Annotation"
-   ]
-  },
-  {
    "id": "779b7a6798be2a69",
    "title": "Language Alignment & Resource Partner (Gujarati) - Freelance AI Trainer Project",
    "company": "Invisible Technologies",
    "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-gujarati-freelance-ai-trainer-project?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "AI/Annotation",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:26:37Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Data Annotation"
-   ]
-  },
-  {
-   "id": "36f2072f45f830d9",
-   "title": "Language Alignment & Resource Partner (Czech) - Freelance AI Trainer Project",
-   "company": "Invisible Technologies",
-   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-czech-freelance-ai-trainer-project?utm_source=api",
    "source": "Himalayas",
    "source_url": "https://himalayas.app",
    "location": "Worldwide",
@@ -1043,6 +1096,44 @@
    "title": "Language Alignment & Resource Partner (Catalan) - Freelance AI Trainer Project",
    "company": "Invisible Technologies",
    "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-catalan-freelance-ai-trainer-project?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "AI/Annotation",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:26:37Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Data Annotation"
+   ]
+  },
+  {
+   "id": "b7c0f1de9d195c16",
+   "title": "Language Alignment & Resource Partner (Brazilian Portuguese) - Freelance AI Trai",
+   "company": "Invisible Technologies",
+   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-brazilian-portuguese-freelance-ai-trai?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "AI/Annotation",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:26:37Z",
+   "first_seen_at": "2026-11-19T17:00:34.033337Z",
+   "skills": [
+    "Data Annotation"
+   ]
+  },
+  {
+   "id": "36f2072f45f830d9",
+   "title": "Language Alignment & Resource Partner (Czech) - Freelance AI Trainer Project",
+   "company": "Invisible Technologies",
+   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-czech-freelance-ai-trainer-project?utm_source=api",
    "source": "Himalayas",
    "source_url": "https://himalayas.app",
    "location": "Worldwide",
@@ -1099,28 +1190,6 @@
    "skills": []
   },
   {
-   "id": "ea8acfcdcb714a41",
-   "title": "Web Developer",
-   "company": "My VA Support, Inc.",
-   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:10:11Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "PHP"
-   ]
-  },
-  {
    "id": "79e4c9f1757171c8",
    "title": "Medical Virtual Assistant",
    "company": "My VA Support, Inc.",
@@ -1154,6 +1223,28 @@
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Windows"
+   ]
+  },
+  {
+   "id": "ea8acfcdcb714a41",
+   "title": "Web Developer",
+   "company": "My VA Support, Inc.",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:10:11Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP"
    ]
   },
   {
@@ -1292,6 +1383,26 @@
    ]
   },
   {
+   "id": "df497e687f6a0afe",
+   "title": "Admin and data analyst Assistant (ZM0625)",
+   "company": "Virtual Talent Latam",
+   "url": "https://himalayas.app/companies/virtual-talent-latam/jobs/admin-and-data-analyst-assistant-zm0625?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:02:46Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Excel",
+    "Statistics"
+   ]
+  },
+  {
    "id": "27b3213d17256478",
    "title": "React Developer Jr.",
    "company": "Flux IT",
@@ -1328,26 +1439,6 @@
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Figma"
-   ]
-  },
-  {
-   "id": "df497e687f6a0afe",
-   "title": "Admin and data analyst Assistant (ZM0625)",
-   "company": "Virtual Talent Latam",
-   "url": "https://himalayas.app/companies/virtual-talent-latam/jobs/admin-and-data-analyst-assistant-zm0625?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:02:46Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Excel",
-    "Statistics"
    ]
   },
   {
@@ -1945,6 +2036,25 @@
    "language": "en",
    "published_at": "2026-11-01T02:58:43Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Machine Learning"
+   ]
+  },
+  {
+   "id": "5222f5880333d614",
+   "title": "Join the G2i Talent Pool",
+   "company": "G2i",
+   "url": "https://himalayas.app/companies/g2i/jobs/join-the-g2i-talent-pool-5575523671?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Other",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-01T02:13:58Z",
+   "first_seen_at": "2026-11-25T19:46:51.249199Z",
    "skills": [
     "Machine Learning"
    ]
