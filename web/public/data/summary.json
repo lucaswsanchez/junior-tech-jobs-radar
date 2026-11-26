@@ -1,30 +1,30 @@
 {
- "generated_at": "2026-11-25T19:48:25.282503Z",
+ "generated_at": "2026-11-26T19:26:52.413233Z",
  "active_window_days": 7,
  "totals": {
-  "active_jobs": 110,
-  "new_last_7_days": 85,
-  "pct_english": 85.5,
+  "active_jobs": 111,
+  "new_last_7_days": 28,
+  "pct_english": 85.6,
   "pct_remote": 100.0,
-  "sources": 5,
-  "tracked_all_time": 110
+  "sources": 4,
+  "tracked_all_time": 114
  },
  "by_role": [
   {
    "name": "Development",
-   "count": 22
+   "count": 23
   },
   {
    "name": "QA",
-   "count": 7
+   "count": 6
   },
   {
    "name": "Data",
-   "count": 12
+   "count": 11
   },
   {
    "name": "IT Support",
-   "count": 16
+   "count": 17
   },
   {
    "name": "AI/Annotation",
@@ -36,13 +36,13 @@
   },
   {
    "name": "Other",
-   "count": 11
+   "count": 12
   }
  ],
  "by_language": [
   {
    "name": "en",
-   "count": 94
+   "count": 95
   },
   {
    "name": "es",
@@ -56,7 +56,7 @@
   },
   {
    "name": "Worldwide",
-   "count": 42
+   "count": 43
   },
   {
    "name": "LATAM",
@@ -66,7 +66,7 @@
  "by_seniority": [
   {
    "name": "Entry level",
-   "count": 106
+   "count": 107
   },
   {
    "name": "Junior",
@@ -76,12 +76,12 @@
  "by_source": [
   {
    "name": "Himalayas",
-   "count": 99,
+   "count": 100,
    "url": "https://himalayas.app"
   },
   {
    "name": "Jobicy",
-   "count": 5,
+   "count": 6,
    "url": "https://jobicy.com"
   },
   {
@@ -93,11 +93,6 @@
    "name": "Remotive",
    "count": 1,
    "url": "https://remotive.com"
-  },
-  {
-   "name": "RemoteOK",
-   "count": 1,
-   "url": "https://remoteok.com"
   }
  ],
  "weekly": [
@@ -143,35 +138,35 @@
   },
   {
    "week": "2026-11-16",
-   "count": 80
+   "count": 78
   },
   {
    "week": "2026-11-23",
-   "count": 8
+   "count": 14
   }
  ],
  "last_run": {
-  "started_at": "2026-11-25T19:46:51.249199Z",
-  "finished_at": "2026-11-25T19:48:25.159637Z",
+  "started_at": "2026-11-26T19:25:19.056027Z",
+  "finished_at": "2026-11-26T19:26:52.334630Z",
   "status": "success",
-  "fetched": 872,
-  "kept": 91,
-  "inserted": 5,
-  "updated": 86,
+  "fetched": 870,
+  "kept": 95,
+  "inserted": 4,
+  "updated": 91,
   "rejected": {
-   "duplicate": 45,
-   "seniority": 639,
-   "location": 32,
-   "not_tech": 65
+   "duplicate": 47,
+   "seniority": 634,
+   "location": 30,
+   "not_tech": 64
   },
   "source_stats": {
    "Get on Board": {
-    "fetched": 184,
+    "fetched": 183,
     "kept": 4
    },
    "Himalayas": {
-    "fetched": 450,
-    "kept": 83
+    "fetched": 451,
+    "kept": 86
    },
    "Remotive": {
     "fetched": 16,
@@ -181,8 +176,8 @@
     "fetched": 100
    },
    "Jobicy": {
-    "fetched": 122,
-    "kept": 3
+    "fetched": 120,
+    "kept": 4
    }
   },
   "errors": []

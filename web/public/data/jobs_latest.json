@@ -1,7 +1,141 @@
 {
- "generated_at": "2026-11-25T19:48:25.282503Z",
- "count": 110,
+ "generated_at": "2026-11-26T19:26:52.413233Z",
+ "count": 111,
  "jobs": [
+  {
+   "id": "22e369f60eeb3f93",
+   "title": "Trainee Flutter Developer",
+   "company": "NetForemost, Inc",
+   "url": "https://himalayas.app/companies/netforemost-inc/jobs/trainee-flutter-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-26T16:55:10Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Flutter"
+   ]
+  },
+  {
+   "id": "1afcc4b0916811dd",
+   "title": "Junior Full-Stack Developer",
+   "company": "Appetiser Apps",
+   "url": "https://himalayas.app/companies/appetiser-apps/jobs/junior-full-stack-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-26T16:53:09Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    ".NET",
+    "AWS",
+    "Agile/Scrum",
+    "Angular",
+    "Azure",
+    "CSS",
+    "GCP",
+    "Git",
+    "HTML",
+    "Java",
+    "JavaScript",
+    "Laravel",
+    "Node.js",
+    "PHP",
+    "Postman",
+    "REST APIs",
+    "React",
+    "SQL",
+    "TypeScript",
+    "Vue",
+    "iOS"
+   ]
+  },
+  {
+   "id": "df7d37420f767cd4",
+   "title": "Booking & Client Support Specialist",
+   "company": "Alegría Travel Services",
+   "url": "https://himalayas.app/companies/alegria-travel-services/jobs/booking-client-support-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +37 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "IT Support",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-26T05:45:57Z",
+   "first_seen_at": "2026-11-26T19:25:19.056027Z",
+   "skills": []
+  },
+  {
+   "id": "bbeca6dbdff8c88e",
+   "title": "Junior Linux Kernel Engineer - Ubuntu",
+   "company": "Canonical",
+   "url": "https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu",
+   "source": "Jobicy",
+   "source_url": "https://jobicy.com",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-26T04:20:39Z",
+   "first_seen_at": "2026-11-26T19:25:19.056027Z",
+   "skills": [
+    "Bash",
+    "Git",
+    "Linux",
+    "Python",
+    "Rust"
+   ]
+  },
+  {
+   "id": "33e195442d0f8aa7",
+   "title": "Customer Support Representative (Italian Desk)",
+   "company": "Everhelp",
+   "url": "https://himalayas.app/companies/everhelp/jobs/customer-support-representative-italian-desk?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-26T00:24:32Z",
+   "first_seen_at": "2026-11-26T19:25:19.056027Z",
+   "skills": []
+  },
+  {
+   "id": "0f8c8d399ed781d8",
+   "title": "Junior SEO Specialist",
+   "company": "Axipro",
+   "url": "https://himalayas.app/companies/axipro/jobs/junior-seo-specialist?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "Other",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-26T00:24:31Z",
+   "first_seen_at": "2026-11-26T19:25:19.056027Z",
+   "skills": [
+    "Cybersecurity"
+   ]
+  },
   {
    "id": "dcfc91cb8a925df2",
    "title": "Business Analyst Jr.",
@@ -437,25 +571,6 @@
    ]
   },
   {
-   "id": "22e369f60eeb3f93",
-   "title": "Trainee Flutter Developer",
-   "company": "NetForemost, Inc",
-   "url": "https://himalayas.app/companies/netforemost-inc/jobs/trainee-flutter-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-20T16:55:39Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Flutter"
-   ]
-  },
-  {
    "id": "51ba4fb79fcc4880",
    "title": "Client Support & Scheduling Specialist",
    "company": "Pavago",
@@ -471,45 +586,6 @@
    "published_at": "2026-11-20T16:52:20Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
-  },
-  {
-   "id": "1afcc4b0916811dd",
-   "title": "Junior Full-Stack Developer",
-   "company": "Appetiser Apps",
-   "url": "https://himalayas.app/companies/appetiser-apps/jobs/junior-full-stack-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-20T16:51:22Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    ".NET",
-    "AWS",
-    "Agile/Scrum",
-    "Angular",
-    "Azure",
-    "CSS",
-    "GCP",
-    "Git",
-    "HTML",
-    "Java",
-    "JavaScript",
-    "Laravel",
-    "Node.js",
-    "PHP",
-    "Postman",
-    "REST APIs",
-    "React",
-    "SQL",
-    "TypeScript",
-    "Vue",
-    "iOS"
-   ]
   },
   {
    "id": "38e10d5de5c86301",
@@ -1073,6 +1149,25 @@
    ]
   },
   {
+   "id": "36f2072f45f830d9",
+   "title": "Language Alignment & Resource Partner (Czech) - Freelance AI Trainer Project",
+   "company": "Invisible Technologies",
+   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-czech-freelance-ai-trainer-project?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
+   "remote": true,
+   "role_type": "AI/Annotation",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:26:37Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Data Annotation"
+   ]
+  },
+  {
    "id": "d50372c143e2b508",
    "title": "Language Alignment & Resource Partner (Lithuanian) - Freelance AI Trainer Projec",
    "company": "Invisible Technologies",
@@ -1130,25 +1225,6 @@
    ]
   },
   {
-   "id": "36f2072f45f830d9",
-   "title": "Language Alignment & Resource Partner (Czech) - Freelance AI Trainer Project",
-   "company": "Invisible Technologies",
-   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-czech-freelance-ai-trainer-project?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "AI/Annotation",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:26:37Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Data Annotation"
-   ]
-  },
-  {
    "id": "7c2f74eafb782836",
    "title": "IT Support Technician I - Buenos Aires",
    "company": "Interlaced",
@@ -1190,6 +1266,28 @@
    "skills": []
   },
   {
+   "id": "ea8acfcdcb714a41",
+   "title": "Web Developer",
+   "company": "My VA Support, Inc.",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:10:11Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP"
+   ]
+  },
+  {
    "id": "79e4c9f1757171c8",
    "title": "Medical Virtual Assistant",
    "company": "My VA Support, Inc.",
@@ -1223,28 +1321,6 @@
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Windows"
-   ]
-  },
-  {
-   "id": "ea8acfcdcb714a41",
-   "title": "Web Developer",
-   "company": "My VA Support, Inc.",
-   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:10:11Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "PHP"
    ]
   },
   {
@@ -1282,6 +1358,30 @@
    "published_at": "2026-11-19T17:03:23Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
+  },
+  {
+   "id": "72d89a36d0884437",
+   "title": "Data Analyst | 100% Remote | LATAM - PH",
+   "company": "Prometeo Talent",
+   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Data",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:02:57Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Looker",
+    "Power BI",
+    "Python",
+    "SQL",
+    "Statistics",
+    "Tableau"
+   ]
   },
   {
    "id": "f1d706a0838c3d5a",
@@ -1338,30 +1438,6 @@
    ]
   },
   {
-   "id": "72d89a36d0884437",
-   "title": "Data Analyst | 100% Remote | LATAM - PH",
-   "company": "Prometeo Talent",
-   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:02:57Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Looker",
-    "Power BI",
-    "Python",
-    "SQL",
-    "Statistics",
-    "Tableau"
-   ]
-  },
-  {
    "id": "3eaa7afa03640385",
    "title": "Product Manager Intern, ShopX(Rewards)",
    "company": "Sezzle",
@@ -1380,26 +1456,6 @@
     "Agile/Scrum",
     "LLMs",
     "SQL"
-   ]
-  },
-  {
-   "id": "df497e687f6a0afe",
-   "title": "Admin and data analyst Assistant (ZM0625)",
-   "company": "Virtual Talent Latam",
-   "url": "https://himalayas.app/companies/virtual-talent-latam/jobs/admin-and-data-analyst-assistant-zm0625?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:02:46Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Excel",
-    "Statistics"
    ]
   },
   {
@@ -1439,6 +1495,26 @@
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
     "Figma"
+   ]
+  },
+  {
+   "id": "df497e687f6a0afe",
+   "title": "Admin and data analyst Assistant (ZM0625)",
+   "company": "Virtual Talent Latam",
+   "url": "https://himalayas.app/companies/virtual-talent-latam/jobs/admin-and-data-analyst-assistant-zm0625?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Admin/VA",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:02:46Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Excel",
+    "Statistics"
    ]
   },
   {
@@ -1498,23 +1574,6 @@
     "SQL",
     "Tableau"
    ]
-  },
-  {
-   "id": "961387e502958585",
-   "title": "Tier 1 Customer Support Agent (International)",
-   "company": "ICANotes",
-   "url": "https://himalayas.app/companies/icanotes/jobs/tier-1-customer-support-agent-international?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T16:54:01Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": []
   },
   {
    "id": "351667f7daaf322a",
@@ -2060,25 +2119,6 @@
    ]
   },
   {
-   "id": "32d44578bb3d7561",
-   "title": "Tech Talent Pool: Engineers, Data and AI/ML",
-   "company": "G2i",
-   "url": "https://himalayas.app/companies/g2i/jobs/tech-talent-pool-engineers-data-and-ai-ml-5668161601?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-01T01:28:27Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Machine Learning"
-   ]
-  },
-  {
    "id": "15292f9a16930b85",
    "title": "Junior Data Analyst",
    "company": "Hire Hangar",
@@ -2278,23 +2318,6 @@
     "JavaScript",
     "PHP"
    ]
-  },
-  {
-   "id": "5c2ec33d8745d664",
-   "title": "QA Tester Entry Level",
-   "company": "Ace IT Careers",
-   "url": "https://remoteOK.com/remote-jobs/remote-qa-tester-entry-level-ace-it-careers-1136701",
-   "source": "RemoteOK",
-   "source_url": "https://remoteok.com",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "QA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-08-15T00:00:25Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": []
   }
  ]
 }
