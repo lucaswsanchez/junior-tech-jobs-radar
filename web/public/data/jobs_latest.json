@@ -1,7 +1,29 @@
 {
- "generated_at": "2026-11-26T19:26:52.413233Z",
- "count": 111,
+ "generated_at": "2026-11-27T19:22:50.400528Z",
+ "count": 106,
  "jobs": [
+  {
+   "id": "8b889bd9e6109cdc",
+   "title": "Database Support Engineer (AMER)",
+   "company": "Supabase",
+   "url": "https://jobicy.com/jobs/154076-database-support-engineer-amer",
+   "source": "Jobicy",
+   "source_url": "https://jobicy.com",
+   "location": "LATAM, Canada, USA",
+   "location_scope": "LATAM",
+   "remote": true,
+   "role_type": "IT Support",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-27T03:31:38Z",
+   "first_seen_at": "2026-11-27T19:21:15.952149Z",
+   "skills": [
+    "AWS",
+    "Linux",
+    "PostgreSQL",
+    "SQL"
+   ]
+  },
   {
    "id": "22e369f60eeb3f93",
    "title": "Trainee Flutter Developer",
@@ -959,35 +981,6 @@
    ]
   },
   {
-   "id": "5f898913a97ecec5",
-   "title": "Jr. DevOps Engineer",
-   "company": "TrueML",
-   "url": "https://himalayas.app/companies/trueml/jobs/jr-devops-engineer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, Mexico",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:43:47Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "AWS",
-    "Bash",
-    "CI/CD",
-    "Docker",
-    "GitHub",
-    "GitHub Actions",
-    "Go",
-    "Kubernetes",
-    "Machine Learning",
-    "Python",
-    "Terraform"
-   ]
-  },
-  {
    "id": "25b50ed1d2a4f2b1",
    "title": "Business Data Support Analyst",
    "company": "World Business Lenders",
@@ -1149,25 +1142,6 @@
    ]
   },
   {
-   "id": "36f2072f45f830d9",
-   "title": "Language Alignment & Resource Partner (Czech) - Freelance AI Trainer Project",
-   "company": "Invisible Technologies",
-   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-czech-freelance-ai-trainer-project?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Worldwide",
-   "location_scope": "Worldwide",
-   "remote": true,
-   "role_type": "AI/Annotation",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:26:37Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Data Annotation"
-   ]
-  },
-  {
    "id": "d50372c143e2b508",
    "title": "Language Alignment & Resource Partner (Lithuanian) - Freelance AI Trainer Projec",
    "company": "Invisible Technologies",
@@ -1225,27 +1199,22 @@
    ]
   },
   {
-   "id": "7c2f74eafb782836",
-   "title": "IT Support Technician I - Buenos Aires",
-   "company": "Interlaced",
-   "url": "https://himalayas.app/companies/interlaced/jobs/it-support-technician-i-buenos-aires?utm_source=api",
+   "id": "36f2072f45f830d9",
+   "title": "Language Alignment & Resource Partner (Czech) - Freelance AI Trainer Project",
+   "company": "Invisible Technologies",
+   "url": "https://himalayas.app/companies/inv/jobs/language-alignment-resource-partner-czech-freelance-ai-trainer-project?utm_source=api",
    "source": "Himalayas",
    "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
+   "location": "Worldwide",
+   "location_scope": "Worldwide",
    "remote": true,
-   "role_type": "IT Support",
+   "role_type": "AI/Annotation",
    "seniority": "Entry level",
    "language": "en",
-   "published_at": "2026-11-19T17:23:24Z",
+   "published_at": "2026-11-19T17:26:37Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": [
-    "AWS",
-    "Azure",
-    "GCP",
-    "Microsoft 365",
-    "Networking",
-    "Windows"
+    "Data Annotation"
    ]
   },
   {
@@ -1264,28 +1233,6 @@
    "published_at": "2026-11-19T17:17:47Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
-  },
-  {
-   "id": "ea8acfcdcb714a41",
-   "title": "Web Developer",
-   "company": "My VA Support, Inc.",
-   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Development",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:10:11Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "PHP"
-   ]
   },
   {
    "id": "79e4c9f1757171c8",
@@ -1324,6 +1271,28 @@
    ]
   },
   {
+   "id": "ea8acfcdcb714a41",
+   "title": "Web Developer",
+   "company": "My VA Support, Inc.",
+   "url": "https://himalayas.app/companies/my-va-support-inc/jobs/web-developer?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Development",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:10:11Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "PHP"
+   ]
+  },
+  {
    "id": "87c5139caa836620",
    "title": "Internship",
    "company": "Acklen Avenue",
@@ -1358,30 +1327,6 @@
    "published_at": "2026-11-19T17:03:23Z",
    "first_seen_at": "2026-11-19T00:45:46.577240Z",
    "skills": []
-  },
-  {
-   "id": "72d89a36d0884437",
-   "title": "Data Analyst | 100% Remote | LATAM - PH",
-   "company": "Prometeo Talent",
-   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, +44 countries",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T17:02:57Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Looker",
-    "Power BI",
-    "Python",
-    "SQL",
-    "Statistics",
-    "Tableau"
-   ]
   },
   {
    "id": "f1d706a0838c3d5a",
@@ -1435,6 +1380,30 @@
     "Snowflake",
     "Statistics",
     "scikit-learn"
+   ]
+  },
+  {
+   "id": "72d89a36d0884437",
+   "title": "Data Analyst | 100% Remote | LATAM - PH",
+   "company": "Prometeo Talent",
+   "url": "https://himalayas.app/companies/prometeo-talent/jobs/data-analyst-100-remote-latam-ph?utm_source=api",
+   "source": "Himalayas",
+   "source_url": "https://himalayas.app",
+   "location": "Argentina, +44 countries",
+   "location_scope": "Argentina",
+   "remote": true,
+   "role_type": "Data",
+   "seniority": "Entry level",
+   "language": "en",
+   "published_at": "2026-11-19T17:02:57Z",
+   "first_seen_at": "2026-11-19T00:45:46.577240Z",
+   "skills": [
+    "Looker",
+    "Power BI",
+    "Python",
+    "SQL",
+    "Statistics",
+    "Tableau"
    ]
   },
   {
@@ -1573,68 +1542,6 @@
    "skills": [
     "SQL",
     "Tableau"
-   ]
-  },
-  {
-   "id": "351667f7daaf322a",
-   "title": "Analista Soporte Tecnico Data Jr",
-   "company": "Stefanini",
-   "url": "https://himalayas.app/companies/stefanini/jobs/analista-soporte-tecnico-data-jr?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "es",
-   "published_at": "2026-11-19T16:52:52Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "ETL",
-    "SQL"
-   ]
-  },
-  {
-   "id": "c310d93c5801fa3f",
-   "title": "Analista Soporte Tecnico Data Trainee",
-   "company": "Stefanini",
-   "url": "https://himalayas.app/companies/stefanini/jobs/analista-soporte-tecnico-data-trainee?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Data",
-   "seniority": "Entry level",
-   "language": "es",
-   "published_at": "2026-11-19T16:52:52Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "SQL"
-   ]
-  },
-  {
-   "id": "fd4de168c11ef8d5",
-   "title": "Junior Project Manager (Keet P2P) (100% remote)",
-   "company": "Tether Operations Limited",
-   "url": "https://himalayas.app/companies/tether-operations-limited/jobs/junior-project-manager-keet-p2p-100-remote-6873631706?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Other",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T16:52:41Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": [
-    "Agile/Scrum",
-    "Git",
-    "GitHub",
-    "JavaScript",
-    "Jira"
    ]
   },
   {
@@ -1799,23 +1706,6 @@
     "Help Desk Tools",
     "Windows"
    ]
-  },
-  {
-   "id": "4d0fa3a9591833c3",
-   "title": "Jr. Operations Assistant",
-   "company": "Valatam",
-   "url": "https://himalayas.app/companies/valatam/jobs/jr-operations-assistant-7792346395?utm_source=api",
-   "source": "Himalayas",
-   "source_url": "https://himalayas.app",
-   "location": "Argentina, Colombia, Ecuador, Honduras, Nicaragua, Venezuela",
-   "location_scope": "Argentina",
-   "remote": true,
-   "role_type": "Admin/VA",
-   "seniority": "Entry level",
-   "language": "en",
-   "published_at": "2026-11-19T16:39:42Z",
-   "first_seen_at": "2026-11-19T00:45:46.577240Z",
-   "skills": []
   },
   {
    "id": "66b8ae508ef4fea8",

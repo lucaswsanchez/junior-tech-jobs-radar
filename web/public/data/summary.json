@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-26T19:26:52.413233Z",
+ "generated_at": "2026-11-27T19:22:50.400528Z",
  "active_window_days": 7,
  "totals": {
-  "active_jobs": 111,
-  "new_last_7_days": 28,
-  "pct_english": 85.6,
+  "active_jobs": 106,
+  "new_last_7_days": 25,
+  "pct_english": 86.8,
   "pct_remote": 100.0,
   "sources": 4,
-  "tracked_all_time": 114
+  "tracked_all_time": 115
  },
  "by_role": [
   {
    "name": "Development",
-   "count": 23
+   "count": 22
   },
   {
    "name": "QA",
@@ -20,7 +20,7 @@
   },
   {
    "name": "Data",
-   "count": 11
+   "count": 9
   },
   {
    "name": "IT Support",
@@ -32,27 +32,27 @@
   },
   {
    "name": "Admin/VA",
-   "count": 24
+   "count": 23
   },
   {
    "name": "Other",
-   "count": 12
+   "count": 11
   }
  ],
  "by_language": [
   {
    "name": "en",
-   "count": 95
+   "count": 92
   },
   {
    "name": "es",
-   "count": 16
+   "count": 14
   }
  ],
  "by_location_scope": [
   {
    "name": "Argentina",
-   "count": 66
+   "count": 60
   },
   {
    "name": "Worldwide",
@@ -60,13 +60,13 @@
   },
   {
    "name": "LATAM",
-   "count": 2
+   "count": 3
   }
  ],
  "by_seniority": [
   {
    "name": "Entry level",
-   "count": 107
+   "count": 102
   },
   {
    "name": "Junior",
@@ -76,12 +76,12 @@
  "by_source": [
   {
    "name": "Himalayas",
-   "count": 100,
+   "count": 94,
    "url": "https://himalayas.app"
   },
   {
    "name": "Jobicy",
-   "count": 6,
+   "count": 7,
    "url": "https://jobicy.com"
   },
   {
@@ -142,42 +142,42 @@
   },
   {
    "week": "2026-11-23",
-   "count": 14
+   "count": 15
   }
  ],
  "last_run": {
-  "started_at": "2026-11-26T19:25:19.056027Z",
-  "finished_at": "2026-11-26T19:26:52.334630Z",
+  "started_at": "2026-11-27T19:21:15.952149Z",
+  "finished_at": "2026-11-27T19:22:50.280383Z",
   "status": "success",
-  "fetched": 870,
-  "kept": 95,
-  "inserted": 4,
-  "updated": 91,
+  "fetched": 874,
+  "kept": 94,
+  "inserted": 1,
+  "updated": 93,
   "rejected": {
    "duplicate": 47,
-   "seniority": 634,
-   "location": 30,
-   "not_tech": 64
+   "seniority": 638,
+   "location": 29,
+   "not_tech": 66
   },
   "source_stats": {
    "Get on Board": {
-    "fetched": 183,
-    "kept": 4
+    "fetched": 178,
+    "kept": 3
    },
    "Himalayas": {
-    "fetched": 451,
-    "kept": 86
+    "fetched": 452,
+    "kept": 85
    },
    "Remotive": {
-    "fetched": 16,
+    "fetched": 17,
     "kept": 1
    },
    "RemoteOK": {
     "fetched": 100
    },
    "Jobicy": {
-    "fetched": 120,
-    "kept": 4
+    "fetched": 127,
+    "kept": 5
    }
   },
   "errors": []
